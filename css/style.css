@@ -1,0 +1,494 @@
+/*
+-----------------------------------------------------------
+	Main Layout
+-----------------------------------------------------------
+*/
+body
+{
+    background: #E3E3E3 url("../images/back-content.png");
+    color: #424242;
+    font-size: 16px;
+}
+header > .container
+{
+    margin-bottom: 0.5em;
+    position: relative;
+}
+header > .container .bar-header
+{
+    background: #737373;
+    border-radius: 0 0 0.5em 0.5em;
+    height: 1em;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+header > .container a
+{
+    color: #000;
+    font-weight: 400;
+    line-height: 3em;
+    margin: 1em;
+    position: relative;
+    z-index: 2;
+}
+header > .container a:hover, header > .container a:focus, header > .container a:active
+{
+    text-decoration: none;
+}
+footer
+{
+    color: #000;
+    margin: 1em auto;
+}
+footer .author
+{
+    font-weight: 700;
+}
+footer .author a
+{
+    color: #000;
+    font-weight: 400;
+    text-decoration: none;
+}
+footer .users-online
+{
+    font-weight: 700;
+    text-align: right;
+}
+footer .users-online span, footer .users-online i
+{
+    display: inline-block;
+    vertical-align: top;
+}
+footer .users-online span.usersonlinetitle
+{
+    display: none;
+}
+
+
+/*
+-----------------------------------------------------------
+	General Styles
+-----------------------------------------------------------
+*/
+a, a:hover, a:focus, a:active
+{
+    outline: none;
+}
+h1, h2, h3
+{
+    margin: 0 0 0.5em;
+}
+h1
+{
+    font-size: 2em;
+}
+h2
+{
+    font-size: 1.5em;
+    font-weight: 400;
+}
+h3
+{
+    font-size: 1.3em;
+    font-weight: 400;
+}
+hr
+{
+    border: 1px solid #4D4D4D;
+    margin: 1.5em auto;
+}
+.btn-group-inverse .btn
+{
+    background: #222;
+    border: 1px solid #E6E6E6;
+    box-shadow: none;
+    color: #fff;
+    text-shadow: 0 -1px 0 #000;
+}
+.btn-group-inverse .active
+{
+    background: #E6E6E6;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333;
+    text-shadow: 0 -1px 0 #fff;
+}
+.mo-slider > div
+{
+    border: 1px solid #000;
+    background: #4d4d4d;
+}
+.mo-slider > div > a.ui-state-default
+{
+    background: #999;
+    border: 1px solid #999;
+    box-shadow: 0 0 0.5em #000;
+    outline: 0;
+}
+.form-actions
+{
+    border-top: 1px solid #999;
+    background: #4d4d4d;
+}
+section input, section textarea, section select
+{
+    background: #ccc !important;
+}
+.btn-link
+{
+    color: #ccc;
+    text-shadow: none;
+}
+.btn-link:hover, .btn-link:focus, .btn-link:active
+{
+    color: #fff;
+}
+.progress
+{
+    border: 1px solid #D3D3D3;
+    clear: both;
+    color: #000000;
+    display: none;
+}
+.progress .bar
+{
+    float: none;
+    width: 0%;
+}
+.progress .progress-label {
+    float: left;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-left: 40%;
+    text-shadow: 1px 1px 0 #fff;
+}
+img
+{
+    display: block;
+    vertical-align: none;
+}
+.ui-widget-content
+{
+    background: none;
+}
+.invisible
+{
+    float: left;
+    height: 0 !important;
+    visibility: hidden;
+    width: 0 !important;
+}
+ul.tagit
+{
+    border-color: #3071B0;
+    margin-left: 0;
+}
+ul.tagit input
+{
+    background: transparent !important;
+    color: #ccc;
+}
+
+
+/*
+-----------------------------------------------------------
+	Container Layout
+-----------------------------------------------------------
+*/
+div.content .container
+{
+    background: #1B1B1B;
+    border: 0.06em solid #2B2B2B;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.5em #666666;
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#00FFFFFF',EndColorStr='#00EAEAEA',GradientType=0);
+    margin: 0.5em auto;
+    min-height: 31.25em;
+}
+div.content .container .content-padding
+{
+    color: #999;
+    margin: 0.5em;
+    text-shadow: 0 1px 0 #000;
+}
+div.content .container .content-padding-small
+{
+    margin: 0.5em;
+}
+div.content .bar-action
+{
+    background: #EAEAEA;
+    background: linear-gradient(#EAEAEA, #FFFFFF);
+    border: 0.06em solid #B8B8B6;
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#00EAEAEA',EndColorStr='#00FFFFFF',GradientType=0);
+    min-height: 3em;
+}
+.nav-webtv
+{
+    margin-bottom: 0;
+}
+.nav-webtv li a
+{
+    margin: 0 1em;
+    padding: 0;
+}
+#search_video
+{
+    margin: 5px 0;
+}
+
+
+/*
+-----------------------------------------------------------
+	Home Styles
+-----------------------------------------------------------
+*/
+div.modal, div.modal-body
+{
+    max-height: none;
+    overflow: visible;
+    width: auto;
+}
+section.channels
+{
+    margin: 0 auto;
+    max-width: 1150px;
+}
+section.channels article.ui-state-highlight
+{
+    height: 182px;
+    vertical-align: top;
+    width: 200px;
+}
+section.channels article
+{
+    background: #121212;
+    border: 5px solid #121212;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 6px 1px #000;
+    display: inline-block;
+    margin: 0 20px 20px 0;
+}
+section.channels article .video
+{
+    cursor: pointer;
+    height: 150px;
+    width: 200px;
+}
+section.channels article .video-actions
+{
+    margin: 8px auto 4px;
+    text-align: center;
+}
+
+
+/*
+-----------------------------------------------------------
+	Manage-Channel Styles
+-----------------------------------------------------------
+*/
+section.manage-channel .cover-image, section.manage-videos .cover-image
+{
+    background: #121212;
+    border: 5px solid #121212;
+    box-shadow: 0 0 6px 1px #000;
+    height: 150px;
+    width: 200px;
+}
+section.manage-catalogue #catalogue_price
+{
+    width: 40%;
+}
+section.manage-catalogue .catalogue-duration
+{
+    margin-left: 0.5em;
+}
+section.manage-catalogue .catalogue-duration .mo-slider
+{
+    float: left;
+    margin-top: 0.3em;
+    width: 65%;
+}
+section.manage-catalogue .catalogue-duration small
+{
+    float: right;
+    margin-top: 0.3em;
+    width: 5em;
+}
+section.manage-catalogue .catalogue-duration input
+{
+    float: right;
+    margin: 0 0.5em 0.5em;
+    text-align: center;
+    width: 2em;
+}
+.manage-videos-title
+{
+    margin-top: 3em;
+}
+section.manage-videos
+{
+    background-color: #121212;
+    box-shadow: 0 0 6px 1px #000;
+    margin: 0 auto 1em;
+    padding: 1em;
+}
+section.manage-videos .control-group
+{
+    margin-bottom: 0.5em;
+}
+
+/*
+-----------------------------------------------------------
+	View Channel and View Video Styles
+-----------------------------------------------------------
+*/
+.channel-playlist
+{
+    background-color: #2B2B2B;
+    clear: both;
+}
+section.channel-player > div {
+    height: 0 !important;
+    padding-bottom: 56.25%;
+    max-width: 720px;
+    position: relative;
+    width: 100% !important;
+    z-index: 1;
+}
+section.channel-player > div > img, section.channel-player > div > video, section.channel-player > div iframe, section.channel-player > div object, section.channel-player > div embed {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.row-fluid section.channel-videos
+{
+    margin-left: 2%;
+}
+section.channel-videos > div
+{
+    margin: 0 auto;
+    padding: 0 0.5em;
+}
+section.channel-videos > div.videos-scroll
+{
+    height: 20em;
+    margin: 0 auto;
+}
+section.channel-videos ul li
+{
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #666;
+    cursor: pointer;
+    padding: 8px 0;
+}
+section.channel-videos ul li figure
+{
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    width: 80%;
+}
+section.channel-videos ul li:first-child
+{
+    border-top-color: transparent;
+}
+section.channel-videos ul li:last-child
+{
+    border-bottom-color: transparent;
+}
+section.channel-videos ul li:hover
+{
+    background-color: #353535;
+    border-color: #353535;
+}
+section.channel-videos ul li.active
+{
+    background-color: #4f4f4f;
+    border-color: #4f4f4f;
+}
+section.channel-videos ul li figure img
+{
+    background: #121212;
+    border: 2px solid #121212;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0.25em 0.5em;
+    vertical-align: top;
+    width: 18%;
+}
+section.channel-videos ul li figure figcaption
+{
+    color: #6e6e6e;
+    display: inline-block;
+    margin-top: 0.5em;
+    vertical-align: top;
+    text-shadow: 0 1px 0 #000;
+    width: 72%;
+}
+section.channel-videos ul li figure figcaption h3
+{
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin-bottom: 5px;
+}
+section.channel-videos ul li figure figcaption p
+{
+    color: #666;
+    margin-bottom: 5px;
+}
+section.channel-videos ul li.active figure figcaption p
+{
+    color: #fff;
+}
+section.channel-videos ul li .facebook
+{
+    height: 100%;
+    display: inline-block;
+    margin-top: 0em;
+    max-width: 13%;
+    width: 50px;
+}
+section.channel-videos ul li .facebook:hover, section.channel-videos ul li .facebook:focus, section.channel-videos ul li .facebook:active
+{
+    background: none;
+}
+section.channel-videos ul li .facebook img
+{
+    width: 100%;
+}
+section.channel-videos ul li .video-actions
+{
+    display: inline-block;
+    margin-left: 0.5em;
+}
+
+
+/*
+-----------------------------------------------------------
+	Edit Video Styles
+-----------------------------------------------------------
+*/
+section.edit-video .cover-image
+{
+    background: #121212;
+    border: 5px solid #121212;
+    box-shadow: 0 0 6px 1px #000;
+    cursor: pointer;
+    height: 150px;
+    margin: 0 auto;
+    width: 200px;
+}
+section.edit-video .control-group
+{
+    margin-bottom: 0.5em;
+}
+section.edit-video .progress
+{
+    margin-top: 1em;
+}
