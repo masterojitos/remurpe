@@ -45,53 +45,72 @@ h1, h2, h3, h3, h4, h5, h6
     text-shadow: 1px 1px 1px #FFF;
     vertical-align: middle;
 }
-.container-poll section.personal-data
+.container-poll section
 {
     background-color: #D8F6A6;
 }
-.container-poll section.personal-data h3
+.container-poll section h3
 {
     background-color: #fff;
     line-height: 50px;
     padding-left: 10px;
 }
-.container-poll section.personal-data p
+.container-poll section p
 {
     padding-left: 10px;
     margin: 0.5em 0;
 }
-.container-poll section.personal-data label
+.container-poll section label
 {
     display: inline-block;
     padding-left: 10px;
-    width: 25%;
+    width: 20%;
 }
-.container-poll section.personal-data input
+.container-poll section input, .container-poll section textarea
 {
     display: inline-block;
     padding-left: 10px;
 }
-.container-poll section.personal-data p > .input-full
+.container-poll section p > .input-full
 {
-    width: 68%;
+    width: 73%;
 }
-.container-poll section.personal-data p > select.input-full
+.container-poll section p > select.input-full
 {
-    width: 70%;
+    width: 75%;
 }
-.container-poll section.personal-data p > small.input-help
+.container-poll section p > small.input-help
 {
     color: red;
 }
-.container-poll section.personal-data p > input.input-large
+.container-poll section p > input.input-large
 {
-    width: 35%;
+    width: 40%;
 }
 .container-poll section.personal-data p > span > label
 {
+    padding-left: 0;
     width: auto;
 }
 .container-poll section.personal-data p > span > input.input-small
 {
-    width: 23%;
+    width: 18%;
+}
+.container-poll section.formation-profession p > span > label
+{
+    background-color: #fff;
+    line-height: 1.5em;
+    padding-left: 30px;
+    vertical-align: top;
+    width: 17%;
+}
+.container-poll section.formation-profession p > label + span > label
+{
+    background-color: transparent;
+    padding-left: 0;
+    width: auto;
+}
+.container-poll section.formation-profession p > span > input.input-small
+{
+    width: 16%;
 }

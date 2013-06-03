@@ -1,5 +1,6 @@
 <?php
 include "includes/ubigeo.php";
+$profesiones = array();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -81,6 +82,54 @@ include "includes/ubigeo.php";
                         <input type="email" name="recomendado_email" id="recomendado_email" placeholder="Email del Recomendado" class="input-small" />
                         <label for="recomendado_telefono">Teléfono</label>
                         <input type="tel" name="recomendado_telefono" id="recomendado_telefono" placeholder="Teléfono del Recomendado" class="input-small" />
+                    </span>
+                </p>
+            </section>
+            <section class="formation-profession">
+                <h3>Formación / Profesión</h3>
+                <p>
+                    <label for="nivel_estudios">Nivel de estudios</label>
+                    <input type="text" name="nivel_estudios" id="nivel_estudios" placeholder="Nivel de estudios" class="input-full" />
+                </p>
+                <p>
+                    <label for="profesion">Profesión</label>
+                    <select name="profesion" id="profesion" class="input-full">
+                        <option value="">Seleccione una profesión</option>
+                        <?php
+                        foreach ($profesiones as $profesion) {
+                            echo '<option value="' . $profesion . '">' . $profesion . '</option>';
+                        }
+                        ?>
+                    </select>
+                </p>
+                <p>
+                    <label>Experiencia laboral</label>
+                </p>
+                <p>
+                    <span><label for="experiencia_3_ultimos_anos">3 Últimos años</label></span>
+                    <textarea name="experiencia_3_ultimos_anos" id="experiencia_3_ultimos_anos" placeholder="3 Últimos años" class="input-full"></textarea>
+                </p>
+                <p>
+                    <span><label for="experiencia_gobiernos_locales">Gobiernos Locales</label></span>
+                    <textarea name="experiencia_gobiernos_locales" id="experiencia_gobiernos_locales" placeholder="Gobiernos Locales" class="input-full"></textarea>
+                </p>
+                <p>
+                    <span><label for="experiencia_gobiernos_regionales">Gobiernos Regionales</label></span>
+                    <textarea name="experiencia_gobiernos_regionales" id="experiencia_gobiernos_regionales" placeholder="Gobiernos Regionales" class="input-full"></textarea>
+                </p>
+                <p>
+                    <label for="referencias">Referencias</label>
+                    <input type="text" name="referencias" id="referencias" placeholder="Referencias" class="input-full" />
+                </p>
+                <p>
+                    <label></label>
+                    <span>
+                        <label for="referencia_email">Email</label>
+                        <input type="email" name="referencia_email" id="referencia_email" placeholder="Email de la referencia" class="input-small" />
+                        <label for="referencia_telefono">Teléfono</label>
+                        <input type="tel" name="referencia_telefono" id="referencia_telefono" placeholder="Teléfono de la referencia" class="input-small" />
+                        <label for="referencia_rpm">RPM</label>
+                        <input type="tel" name="referencia_rpm" id="referencia_rpm" placeholder="RPM de la referencia" class="input-small" />
                     </span>
                 </p>
             </section>
