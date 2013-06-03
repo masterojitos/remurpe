@@ -1,3 +1,6 @@
+<?php
+include "includes/ubigeo.php";
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -32,11 +35,11 @@
                 </p>
                 <p>
                     <label for="telefono">Teléfono</label>
-                    <input type="text" name="telefono" id="telefono" placeholder="Telefono" class="input-large" />
+                    <input type="tel" name="telefono" id="telefono" placeholder="Telefono" class="input-large" />
                 </p>
                 <p>
                     <label for="email">Email</label>
-                    <input type="text" name="email" id="email" placeholder="Email" class="input-large" />
+                    <input type="email" name="email" id="email" placeholder="Email" class="input-large" />
                 </p>
                 <p>
                     <label for="fotografia"">Fotografia</label>
@@ -45,9 +48,14 @@
                     <small class="input-help"> (Solo formatos jpg)</small>
                 </p>
                 <p>
-                    <label for="departmento">Departamento</label>
-                    <select name="departmento" id="departmento" class="input-full">
+                    <label for="departamento">Departamento</label>
+                    <select name="departamento" id="departamento" class="input-full">
                         <option value="">Seleccione un departamento</option>
+                        <?php
+                        foreach ($departamentos as $departamento) {
+                            echo '<option value="' . $departamento . '">' . $departamento . '</option>';
+                        }
+                        ?>
                     </select>
                 </p>
                 <p>
@@ -70,13 +78,14 @@
                     <label></label>
                     <span>
                         <label for="recomendado_email">Email</label>
-                        <input type="text" name="recomendado_email" id="recomendado_email" placeholder="Email del Recomendado" class="input-small" />
+                        <input type="email" name="recomendado_email" id="recomendado_email" placeholder="Email del Recomendado" class="input-small" />
                         <label for="recomendado_telefono">Teléfono</label>
-                        <input type="text" name="recomendado_telefono" id="recomendado_telefono" placeholder="Teléfono del Recomendado" class="input-small" />
+                        <input type="tel" name="recomendado_telefono" id="recomendado_telefono" placeholder="Teléfono del Recomendado" class="input-small" />
                     </span>
                 </p>
             </section>
             <input type="file" name="fotografia" class="mo_file_trigger">
+            <span id="variables" data-provincias='<?php echo json_encode($provincias); ?>' data-distritos='<?php echo json_encode($distritos); ?>'></span>
         </form>
         <script src="js/respond.min.js"></script>
         <script src="js/prefixfree.min.js"></script>

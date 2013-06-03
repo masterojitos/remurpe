@@ -42,7 +42,7 @@
     box-shadow: 0 0 5px #0058A2;
 }
 
-.MOForm input[type="text"], .MOForm input[type="password"] {
+.MOForm input[type="text"], .MOForm input[type="password"], .MOForm input[type="email"], .MOForm input[type="tel"] {
     width: 250px;
     height: 18px;
     border-radius: 5px;
