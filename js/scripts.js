@@ -1,6 +1,10 @@
 $(document).on("ready", function() {
     var $this;
     
+    $('#reglamento').on("click", function(e) {
+        e.preventDefault();
+    });
+    
     var moFile = function(e) {
         e.preventDefault();
         $(".mo_file_trigger[name='" + $(this).data("filename") + "']").trigger("click");
@@ -47,9 +51,11 @@ $(document).on("ready", function() {
         $('#distrito').append(options_distritos).removeAttr('disabled');
     });
 
-    $("form").on("submit", function(e) {
-        e.preventDefault();
-        $this = $(this);
-        $("html").animate({scrollTop : 0}, 500);
+    $("form").on("submit", function() {
+        if ($('#condiciones_no').is(":checked")) {
+            $("html").animate({ scrollTop : $('#condiciones_no').parent().parent().position().top }, 500);
+            return false;
+        }
+        return true;
     });
 });

@@ -2,6 +2,7 @@ body
 {
     background: #fff;
     color: #333;
+    font-family: Arial;
     font-size: 16px;
 }
 a, a:hover, a:focus, a:active
@@ -21,8 +22,9 @@ h1, h2, h3, h3, h4, h5, h6
 .container-poll .title-poll
 {
     background-color: #D8FBD8;
-    height: 50px;
+    min-height: 50px;
     padding: 0 10px;
+    overflow: hidden;
 }
 .container-poll .title-poll h2
 {
@@ -30,7 +32,7 @@ h1, h2, h3, h3, h4, h5, h6
     display: inline-block;
     line-height: 50px;
 }
-.container-poll .title-poll button
+.container-poll .title-poll a
 {
     background-color: #FF0;
     border: 1px solid #000;
@@ -39,7 +41,8 @@ h1, h2, h3, h3, h4, h5, h6
     color: #333;
     float: right;
     font-weight: 700;
-    height: 30px;
+    min-height: 30px;
+    line-height: 30px;
     margin: 10px 0;
     padding: 0 2em;
     text-shadow: 1px 1px 1px #FFF;
@@ -48,6 +51,8 @@ h1, h2, h3, h3, h4, h5, h6
 .container-poll section
 {
     background-color: #D8F6A6;
+    clear: both;
+    overflow: hidden;
 }
 .container-poll section h3
 {
@@ -63,8 +68,17 @@ h1, h2, h3, h3, h4, h5, h6
 .container-poll section label
 {
     display: inline-block;
+    font-weight: 700;
     padding-left: 10px;
     width: 20%;
+}
+.container-poll section label.normal-text
+{
+    font-weight: 400;
+}
+.container-poll section label.label-full
+{
+    width: 100%;
 }
 .container-poll section input, .container-poll section textarea
 {
@@ -89,6 +103,7 @@ h1, h2, h3, h3, h4, h5, h6
 }
 .container-poll section.personal-data p > span > label
 {
+    font-weight: 400;
     padding-left: 0;
     width: auto;
 }
@@ -99,6 +114,7 @@ h1, h2, h3, h3, h4, h5, h6
 .container-poll section.formation-profession p > span > label
 {
     background-color: #fff;
+    font-weight: 400;
     line-height: 1.5em;
     padding-left: 30px;
     vertical-align: top;
@@ -107,10 +123,66 @@ h1, h2, h3, h3, h4, h5, h6
 .container-poll section.formation-profession p > label + span > label
 {
     background-color: transparent;
+    font-weight: 400;
     padding-left: 0;
+    vertical-align: middle;
     width: auto;
 }
 .container-poll section.formation-profession p > span > input.input-small
 {
     width: 16%;
+}
+.container-poll section.formation-profession div.column
+{
+    box-shadow: 0 0 3px #000;
+    float: left;
+    margin: 10px 20px;
+    padding: 10px;
+    vertical-align: top;
+    max-width: 300px;
+}
+.container-poll section.formation-profession div.row
+{
+    margin: 10px 20px 20px;
+    padding: 10px;
+    max-width: none;
+}
+.container-poll section.formation-profession div.column h4
+{
+    text-shadow: 2px 2px 0 #fff;
+    text-decoration: underline;
+}
+.container-poll section.formation-profession div.column h4, .container-poll section.formation-profession div.column label
+{
+    font-weight: 400;
+    display: inline;
+}
+.container-poll section.formation-profession div.column ul
+{
+    margin: 0;
+    padding: 10px 0px;
+}
+.container-poll section.formation-profession div.column ul li
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.container-poll section.formation-profession div.row ul li
+{
+    float: left;
+    width: 140px;
+}
+.container-poll section.formation-profession div.column ul li label
+{
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+}
+.container-poll section.formation-profession p.row-submit
+{
+    background-color: #fff;
+    margin: 0;
+    padding: 20px 20px 10px;
+    text-align: right;
 }
