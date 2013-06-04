@@ -13,8 +13,10 @@ class Connection {
     private function __construct()
     {
         $this->Link = @mysql_pconnect("localhost", "root", "");
+        //$this->Link = @mysql_pconnect("localhost:3306", "bazabache", "BAzabache2013");
         if (!$this->Link) throw new Exception("No se pudo conectar con el servidor: " . $this->error());
         if (!mysql_select_db("remurpe", $this->Link)) throw new Exception("No se pudo conectar a la base de datos: " . $this->error());
+        //if (!mysql_select_db("remurpe_general", $this->Link)) throw new Exception("No se pudo conectar a la base de datos: " . $this->error());
         $this->query("SET NAMES utf8");
     }
 
