@@ -30,23 +30,42 @@ h1, h2, h3, h3, h4, h5, h6
 {
     color: #F00;
     display: inline-block;
-    line-height: 50px;
+    line-height: 64px;
 }
-.container-poll .title-poll a
+.container-poll .title-poll ul.social-networks
 {
-    background-color: #FF0;
-    border: 1px solid #000;
-    border-radius: 0.5em;
-    box-shadow: 0 4px 18px #C8C8C8;
-    color: #333;
     float: right;
-    font-weight: 700;
-    min-height: 30px;
-    line-height: 30px;
-    margin: 10px 0;
-    padding: 0 2em;
-    text-shadow: 1px 1px 1px #FFF;
-    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+.container-poll .title-poll ul.social-networks li
+{
+    display: inline-block;
+    list-style-type: none;
+    height: 64px;
+    width: 64px;
+}
+.container-poll .title-poll ul.social-networks li a
+{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.container-poll .title-poll ul.social-networks li a.youtube
+{
+    background-image: url(../img/youtube.png);
+}
+.container-poll .title-poll ul.social-networks li a.skype
+{
+    background-image: url(../img/skype.png);
+}
+.container-poll .title-poll ul.social-networks li a.facebook
+{
+    background-image: url(../img/facebook.png);
+}
+.container-poll .title-poll ul.social-networks li a.twitter
+{
+    background-image: url(../img/twitter.png);
 }
 .container-poll section
 {
@@ -64,6 +83,22 @@ h1, h2, h3, h3, h4, h5, h6
 {
     padding-left: 10px;
     margin: 0.5em 0;
+}
+.container-poll a#reglamento
+{
+    background-color: #FF0;
+    border: 1px solid #000;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 18px #C8C8C8;
+    color: #333;
+    display: inline-block;
+    font-weight: 700;
+    min-height: 30px;
+    line-height: 30px;
+    margin: 10px 20px;
+    padding: 0 2em;
+    text-shadow: 1px 1px 1px #FFF;
+    vertical-align: middle;
 }
 .container-poll section label
 {
@@ -107,7 +142,16 @@ h1, h2, h3, h3, h4, h5, h6
     padding-left: 0;
     width: auto;
 }
-.container-poll section.personal-data p > span > input.input-small
+.container-poll section p > span.span-block
+{
+    display: inline-block;
+    width: 75%;
+}
+.container-poll section p > span > .input-full
+{
+    width: 98%;
+}
+.container-poll section.personal-data p > span > .input-small
 {
     width: 18%;
 }

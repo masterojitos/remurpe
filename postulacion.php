@@ -73,7 +73,12 @@ if (isset($_POST['submit'])) {
         <form class="container-poll MOForm" method="POST" enctype="multipart/form-data">
             <div class="title-poll">
                 <h2>Consultas / preguntas</h2>
-                <a id="reglamento">Reglamento para postular</a>
+                <ul class="social-networks">
+                    <li><a href="" class="youtube"></a></li>
+                    <li><a href="" class="skype"></a></li>
+                    <li><a href="" class="facebook"></a></li>
+                    <li><a href="" class="twitter"></a></li>
+                </ul>
             </div>
             <section class="personal-data">
                 <h3>Datos personales</h3>
@@ -127,12 +132,9 @@ if (isset($_POST['submit'])) {
                     </select>
                 </p>
                 <p>
-                    <label for="recomendado_nombre">Recomendado por</label>
-                    <input type="text" name="recomendado_nombre" id="recomendado_nombre" placeholder="Recomendado por" maxlength="100" class="input-full" />
-                </p>
-                <p>
-                    <label></label>
-                    <span>
+                    <label for="recomendado_nombre">Recomendado por el siguiente aliado de REMURPE</label>
+                    <span class="span-block">
+                        <input type="text" name="recomendado_nombre" id="recomendado_nombre" placeholder="Recomendado por" maxlength="100" class="input-full" />
                         <label for="recomendado_email">Email</label>
                         <input type="email" name="recomendado_email" id="recomendado_email" placeholder="Email del Recomendado" class="input-small" />
                         <label for="recomendado_telefono">Teléfono</label>
@@ -199,6 +201,7 @@ if (isset($_POST['submit'])) {
                         <label for="condiciones_si">Sí</label>
                         <input type="radio" name="condiciones" id="condiciones_no" value="No" />
                         <label for="condiciones_no">No</label>
+                        <a id="reglamento">Requisitos Necesarios</a>
                     </span>
                 </p>
                 <p>&nbsp;</p>
