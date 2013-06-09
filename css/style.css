@@ -30,42 +30,12 @@ h1, h2, h3, h3, h4, h5, h6
 {
     color: #F00;
     display: inline-block;
-    line-height: 64px;
+    line-height: 50px;
 }
-.container-poll .title-poll ul.social-networks
+.container-poll .title-poll ul.social-icons
 {
     float: right;
-    margin: 0;
-    padding: 0;
-}
-.container-poll .title-poll ul.social-networks li
-{
-    display: inline-block;
-    list-style-type: none;
-    height: 64px;
-    width: 64px;
-}
-.container-poll .title-poll ul.social-networks li a
-{
-    display: block;
-    height: 100%;
-    width: 100%;
-}
-.container-poll .title-poll ul.social-networks li a.youtube
-{
-    background-image: url(../img/youtube.png);
-}
-.container-poll .title-poll ul.social-networks li a.skype
-{
-    background-image: url(../img/skype.png);
-}
-.container-poll .title-poll ul.social-networks li a.facebook
-{
-    background-image: url(../img/facebook.png);
-}
-.container-poll .title-poll ul.social-networks li a.twitter
-{
-    background-image: url(../img/twitter.png);
+    margin: 6px 0;
 }
 .container-poll section
 {

@@ -66,6 +66,7 @@ if (isset($_POST['submit'])) {
         <title>Postulación a Remurpe</title>
         <link rel="stylesheet" fonohref="css/normalize.css" />
         <link rel="stylesheet" href="css/MOStyles.css" />
+        <link rel="stylesheet" href="css/social-icons.css" />
         <link rel="stylesheet" href="css/style.css" />
         <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     </head>
@@ -73,11 +74,11 @@ if (isset($_POST['submit'])) {
         <form class="container-poll MOForm" method="POST" enctype="multipart/form-data">
             <div class="title-poll">
                 <h2>Consultas / preguntas</h2>
-                <ul class="social-networks">
-                    <li><a href="" class="youtube"></a></li>
-                    <li><a href="" class="skype"></a></li>
-                    <li><a href="" class="facebook"></a></li>
-                    <li><a href="" class="twitter"></a></li>
+                <ul class="social-icons color">
+                    <li><a href="http://www.youtube.com/user/remurpe" class="youtube">Youtube</a></li>
+                    <li><a href="" class="skype">Skype</a></li>
+                    <li><a href="https://www.facebook.com/remurpe.prensa" class="facebook">Facebook</a></li>
+                    <li><a href="https://twitter.com/remurpe" class="twitter">Twitter</a></li>
                 </ul>
             </div>
             <section class="personal-data">
