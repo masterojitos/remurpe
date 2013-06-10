@@ -48,16 +48,37 @@ $(document).on("ready", function() {
     });
     
     var checkbox_name, checkboxs_selector;
+    var checkall_checked = false;
     $(".checkbox-checkall").on("click", function() {
         $this = $(this);
         checkbox_name = $("." + $this.data("trigger")).data("checkname");
         checkboxs_selector = "." + $this.data("trigger") + " input[type=checkbox][name^=" + checkbox_name + "]";
         $("." + $this.data("trigger") + " .checkall").prop("checked", ($(checkboxs_selector).length === $(checkboxs_selector + ":checked").length));
+        if (($(checkboxs_selector).length === $(checkboxs_selector + ":checked").length)) {
+            $("." + $this.data("trigger") + " .checkall").toggleClass("on");
+            checkall_checked = false;
+        } else if ($("." + $this.data("trigger") + " .checkall").not(":checked") && !checkall_checked) {
+            $("." + $this.data("trigger") + " .checkall").toggleClass("on");
+            checkall_checked = true;
+        }
     });
     $(document).on("click", ".checkall", function() {
         $this = $(this);
         checkbox_name = $("." + $this.data("trigger")).data("checkname");
-        $("." + $this.data("trigger") + " input[type=checkbox][name^=" + checkbox_name + "]").prop("checked", $this.is(":checked"));
+        $("." + $this.data("trigger") + " input[type=checkbox][name^=" + checkbox_name + "]").prop("checked", $this.is(":checked")).parent().toggleClass("on");
+    });
+    
+    
+    //checkbox and radio styles
+    $("label.checkbox span").on("click", function() {
+        $(this).parent().toggleClass("on");
+    });
+    $("label.checkbox").on("click", function() {
+        $(this).toggleClass("on");
+    });
+    $("label.radio").on("click", function() {
+        $("label.radio").removeClass("on");
+        $(this).addClass("on");
     });
 
     $("form").on("submit", function() {

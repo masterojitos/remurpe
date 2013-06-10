@@ -213,17 +213,17 @@ if (isset($_POST['submit'])) {
                 $i = 0;
                 foreach ($especializaciones as $espececializacion_categoria => $especializacion_items) {
                 echo '<div class="column especializacion-' . ++$i . '" data-checkname="especializacion">
-                    <label>
+                    <label class="checkbox">
                         <input type="checkbox" class="checkall" data-trigger="especializacion-' . $i . '" />
-                        <h4>' . $espececializacion_categoria . '</h4>
+                        <span><h4>' . $espececializacion_categoria . '</h4></span>
                     </label>
                     <ul>';
                     foreach ($especializacion_items as $especializacion) {
                         $especializacion = ucwords(strtolower($especializacion));
                         echo '<li>
-                            <label>
+                            <label class="checkbox">
                                 <input type="checkbox" name="especializacion[' . $espececializacion_categoria . '][]" value="' . $especializacion . '" class="checkbox-checkall" data-trigger="especializacion-' . $i . '" />
-                                ' . $especializacion . '
+                                <span>' . $especializacion . '</span>
                             </label>
                         </li>';
                     }
@@ -235,18 +235,18 @@ if (isset($_POST['submit'])) {
                     <label class="label-full">Zonas de intervención</label>
                 </p>
                 <div class="column row zonas_intervencion" data-checkname="intervencion">
-                    <label>
+                    <label class="checkbox">
                         <input type="checkbox" class="checkall" data-trigger="zonas_intervencion" />
-                        <h4>Todas</h4>
+                        <span><h4>Todas</h4></span>
                     </label>
                     <ul>
                     <?php
                     foreach ($departamentos as $departamento) {
                         $departamento = ucwords(strtolower($departamento));
                         echo '<li>
-                            <label>
+                            <label class="checkbox">
                                 <input type="checkbox" name="intervencion[]" value="' . $departamento . '" class="checkbox-checkall" data-trigger="zonas_intervencion" />
-                                ' . $departamento . '
+                                <span>' . $departamento . '</span>
                             </label>
                         </li>';
                     }
