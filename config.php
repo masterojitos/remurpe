@@ -2,6 +2,8 @@
 require_once "includes/Connection.class.php";
 $cn = Connection::getInstance();
 
+require "includes/functions.php";
+
 require "includes/ubigeo.php";
 
 $profesiones = array();

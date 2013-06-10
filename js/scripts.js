@@ -30,7 +30,7 @@ $(document).on("ready", function() {
         $('#distrito').attr("disabled", "disabled");
         for (provincia_index in provincias[$this]) {
             provincia_value = provincias[$this][provincia_index];
-            options_provincias.push($('<option />', { value: provincia_value, text: provincia_value }));
+            options_provincias.push($('<option />', {value: provincia_value, text: provincia_value}));
         }
         $('#provincia').append(options_provincias).removeAttr('disabled');
     });
@@ -46,14 +46,26 @@ $(document).on("ready", function() {
         }
         for (distrito_index in distritos[$('#departamento').val()][$this]) {
             distrito_value = distritos[$('#departamento').val()][$this][distrito_index];
-            options_distritos.push($('<option />', { value: distrito_value, text: distrito_value }));
+            options_distritos.push($('<option />', {value: distrito_value, text: distrito_value}));
         }
         $('#distrito').append(options_distritos).removeAttr('disabled');
+    });
+    
+    //checkbox and radio styles
+    $("label.checkbox span").on("click", function() {
+        $(this).parent().toggleClass("on");
+    });
+    $("label.checkbox").on("click", function() {
+        $(this).toggleClass("on");
+    });
+    $("label.radio").on("click", function() {
+        $("label.radio").removeClass("on");
+        $(this).addClass("on");
     });
 
     $("form").on("submit", function() {
         if ($('#condiciones_no').is(":checked")) {
-            $("html").animate({ scrollTop : $('#condiciones_no').parent().parent().position().top }, 500);
+            $("html").animate({scrollTop : $('#condiciones_no').parent().parent().position().top}, 500);
             return false;
         }
         return true;
