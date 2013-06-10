@@ -2,95 +2,95 @@
 /* CSS Document */
 
 body {
-	color: #333;
-	font: 11px Verdana, Arial, sans-serif
+    color: #333;
+    font: 11px Verdana, Arial, sans-serif
 }
 
 table, form {
-	text-align: left
+    text-align: left
 }
 
 p{
-	margin: 10px 0;
+    margin: 10px 0;
 }
 
 small{
-	font-size: 9px
+    font-size: 9px
 }
 
 strong{
-	font-weight: 700
+    font-weight: 700
 }
 
 hr{
-	height: 1px;
-	border: none;
-	margin: 7px 0;
-	background-color: #ccc
+    height: 1px;
+    border: none;
+    margin: 7px 0;
+    background-color: #ccc
 }
 
 a {
-	color: #00AEEF;
-	text-decoration: none
+    color: #00AEEF;
+    text-decoration: none
 }
 
 a:hover {
-	color: #000
+    color: #000
 }
 
 input {
-	vertical-align: middle
+    vertical-align: middle
 }
 
 .space{
-	height: 20px;
-	display: block;
+    height: 20px;
+    display: block;
 }
 
 .left {
-	float: left !important
+    float: left !important
 }
 
 .right {
-	float: right !important
+    float: right !important
 }
 
 .clear {
-	clear: both !important
+    clear: both !important
 }
 
 .bold {
-	font-weight: 700 !important
+    font-weight: 700 !important
 }
 
 .normal {
-	font-weight: 400 !important
+    font-weight: 400 !important
 }
 
 .block {
-	display: block !important
+    display: block !important
 }
 
 .red{
-	color: #f00
+    color: #f00
 }
 
 .green{
-	color: #0f0
+    color: #0f0
 }
 
 .blue{
-	color: #00f
+    color: #00f
 }
 
 .lightblue{
-	color: #0171D6
+    color: #0171D6
 }
 
 .white{
-	color: #fff
+    color: #fff
 }
 
 .gray{
-	color: #ccc
+    color: #ccc
 }

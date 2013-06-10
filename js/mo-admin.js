@@ -140,7 +140,7 @@ function mo_list(mod){
                     "aoColumnDefs": [
                         {"mRender": 
                             function ( data, type, row ) {
-                                return '<a href="#" id="' + data + '" class="update" title="Ver detalle">' + data + '</a>';
+                                return '<a href="#" id="' + data + '" class="update no-background" title="Ver detalle">' + data + '</a>';
                             }, "aTargets": [ 0 ]},
 //                        { "bVisible": false, "aTargets": [ 3 ] }, 
                         {"sClass": "center", "aTargets": [ 0, 3 ]}

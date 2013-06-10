@@ -1,37 +1,18 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.9
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 10-06-2013 a las 13:36:30
--- Versión del servidor: 5.5.8
--- Versión de PHP: 5.3.5
+-- Tiempo de generaciÃ³n: 10-06-2013 a las 16:32:15
+-- VersiÃ³n del servidor: 5.5.24-log
+-- VersiÃ³n de PHP: 5.3.13
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 --
 -- Base de datos: `remurpe`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `configuration`
---
-
-CREATE TABLE IF NOT EXISTS `configuration` (
-  `name` varchar(100) DEFAULT NULL,
-  `email` varchar(255) NOT NULL,
-  `username` varchar(100) DEFAULT NULL,
-  `password` varchar(100) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Volcar la base de datos para la tabla `configuration`
---
-
-INSERT INTO `configuration` (`name`, `email`, `username`, `password`) VALUES
-('Remurpe', 'remurpe@remurpe.org.pe', 'remurpe', '12345');
 
 -- --------------------------------------------------------
 
@@ -67,12 +48,13 @@ CREATE TABLE IF NOT EXISTS `postulante` (
   `curriculum` varchar(100) NOT NULL,
   `fecha_creacion` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Volcar la base de datos para la tabla `postulante`
+-- Volcado de datos para la tabla `postulante`
 --
 
 INSERT INTO `postulante` (`id`, `nombre`, `apellido`, `dni`, `telefono`, `email`, `foto`, `departamento`, `provincia`, `distrito`, `recomendado_nombre`, `recomendado_email`, `recomendado_telefono`, `nivel_estudios`, `profesion`, `experiencia_3_ultimos_anos`, `experiencia_gobiernos_locales`, `experiencia_gobiernos_regionales`, `referencia_nombre`, `referencia_email`, `referencia_telefono`, `referencia_rpm`, `especializacion`, `intervencion`, `curriculum`, `fecha_creacion`) VALUES
-(1, 'Ricardo Gerald', 'Garcia Rodriguez', 46287426, 4294675, 'master.ojitos@gmail.com', '', 'CALLAO', 'CALLAO', 'CALLAO', 'Lisbeth Eleorreaga Lanchipa', 'liseleorreaga@gmail.com', 4294676, 'Superior', 'Ingeniería de Sistemas', 'a', 'b', 'c\r\nde\r\n', 'Hector Leon', 'hleon@gmail.com', 456, 0, 'a:2:{s:35:"POLITICAS PUBLICAS DESCENTRALIZADAS";a:2:{i:0;s:29:"Gestion De Politicas Publicas";i:1;s:26:"Planeamiento Institucional";}s:35:"POLITICAS SOCIALES DESCENTRALIZADAS";a:2:{i:0;s:5:"Salud";i:1;s:12:"Sanieamiento";}}', 'a:2:{i:0;s:6:"Callao";i:1;s:4:"Lima";}', '', '2013-06-10 06:24:57'),
-(2, 'Andres Sebastian', 'Garcia Rodriguez', 0, 4294630, 'andresgarciadev@gmail.com', '51b5cdbc7c4d5_SDC12262.JPG', 'AREQUIPA', 'CAYLLOMA', '', '', '', 0, '', 'Odontología', '', 'Niños del árbol\r\nfin.', '', '', '', 0, 0, 'a:2:{s:35:"POLITICAS SOCIALES DESCENTRALIZADAS";a:1:{i:0;s:9:"Educacion";}i:0;s:34:"GESTION DEL TERRITORIO Y AMBIENTAL";}', 'a:1:{i:0;s:5:"Todas";}', '51b5cdbc7c4d5_Curriculum Vitae.pdf', '2013-06-10 07:59:40');
+(1, 'Ricardo Gerald', 'Garcia Rodriguez', 46287426, 4294675, 'master.ojitos@gmail.com', '', 'CALLAO', 'CALLAO', 'CALLAO', 'Lisbeth Eleorreaga Lanchipa', 'liseleorreaga@gmail.com', 4294676, 'Superior', 'Ingenierï¿½a de Sistemas', 'a', 'b', 'c\r\nde\r\n', 'Hector Leon', 'hleon@gmail.com', 456, 0, 'a:2:{s:35:"POLITICAS PUBLICAS DESCENTRALIZADAS";a:2:{i:0;s:29:"Gestion De Politicas Publicas";i:1;s:26:"Planeamiento Institucional";}s:35:"POLITICAS SOCIALES DESCENTRALIZADAS";a:2:{i:0;s:5:"Salud";i:1;s:12:"Sanieamiento";}}', 'a:2:{i:0;s:6:"Callao";i:1;s:4:"Lima";}', '', '2013-06-10 11:24:57'),
+(2, 'Andres Sebastian', 'Garcia Rodriguez', 0, 4294630, 'andresgarciadev@gmail.com', '51b5cdbc7c4d5_SDC12262.JPG', 'AREQUIPA', 'CAYLLOMA', '', '', '', 0, '', 'Odontologï¿½a', '', 'Niï¿½os del ï¿½rbol\r\nfin.', '', '', '', 0, 0, 'a:2:{s:35:"POLITICAS SOCIALES DESCENTRALIZADAS";a:1:{i:0;s:9:"Educacion";}i:0;s:34:"GESTION DEL TERRITORIO Y AMBIENTAL";}', 'a:1:{i:0;s:5:"Todas";}', '51b5cdbc7c4d5_Curriculum Vitae.pdf', '2013-06-10 12:59:40'),
+(3, 'Joe', 'Robles', 8509, 0, 'joe.robles.pdj@gmail.com', '', 'CUSCO', 'CALCA', '', '', '', 0, '', '', '', 'NiÃ±os del Ã¡rbol.\r\nfinish.', '', '', '', 0, 0, 'a:2:{s:35:"POLITICAS PUBLICAS DESCENTRALIZADAS";a:2:{i:0;s:29:"Gestion De Politicas Publicas";i:1;s:24:"Planeamiento Territorial";}s:35:"POLITICAS SOCIALES DESCENTRALIZADAS";a:6:{i:0;s:9:"Educacion";i:1;s:5:"Salud";i:2;s:22:"Programas Alimentarios";i:3;s:12:"Sanieamiento";i:4;s:12:"Discapacidad";i:5;s:15:"Empleo Temporal";}}', 'a:1:{i:0;s:6:"Callao";}', '51b5f34912183_AISB08.pdf', '2013-06-10 15:39:53');

@@ -76,7 +76,7 @@ if (isset($_POST['submit'])) {
                 <h2>Consultas / preguntas</h2>
                 <ul class="social-icons color">
                     <li><a href="http://www.youtube.com/user/remurpe" class="youtube">Youtube</a></li>
-                    <li><a href="" class="skype">Skype</a></li>
+                    <li><a href="skype:beltus20?chat" class="skype">Skype</a></li>
                     <li><a href="https://www.facebook.com/remurpe.prensa" class="facebook">Facebook</a></li>
                     <li><a href="https://twitter.com/remurpe" class="twitter">Twitter</a></li>
                 </ul>
@@ -202,7 +202,7 @@ if (isset($_POST['submit'])) {
                         <label for="condiciones_si">Sí</label>
                         <input type="radio" name="condiciones" id="condiciones_no" value="No" />
                         <label for="condiciones_no">No</label>
-                        <a id="reglamento">Requisitos Necesarios</a>
+                        <a href="#" id="reglamento">Requisitos Necesarios</a>
                     </span>
                 </p>
                 <p>&nbsp;</p>
@@ -210,10 +210,11 @@ if (isset($_POST['submit'])) {
                     <label class="label-full">Áreas de especialización</label>
                 </p>
                 <?php
+                $i = 0;
                 foreach ($especializaciones as $espececializacion_categoria => $especializacion_items) {
-                echo '<div class="column">
+                echo '<div class="column especializacion-' . ++$i . '" data-checkname="especializacion">
                     <label>
-                        <input type="checkbox" name="especializacion[]" value="' . $espececializacion_categoria . '" />
+                        <input type="checkbox" class="checkall" data-trigger="especializacion-' . $i . '" />
                         <h4>' . $espececializacion_categoria . '</h4>
                     </label>
                     <ul>';
@@ -221,7 +222,7 @@ if (isset($_POST['submit'])) {
                         $especializacion = ucwords(strtolower($especializacion));
                         echo '<li>
                             <label>
-                                <input type="checkbox" name="especializacion[' . $espececializacion_categoria . '][]" value="' . $especializacion . '" />
+                                <input type="checkbox" name="especializacion[' . $espececializacion_categoria . '][]" value="' . $especializacion . '" class="checkbox-checkall" data-trigger="especializacion-' . $i . '" />
                                 ' . $especializacion . '
                             </label>
                         </li>';
@@ -233,9 +234,9 @@ if (isset($_POST['submit'])) {
                 <p>
                     <label class="label-full">Zonas de intervención</label>
                 </p>
-                <div class="column row">
+                <div class="column row zonas_intervencion" data-checkname="intervencion">
                     <label>
-                        <input type="checkbox" name="intervencion[]" value="Todas" />
+                        <input type="checkbox" class="checkall" data-trigger="zonas_intervencion" />
                         <h4>Todas</h4>
                     </label>
                     <ul>
@@ -244,7 +245,7 @@ if (isset($_POST['submit'])) {
                         $departamento = ucwords(strtolower($departamento));
                         echo '<li>
                             <label>
-                                <input type="checkbox" name="intervencion[]" value="' . $departamento . '" />
+                                <input type="checkbox" name="intervencion[]" value="' . $departamento . '" class="checkbox-checkall" data-trigger="zonas_intervencion" />
                                 ' . $departamento . '
                             </label>
                         </li>';

@@ -35,7 +35,7 @@ if(!empty($id)){
         <tr><td><strong>DNI:</strong></td><td><?php echo $row['dni']; ?></td></tr>
         <tr><td><strong>Teléfono:</strong></td><td><?php echo $row['telefono']; ?></td></tr>
         <tr><td><strong>Email:</strong></td><td><?php echo $row['email']; ?></td></tr>
-        <tr><td><strong>Fotografía:</strong></td><td><?php echo ($row['foto'] !== "" ? '<a href="../userfiles/' . $row['foto'] . '">Ver</a>' : ''); ?></td></tr>
+        <tr><td><strong>Fotografía:</strong></td><td><?php echo ($row['foto'] !== "" ? '<a href="../userfiles/' . $row['foto'] . '"><img src="../thumbnail.php?file=' . $row['foto'] . '" alt="' . $row['nombre'] . '" /></a>' : ''); ?></td></tr>
         <tr><td><strong>Departamento:</strong></td><td><?php echo $row['departamento']; ?></td></tr>
         <tr><td><strong>Provincia:</strong></td><td><?php echo $row['provincia']; ?></td></tr>
         <tr><td><strong>Distrito:</strong></td><td><?php echo $row['distrito']; ?></td></tr>
@@ -54,8 +54,8 @@ if(!empty($id)){
         <tr><td><?php echo $tab; ?><strong>RPM:</strong></td><td><?php echo $row['referencia_rpm']; ?></td></tr>
         <tr><td><strong>Áreas de especialización:</strong></td><td><?php echo $especializaciones_text; ?></td></tr>
         <tr><td><strong>Zonas de Intervención:</strong></td><td><?php echo $intervenciones_text; ?></td></tr>
-        <tr><td><strong>Curriculum Vitae:</strong></td><td><?php echo ($row['curriculum'] !== "" ? '<a href="./userfiles/' . $row['curriculum'] . '">Ver</a>' : ''); ?></td></tr>
+        <tr><td><strong>Curriculum Vitae:</strong></td><td><?php echo ($row['curriculum'] !== "" ? '<a href="../userfiles/' . $row['curriculum'] . '">Ver</a>' : ''); ?></td></tr>
         <tr><td><strong>Fecha de Registro:</strong></td><td><?php echo date("d-m-Y H:i:s", strtotime($row['fecha_creacion'])); ?></td></tr>
-        <tr><td colspan="2"><br /><input type="button" value="Retornar" class="list" /></td></tr>
+        <tr><td colspan="2"><br /><a href="./?mod=20">Retornar</a></td></tr>
     </table>
 </fieldset>

@@ -1,10 +1,6 @@
 $(document).on("ready", function() {
     var $this;
     
-    $('#reglamento').on("click", function(e) {
-        e.preventDefault();
-    });
-    
     var moFile = function(e) {
         e.preventDefault();
         $(".mo_file_trigger[name='" + $(this).data("filename") + "']").trigger("click");
@@ -51,16 +47,17 @@ $(document).on("ready", function() {
         $('#distrito').append(options_distritos).removeAttr('disabled');
     });
     
-    //checkbox and radio styles
-    $("label.checkbox span").on("click", function() {
-        $(this).parent().toggleClass("on");
+    var checkbox_name, checkboxs_selector;
+    $(".checkbox-checkall").on("click", function() {
+        $this = $(this);
+        checkbox_name = $("." + $this.data("trigger")).data("checkname");
+        checkboxs_selector = "." + $this.data("trigger") + " input[type=checkbox][name^=" + checkbox_name + "]";
+        $("." + $this.data("trigger") + " .checkall").prop("checked", ($(checkboxs_selector).length === $(checkboxs_selector + ":checked").length));
     });
-    $("label.checkbox").on("click", function() {
-        $(this).toggleClass("on");
-    });
-    $("label.radio").on("click", function() {
-        $("label.radio").removeClass("on");
-        $(this).addClass("on");
+    $(document).on("click", ".checkall", function() {
+        $this = $(this);
+        checkbox_name = $("." + $this.data("trigger")).data("checkname");
+        $("." + $this.data("trigger") + " input[type=checkbox][name^=" + checkbox_name + "]").prop("checked", $this.is(":checked"));
     });
 
     $("form").on("submit", function() {

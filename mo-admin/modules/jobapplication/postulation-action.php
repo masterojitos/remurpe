@@ -1,11 +1,11 @@
 <?php
 require_once "../config.php";
-switch($do){
+switch ($do) {
     case 6:
-        $aColumns = array( 'id', 'nombre', 'apellido', 'dni', 'email', 'fecha_creacion' );
+        $aColumns = array('id', 'nombre', 'apellido', 'dni', 'email', 'fecha_creacion');
         $sIndexColumn = "id";
         $sTable = "postulante";
-    	/*
+        /*
          * Paging
          */
         $sLimit = "";
@@ -30,7 +30,7 @@ switch($do){
                 $sOrder = "";
             }
         }
-    	/*
+        /*
          * Filtering
          * NOTE this does not match the built-in DataTables filtering which does it
          * word by word on any field. It's possible to do here, but concerned about efficiency
@@ -45,7 +45,7 @@ switch($do){
             $sWhere = substr_replace($sWhere, "", -3);
             $sWhere .= ')';
         }
-    	/* Individual column filtering */
+        /* Individual column filtering */
         for ($i = 0; $i < count($aColumns); $i++) {
             if (isset($_POST['bSearchable_' . $i]) && $_POST['bSearchable_' . $i] == "true" && $_POST['sSearch_' . $i] != '') {
                 if ($sWhere == "") {
@@ -56,7 +56,7 @@ switch($do){
                 $sWhere .= "`" . $aColumns[$i] . "` LIKE '%" . mysql_real_escape_string($_POST['sSearch_' . $i]) . "%' ";
             }
         }
-    	/*
+        /*
          * SQL queries
          * Get data to display
          */
@@ -64,7 +64,7 @@ switch($do){
 		FROM $sTable $sWhere $sOrder $sLimit";
 //        var_dump($sQuery);
         $rResult = $cn->query($sQuery);
-        
+
         /* Data set length after filtering */
         $sQuery = "SELECT FOUND_ROWS()";
 //        var_dump($sQuery);
@@ -78,8 +78,8 @@ switch($do){
         $rResultTotal = $cn->query($sQuery);
         $aResultTotal = $cn->fetch($rResultTotal);
         $iTotal = $aResultTotal[0];
-        
-    	/*
+
+        /*
          * Output
          */
         $output = array(
@@ -104,8 +104,7 @@ switch($do){
         }
 
         echo json_encode($output);
-        
+
         break;
 }
 exit;
-?>
