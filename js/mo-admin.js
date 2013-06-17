@@ -102,7 +102,9 @@ $(document).on("ready", function() {
     var profesion, especializacion, intervencion;
     $(document).on("click", "#clear_filter", function() {
         mo_list(20);
-        $('#content .datatable th:first').trigger("click");
+        setTimeout(function() {
+            $('#content .datatable th:first').trigger("click");
+        }, 1000);
     });
     var filters = [];
     $(document).on("click", "#special_filter", function() {
@@ -174,7 +176,7 @@ function mo_list(mod){
                         {"sClass": "center", "aTargets": [ 0, 3 ]}
                     ],
                     "oLanguage": {
-                        "sProcessing": "Bitte warten...",
+                        "sProcessing": "Procesando...",
                         "sLengthMenu": "Mostrar _MENU_ registros por pagina",
                         "sZeroRecords": "No se encontraron registros.",
                         "sInfo": "Mostrando del _START_ al _END_ de _TOTAL_ registros",
