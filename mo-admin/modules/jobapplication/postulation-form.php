@@ -35,7 +35,6 @@ if(!empty($id)){
         <tr><td><strong>DNI:</strong></td><td><?php echo $row['dni']; ?></td></tr>
         <tr><td><strong>Teléfono:</strong></td><td><?php echo $row['telefono']; ?></td></tr>
         <tr><td><strong>Email:</strong></td><td><?php echo $row['email']; ?></td></tr>
-        <tr><td><strong>Fotografía:</strong></td><td><?php echo ($row['foto'] !== "" ? '<a href="../userfiles/' . $row['foto'] . '"><img src="../thumbnail.php?file=' . $row['foto'] . '" alt="' . $row['nombre'] . '" /></a>' : ''); ?></td></tr>
         <tr><td><strong>Departamento:</strong></td><td><?php echo $row['departamento']; ?></td></tr>
         <tr><td><strong>Provincia:</strong></td><td><?php echo $row['provincia']; ?></td></tr>
         <tr><td><strong>Distrito:</strong></td><td><?php echo $row['distrito']; ?></td></tr>

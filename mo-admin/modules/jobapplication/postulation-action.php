@@ -2,7 +2,7 @@
 require_once "../config.php";
 switch ($do) {
     case 6:
-        $aColumns = array('id', 'nombre', 'apellido', 'dni', 'email', 'fecha_creacion');
+        $aColumns = array('id', 'nombre', 'apellido', 'dni', 'email', 'fecha_creacion', 'profesion', 'especializacion', 'intervencion');
         $sIndexColumn = "id";
         $sTable = "postulante";
         /*
@@ -53,7 +53,25 @@ switch ($do) {
                 } else {
                     $sWhere .= " AND ";
                 }
-                $sWhere .= "`" . $aColumns[$i] . "` LIKE '%" . mysql_real_escape_string($_POST['sSearch_' . $i]) . "%' ";
+                if ($i == 6) { //CUSTOMIZE FOR REMURPE
+                    $values_search = mysql_real_escape_string($_POST['sSearch_6']);
+                    $column_count = $row_count = 0;
+                    $mo_columns = explode("***", $values_search);
+                    foreach ($mo_columns as $column_i => $values_column) {
+                        if ($values_column != "") {
+                            if (0 === $column_count++) $sWhere .= "( ";
+                            $mo_rows = explode("|||", $values_column);
+                            foreach ($mo_rows as $value_search) {
+                                if ($row_count++ > 0) $sWhere .= " OR ";
+                                $sWhere .= "`" . $aColumns[$i] . "` LIKE '%" . $value_search . "%' ";
+                            }
+                        }
+                        $i++;
+                    }
+                    if ($column_count > 0) $sWhere .= ") ";
+                } else {
+                    $sWhere .= "`" . $aColumns[$i] . "` LIKE '%" . mysql_real_escape_string($_POST['sSearch_' . $i]) . "%' ";
+                }
             }
         }
         /*
@@ -62,7 +80,7 @@ switch ($do) {
          */
         $sQuery = "SELECT SQL_CALC_FOUND_ROWS `" . str_replace(" , ", " ", implode("`, `", $aColumns)) . "` 
 		FROM $sTable $sWhere $sOrder $sLimit";
-//        var_dump($sQuery);
+//        var_dump($sQuery);exit;
         $rResult = $cn->query($sQuery);
 
         /* Data set length after filtering */
@@ -97,7 +115,7 @@ switch ($do) {
                     $row[] = ($aRow[$aColumns[$i]] == "0") ? '-' : $aRow[$aColumns[$i]];
                 } else if ($aColumns[$i] != ' ') {
                     /* General output */
-                    $row[] = $aRow[$aColumns[$i]];
+                    $row[] = substr($aRow[$aColumns[$i]], 0, 100);
                 }
             }
             $output['aaData'][] = $row;

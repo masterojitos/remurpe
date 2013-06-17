@@ -48,44 +48,36 @@ $(document).on("ready", function() {
     });
     
     var checkbox_name, checkboxs_selector;
-    var checkall_checked = false;
     $(".checkbox-checkall").on("click", function() {
         $this = $(this);
         checkbox_name = $("." + $this.data("trigger")).data("checkname");
         checkboxs_selector = "." + $this.data("trigger") + " input[type=checkbox][name^=" + checkbox_name + "]";
         $("." + $this.data("trigger") + " .checkall").prop("checked", ($(checkboxs_selector).length === $(checkboxs_selector + ":checked").length));
-        if (($(checkboxs_selector).length === $(checkboxs_selector + ":checked").length)) {
-            $("." + $this.data("trigger") + " .checkall").toggleClass("on");
-            checkall_checked = false;
-        } else if ($("." + $this.data("trigger") + " .checkall").not(":checked") && !checkall_checked) {
-            $("." + $this.data("trigger") + " .checkall").toggleClass("on");
-            checkall_checked = true;
-        }
     });
     $(document).on("click", ".checkall", function() {
         $this = $(this);
         checkbox_name = $("." + $this.data("trigger")).data("checkname");
-        $("." + $this.data("trigger") + " input[type=checkbox][name^=" + checkbox_name + "]").prop("checked", $this.is(":checked")).parent().toggleClass("on");
-    });
-    
-    
-    //checkbox and radio styles
-    $("label.checkbox span").on("click", function() {
-        $(this).parent().toggleClass("on");
-    });
-    $("label.checkbox").on("click", function() {
-        $(this).toggleClass("on");
-    });
-    $("label.radio").on("click", function() {
-        $("label.radio").removeClass("on");
-        $(this).addClass("on");
+        $("." + $this.data("trigger") + " input[type=checkbox][name^=" + checkbox_name + "]").prop("checked", $this.is(":checked"));
     });
 
     $("form").on("submit", function() {
         if ($('#condiciones_no').is(":checked")) {
-            $("html").animate({scrollTop : $('#condiciones_no').parent().parent().position().top}, 500);
+            $("html").animate({scrollTop : $('#condiciones_no').parent().parent().position().top}, 500, function() {
+                alert("Debe aceptar las condiciones de los requesitos necesarios para inscribirse.");
+            });
             return false;
+        } else if ($('div.especializacion-1 input[type=checkbox]:checked, div.especializacion-2 input[type=checkbox]:checked, div.especializacion-3 input[type=checkbox]:checked').length <= 0) {
+            $("html").animate({scrollTop : $('div.especializacion-1').prev().position().top}, 500, function() {
+                alert("Debe marcar por lo menos un área de especialización.");
+            });
+            return false;
+        } else if ($('div.zonas-intervencion input[type=checkbox]:checked').length <= 0) {
+            $("html").animate({scrollTop : $(document).height() }, 500, function() {
+                alert("Debe marcar por lo menos una zona de internvención.");
+            });
+            return false;
+        } else {
+            return true;
         }
-        return true;
     });
 });

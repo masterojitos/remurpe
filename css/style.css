@@ -99,7 +99,7 @@ h1, h2, h3, h3, h4, h5, h6
 {
     width: 75%;
 }
-.container-poll section p > small.input-help
+.container-poll section p small.input-help
 {
     color: red;
 }
@@ -124,7 +124,7 @@ h1, h2, h3, h3, h4, h5, h6
 }
 .container-poll section.personal-data p > span > .input-small
 {
-    width: 18%;
+    width: 30%;
 }
 .container-poll section.formation-profession p > span > label
 {
@@ -145,7 +145,7 @@ h1, h2, h3, h3, h4, h5, h6
 }
 .container-poll section.formation-profession p > span > input.input-small
 {
-    width: 16%;
+    width: 15%;
 }
 .container-poll section.formation-profession div.column
 {
@@ -200,4 +200,100 @@ h1, h2, h3, h3, h4, h5, h6
     margin: 0;
     padding: 20px 20px 10px;
     text-align: right;
+}
+
+@media (max-width: 480px) {
+    .container-poll a#reglamento
+    {
+        margin-left: 0;
+        text-align: center;
+    }
+    .container-poll section label
+    {
+        padding-left: 2px;
+        display: block;
+        width: 90%;
+    }
+    .container-poll section input, .container-poll section textarea
+    {
+        display: block;
+        margin-left: 0;
+    }
+    .container-poll section .input-options input
+    {
+        display: inline-block;
+    }
+    .container-poll section textarea
+    {
+        max-width: 90%;
+    }
+    .container-poll section p > .input-full
+    {
+        width: 90%;
+    }
+    .container-poll section p > select.input-full
+    {
+        width: 93%;
+    }
+    .container-poll section p > input.input-large
+    {
+        width: 90%;
+    }
+    .container-poll section.personal-data p > span > label
+    {
+        display: inline-block;
+        width: 30%;
+    }
+    .container-poll section p > span.span-block
+    {
+        display: block;
+        width: 100%;
+    }
+    .container-poll section p > span > .input-full
+    {
+        width: 90%;
+    }
+    .container-poll section.personal-data p > span > .input-small
+    {
+        display: inline-block;
+        width: 59%;
+    }
+    .container-poll section.formation-profession p > span > label
+    {
+        padding-left: 5%;
+        width: 88%;
+    }
+    .container-poll section.formation-profession p > label + span > label
+    {
+        display: inline-block;
+        width: 30%;
+    }
+    .container-poll section.formation-profession p > label + span.input-options > input
+    {
+        width: 10%;
+    }
+    .container-poll section.formation-profession p > label + span.input-options > label
+    {
+        width: 84%;
+    }
+    .container-poll section.formation-profession p > span > input.input-small
+    {
+        display: inline-block;
+        width: 59%;
+    }
+    .container-poll section.formation-profession div.column
+    {
+        margin: 10px 5%;
+        max-width: 84%;
+        padding: 3%;
+        width: 84%;
+    }
+    .container-poll section.formation-profession div.row ul li
+    {
+        width: 100%;
+    }
+    .container-poll section.formation-profession p.row-submit input
+    {
+        display: inline-block;
+    }
 }

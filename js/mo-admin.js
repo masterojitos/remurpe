@@ -6,6 +6,7 @@ $.ajaxSetup({
     }
 });
 
+var oTable;
 $(document).on("ready", function() {
     var nav = eval($("#nav").height() - 30);
     if(nav > $("#content").height()) $("#content").css("min-height", nav + "px");
@@ -97,6 +98,33 @@ $(document).on("ready", function() {
         $(document).on("click", ".delete", function(){mo_delete(mod, $(this));return false;});
         $(document).on("submit", "form", function(){mo_submit(mod, 5);return false;});        
     }
+    
+    var profesion, especializacion, intervencion;
+    $(document).on("click", "#clear_filter", function() {
+        mo_list(20);
+        $('#content .datatable th:first').trigger("click");
+    });
+    var filters = [];
+    $(document).on("click", "#special_filter", function() {
+        filters = [];
+        var profesion = $("#profesion").val();
+        var especializacion = $("#especializacion").val();
+        var intervencion = $("#intervencion").val();
+        if (profesion) {
+            filters.push(profesion.join('|||'));
+        }
+        filters.push('***');
+        if (especializacion) {
+            filters.push(especializacion.join('|||'));
+        }
+        filters.push('***');
+        if (intervencion) {
+            filters.push(intervencion.join('|||'));
+        }
+        if (filters.length) {
+            oTable.fnFilter(filters.join(''), 6);
+        }
+    });
 });
 
 function mo_error(text){
@@ -127,7 +155,7 @@ function mo_list(mod){
             $(".search, #list, a.new").fadeIn();
             mo_style();
             if (mod === 20) {
-                $('#content .datatable').dataTable({
+                oTable = $('#content .datatable').dataTable({
                     "bProcessing": true,
                     "bServerSide": true,
                     "sAjaxSource": "directory.php",
@@ -142,7 +170,7 @@ function mo_list(mod){
                             function ( data, type, row ) {
                                 return '<a href="#" id="' + data + '" class="update no-background" title="Ver detalle">' + data + '</a>';
                             }, "aTargets": [ 0 ]},
-//                        { "bVisible": false, "aTargets": [ 3 ] }, 
+                        { "bVisible": false, "aTargets": [ 6, 7, 8 ] },
                         {"sClass": "center", "aTargets": [ 0, 3 ]}
                     ],
                     "oLanguage": {
@@ -152,7 +180,7 @@ function mo_list(mod){
                         "sInfo": "Mostrando del _START_ al _END_ de _TOTAL_ registros",
                         "sInfoEmpty": "Mostrando del 0 al 0 de 0 registros",
                         "sInfoFiltered": "(Filtrado de un total de _MAX_ registros)",
-                        "sSearch": "Buscar",
+                        "sSearch": "Busqueda General",
                         "oPaginate": {
                             "sFirst":    "Primero",
                             "sPrevious": "Anterior",

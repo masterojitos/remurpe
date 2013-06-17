@@ -1,7 +1,7 @@
 <?php
 require_once "config.php";
 
-if (isset($_POST['submit'])) {    
+if (isset($_POST['submit'])) {
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
     $dni = $_POST['dni'];
@@ -25,7 +25,9 @@ if (isset($_POST['submit'])) {
     $especializacion = $cn->scape(serialize($_POST['especializacion']));
     $intervencion = $cn->scape(serialize($_POST['intervencion']));
     
-    $files = array('image' => 'fotografia', 'pdf' => 'curriculum');
+//    $files = array('image' => 'fotografia', 'pdf' => 'curriculum');
+    $fotografia = '';
+    $files = array('pdf' => 'curriculum');
     $allowed_image_types = array('image/jpeg', 'image/jpg');
     $allowed_pdf_types = array('application/pdf', 'application/x-pdf', 'application/acrobat', 'applications/vnd.pdf', 'text/pdf', 'text/x-pdf');
     $userfiles_folder = './userfiles/';
@@ -54,7 +56,6 @@ if (isset($_POST['submit'])) {
         "' . $nivel_estudios . '", "' . $profesion . '", "' . $experiencia_3_ultimos_anos . '", "' . $experiencia_gobiernos_locales . '", "' . $experiencia_gobiernos_regionales . '", 
         "' . $referencia_nombre . '", "' . $referencia_email . '", "' . $referencia_telefono . '", "' . $referencia_rpm . '", "' . $especializacion . '", "' . $intervencion . '", "' . $curriculum . '");';
     $cn->query($query);
-    header("Location: ./");
 }
 ?>
 <!DOCTYPE html>
@@ -81,37 +82,35 @@ if (isset($_POST['submit'])) {
                     <li><a href="https://twitter.com/remurpe" class="twitter">Twitter</a></li>
                 </ul>
             </div>
+            <?php if (isset($_POST['submit'])) { ?>
+            <p class="alert alert-success">Gracias por inscribirte.</p>
+            <a href="./">Volver al inicio.</a>
+            <?php } else { ?>
             <section class="personal-data">
                 <h3>Datos personales</h3>
                 <p>
-                    <label for="nombre">Nombre</label>
+                    <label for="nombre">Nombre <small class="input-help">*</small></label>
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre" required="required" maxlength="100" class="input-full" />
                 </p>
                 <p>
-                    <label for="apellido">Apellidos</label>
+                    <label for="apellido">Apellidos <small class="input-help">*</small></label>
                     <input type="text" name="apellido" id="apellido" placeholder="Apellidos" required="required" maxlength="100" class="input-full" />
                 </p>
                 <p>
-                    <label for="dni">DNI</label>
-                    <input type="text" name="dni" id="dni" placeholder="DNI" maxlength="8" class="input-large" />
+                    <label for="dni">DNI <small class="input-help">*</small></label>
+                    <input type="text" name="dni" id="dni" placeholder="DNI" required="required" maxlength="8" class="input-large" />
                 </p>
                 <p>
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" name="telefono" id="telefono" placeholder="Telefono" maxlength="11" class="input-large" />
+                    <label for="telefono">Teléfono <small class="input-help">*</small></label>
+                    <input type="tel" name="telefono" id="telefono" placeholder="Telefono" required="required" maxlength="11" class="input-large" />
                 </p>
                 <p>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Email" class="input-large" />
+                    <label for="email">Email <small class="input-help">*</small></label>
+                    <input type="email" name="email" id="email" placeholder="Email" required="required" class="input-large" />
                 </p>
                 <p>
-                    <label for="fotografia">Fotografía</label>
-                    <input type="text" id="fotografia" class="mo_file input-large" placeholder="Fotografía" readonly="readonly" data-filename="fotografia" />
-                    <input type="button" value="Examinar" data-filename="fotografia" />
-                    <small class="input-help"> (Solo formato jpg)</small>
-                </p>
-                <p>
-                    <label for="departamento">Departamento</label>
-                    <select name="departamento" id="departamento" class="input-full">
+                    <label for="departamento">Departamento <small class="input-help">*</small></label>
+                    <select name="departamento" id="departamento" required="required" class="input-full">
                         <option value="">Seleccione un departamento</option>
                         <?php
                         foreach ($departamentos as $departamento) {
@@ -121,25 +120,25 @@ if (isset($_POST['submit'])) {
                     </select>
                 </p>
                 <p>
-                    <label for="provincia">Provincia</label>
-                    <select name="provincia" id="provincia" class="input-full" disabled="disabled">
+                    <label for="provincia">Provincia <small class="input-help">*</small></label>
+                    <select name="provincia" id="provincia" required="required" class="input-full" disabled="disabled">
                         <option value="">Seleccione una provincia</option>
                     </select>
                 </p>
                 <p>
-                    <label for="distrito">Distrito</label>
-                    <select name="distrito" id="distrito" class="input-full" disabled="disabled">
+                    <label for="distrito">Distrito <small class="input-help">*</small></label>
+                    <select name="distrito" id="distrito" required="required" class="input-full" disabled="disabled">
                         <option value="">Seleccione un distrito</option>
                     </select>
                 </p>
                 <p>
-                    <label for="recomendado_nombre">Recomendado por el siguiente aliado de REMURPE</label>
+                    <label for="recomendado_nombre">Recomendado por el siguiente aliado de REMURPE <small class="input-help">*</small></label>
                     <span class="span-block">
-                        <input type="text" name="recomendado_nombre" id="recomendado_nombre" placeholder="Recomendado por" maxlength="100" class="input-full" />
-                        <label for="recomendado_email">Email</label>
-                        <input type="email" name="recomendado_email" id="recomendado_email" placeholder="Email del Recomendado" class="input-small" />
-                        <label for="recomendado_telefono">Teléfono</label>
-                        <input type="tel" name="recomendado_telefono" id="recomendado_telefono" placeholder="Teléfono del Recomendado" maxlength="11" class="input-small" />
+                        <input type="text" name="recomendado_nombre" id="recomendado_nombre" placeholder="Recomendado por" required="required" maxlength="100" class="input-full" />
+                        <label for="recomendado_email">Email <small class="input-help">*</small></label>
+                        <input type="email" name="recomendado_email" id="recomendado_email" placeholder="Email del Recomendado" required="required" class="input-small" />
+                        <label for="recomendado_telefono">Teléfono <small class="input-help">*</small></label>
+                        <input type="tel" name="recomendado_telefono" id="recomendado_telefono" placeholder="Teléfono del Recomendado" required="required" maxlength="11" class="input-small" />
                     </span>
                 </p>
             </section>
@@ -168,8 +167,8 @@ if (isset($_POST['submit'])) {
                     <label>Experiencia laboral</label>
                 </p>
                 <p>
-                    <span><label for="experiencia_3_ultimos_anos">3 Últimos años</label></span>
-                    <textarea name="experiencia_3_ultimos_anos" id="experiencia_3_ultimos_anos" placeholder="3 Últimos años" class="input-full"></textarea>
+                    <span><label for="experiencia_3_ultimos_anos">3 Últimos años <small class="input-help">*</small></label></span>
+                    <textarea name="experiencia_3_ultimos_anos" id="experiencia_3_ultimos_anos" placeholder="3 Últimos años" required="required" class="input-full"></textarea>
                 </p>
                 <p>
                     <span><label for="experiencia_gobiernos_locales">Gobiernos Locales</label></span>
@@ -180,46 +179,46 @@ if (isset($_POST['submit'])) {
                     <textarea name="experiencia_gobiernos_regionales" id="experiencia_gobiernos_regionales" placeholder="Gobiernos Regionales" class="input-full"></textarea>
                 </p>
                 <p>
-                    <label for="referencia_nombre">Referencias</label>
-                    <input type="text" name="referencia_nombre" id="referencia_nombre" placeholder="Referencias" maxlength="100" class="input-full" />
+                    <label for="referencia_nombre">Referencias <small class="input-help">*</small></label>
+                    <input type="text" name="referencia_nombre" id="referencia_nombre" placeholder="Referencias" required="required" maxlength="100" class="input-full" />
                 </p>
                 <p>
                     <label></label>
                     <span>
-                        <label for="referencia_email">Email</label>
-                        <input type="email" name="referencia_email" id="referencia_email" placeholder="Email de referencia" class="input-small" />
-                        <label for="referencia_telefono">Teléfono</label>
-                        <input type="tel" name="referencia_telefono" id="referencia_telefono" placeholder="Teléfono de referencia" maxlength="11" class="input-small" />
+                        <label for="referencia_email">Email <small class="input-help">*</small></label>
+                        <input type="email" name="referencia_email" id="referencia_email" placeholder="Email" required="required" class="input-small" />
+                        <label for="referencia_telefono">Teléfono <small class="input-help">*</small></label>
+                        <input type="tel" name="referencia_telefono" id="referencia_telefono" placeholder="Teléfono" required="required" maxlength="11" class="input-small" />
                         <label for="referencia_rpm">RPM</label>
-                        <input type="tel" name="referencia_rpm" id="referencia_rpm" placeholder="RPM de referencia" maxlength="11" class="input-small" />
+                        <input type="tel" name="referencia_rpm" id="referencia_rpm" placeholder="RPM" maxlength="11" class="input-small" />
                     </span>
                 </p>
                 <p>&nbsp;</p>
                 <p>
                     <label class="normal-text">Acepto las condiciones</label>
-                    <span>
+                    <span class="input-options">
                         <input type="radio" name="condiciones" id="condiciones_si" value="Sí" checked="checked" />
-                        <label for="condiciones_si">Sí</label>
+                        <label for="condiciones_si" class="radio">Sí</label>
                         <input type="radio" name="condiciones" id="condiciones_no" value="No" />
-                        <label for="condiciones_no">No</label>
+                        <label for="condiciones_no" class="radio">No</label>
                         <a href="#" id="reglamento">Requisitos Necesarios</a>
                     </span>
                 </p>
                 <p>&nbsp;</p>
                 <p>
-                    <label class="label-full">Áreas de especialización</label>
+                    <label class="label-full">Áreas de especialización <small class="input-help">*</small></label>
                 </p>
                 <?php
                 $i = 0;
                 foreach ($especializaciones as $espececializacion_categoria => $especializacion_items) {
-                echo '<div class="column especializacion-' . ++$i . '" data-checkname="especializacion">
+                echo '<div class="column especializacion-' . ++$i . ' input-options" data-checkname="especializacion">
                     <label class="checkbox">
                         <input type="checkbox" class="checkall" data-trigger="especializacion-' . $i . '" />
                         <span><h4>' . $espececializacion_categoria . '</h4></span>
                     </label>
                     <ul>';
                     foreach ($especializacion_items as $especializacion) {
-                        $especializacion = ucwords(strtolower($especializacion));
+                        $especializacion = utf8_encode(ucwords(strtolower(utf8_decode($especializacion))));
                         echo '<li>
                             <label class="checkbox">
                                 <input type="checkbox" name="especializacion[' . $espececializacion_categoria . '][]" value="' . $especializacion . '" class="checkbox-checkall" data-trigger="especializacion-' . $i . '" />
@@ -232,11 +231,11 @@ if (isset($_POST['submit'])) {
                 }
                 ?>
                 <p>
-                    <label class="label-full">Zonas de intervención</label>
+                    <label class="label-full">Zonas de intervención <small class="input-help">*</small></label>
                 </p>
-                <div class="column row zonas_intervencion" data-checkname="intervencion">
+                <div class="column row zonas-intervencion input-options" data-checkname="intervencion">
                     <label class="checkbox">
-                        <input type="checkbox" class="checkall" data-trigger="zonas_intervencion" />
+                        <input type="checkbox" class="checkall" data-trigger="zonas-intervencion" />
                         <span><h4>Todas</h4></span>
                     </label>
                     <ul>
@@ -245,7 +244,7 @@ if (isset($_POST['submit'])) {
                         $departamento = ucwords(strtolower($departamento));
                         echo '<li>
                             <label class="checkbox">
-                                <input type="checkbox" name="intervencion[]" value="' . $departamento . '" class="checkbox-checkall" data-trigger="zonas_intervencion" />
+                                <input type="checkbox" name="intervencion[]" value="' . $departamento . '" class="checkbox-checkall" data-trigger="zonas-intervencion" />
                                 <span>' . $departamento . '</span>
                             </label>
                         </li>';
@@ -267,6 +266,7 @@ if (isset($_POST['submit'])) {
             <input type="file" name="fotografia" class="mo_file_trigger">
             <input type="file" name="curriculum" class="mo_file_trigger">
             <span id="variables" data-provincias='<?php echo json_encode($provincias); ?>' data-distritos='<?php echo json_encode($distritos); ?>'></span>
+            <?php } ?>
         </form>
         <script src="js/respond.min.js"></script>
         <script src="js/prefixfree.min.js"></script>
