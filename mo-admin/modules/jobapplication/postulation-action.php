@@ -1,6 +1,9 @@
 <?php
 require_once "../config.php";
 switch ($do) {
+    case 4:
+        $cn->query("DELETE FROM postulante WHERE id = '" . $cn->scape($_POST['id']) . "'");
+        break;
     case 6:
         $aColumns = array('id', 'nombre', 'apellido', 'dni', 'email', 'fecha_creacion', 'profesion', 'especializacion', 'intervencion');
         $sIndexColumn = "id";

@@ -10,9 +10,9 @@ if(!empty($id)){
     if (count($especializaciones)) {
         foreach ($especializaciones as $espececializacion_categoria => $especializacion_items) {
             if (is_array($especializacion_items) && count($especializacion_items)) {
-                $especializaciones_text.= $espececializacion_categoria;
+                if ($especializaciones_text != "") $especializaciones_text.= '<br />';
+                $especializaciones_text.= $espececializacion_categoria . ":<br />";
                 $especializaciones_array = array();
-                $especializaciones_text.= ":<br />";
                 foreach ($especializacion_items as $especializacion) {
                     $especializaciones_array[] = $especializacion;
                 }
@@ -55,6 +55,6 @@ if(!empty($id)){
         <tr><td><strong>Zonas de Intervención:</strong></td><td><?php echo $intervenciones_text; ?></td></tr>
         <tr><td><strong>Curriculum Vitae:</strong></td><td><?php echo ($row['curriculum'] !== "" ? '<a href="../userfiles/' . $row['curriculum'] . '">Ver</a>' : ''); ?></td></tr>
         <tr><td><strong>Fecha de Registro:</strong></td><td><?php echo date("d-m-Y H:i:s", strtotime($row['fecha_creacion'])); ?></td></tr>
-        <tr><td colspan="2"><br /><a href="./?mod=20">Retornar</a></td></tr>
+        <tr><td colspan="2"><br /><a href="#" id="<?php echo $row['id']; ?>" class="delete">Eliminar</a> &nbsp; <a href="./?mod=20">Retornar</a></td></tr>
     </table>
 </fieldset>

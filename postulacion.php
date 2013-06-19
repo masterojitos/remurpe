@@ -149,8 +149,8 @@ if (isset($_POST['submit'])) {
                     <input type="text" name="nivel_estudios" id="nivel_estudios" placeholder="Nivel de estudios" maxlength="100" class="input-full" />
                 </p>
                 <p>
-                    <label for="profesion">Profesión</label>
-                    <select name="profesion" id="profesion" class="input-full">
+                    <label for="profesion">Profesión <small class="input-help">*</small></label>
+                    <select name="profesion" id="profesion" required="required" class="input-full">
                         <option value="">Seleccione una profesión</option>
                         <?php
                         foreach ($profesiones as $profesion_categoria => $profesion_items) {
@@ -218,11 +218,10 @@ if (isset($_POST['submit'])) {
                     </label>
                     <ul>';
                     foreach ($especializacion_items as $especializacion) {
-                        $especializacion = utf8_encode(ucwords(strtolower(utf8_decode($especializacion))));
                         echo '<li>
                             <label class="checkbox">
                                 <input type="checkbox" name="especializacion[' . $espececializacion_categoria . '][]" value="' . $especializacion . '" class="checkbox-checkall" data-trigger="especializacion-' . $i . '" />
-                                <span>' . $especializacion . '</span>
+                                <span>' . ucwords($especializacion) . '</span>
                             </label>
                         </li>';
                     }

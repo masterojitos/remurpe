@@ -234,13 +234,7 @@ function mo_delete(mod, e){
         $.ajax({
             data: "mod=" + mod + "&do=4&id=" + e.attr("id"),
             success: function() {
-                e.parent().parent().fadeOut(function() {
-                    e.parent().parent().remove();
-                    $("#list tr").removeClass("odd").filter(":nth-child(odd)").addClass("odd");
-                    if($("#list tr").length == 1){
-                        $('#list tbody').append('<tr><td colspan="10" class="row_error center">No hay registros.</td></tr>');
-                    }
-                });
+                document.location = "./?mod=" + mod;
             }
         });
     });
