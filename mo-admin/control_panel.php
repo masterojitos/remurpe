@@ -54,7 +54,7 @@
         <script src="../js/jquery.min.js"></script>
         <script src="../lib/confirm/js/confirm.js"></script>
         <script src="../lib/confirm/js/jquery.simplemodal.js"></script>
-        <script src="../lib/DataTables/media/js/jquery.dataTables.min.js"></script>
+        <script src="../lib/DataTables/media/js/jquery.dataTables.js"></script>
         <script src="../js/mo-admin.js"></script>
     </body>
 </html>

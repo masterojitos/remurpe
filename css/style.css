@@ -49,7 +49,7 @@ h1, h2, h3, h3, h4, h5, h6
     line-height: 50px;
     padding-left: 10px;
 }
-.container-poll section p
+.container-poll section p, .container-poll section div
 {
     padding-left: 10px;
     margin: 0.5em 0;
@@ -75,8 +75,10 @@ h1, h2, h3, h3, h4, h5, h6
 {
     display: inline-block;
     font-weight: 700;
+    line-height: 26px;
     padding-left: 10px;
     width: 20%;
+    vertical-align: top;
 }
 .container-poll section label.normal-text
 {
@@ -99,7 +101,7 @@ h1, h2, h3, h3, h4, h5, h6
 {
     width: 75%;
 }
-.container-poll section p small.input-help
+.container-poll section p small.input-help, .container-poll section div small.input-help
 {
     color: red;
 }
@@ -125,6 +127,21 @@ h1, h2, h3, h3, h4, h5, h6
 .container-poll section.personal-data p > span > .input-small
 {
     width: 30%;
+}
+.container-poll section div table#aliados
+{
+    display: inline-block;
+    width: 75%;
+}
+.container-poll section div table#aliados th
+{
+    border-bottom: 1px solid #999;
+    text-align: left;
+}
+.container-poll section div table#aliados td
+{
+    border-bottom: 1px solid #ccc;
+    padding: 0 1em 0 0;
 }
 .container-poll section.formation-profession p > span > label
 {

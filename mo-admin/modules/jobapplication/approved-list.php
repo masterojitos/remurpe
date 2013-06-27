@@ -46,7 +46,7 @@
         <input type="button" id="clear_filter" value="Reinicializar" />
     </div>
 </div>
-<table id="inscription-list" width="100%" class="listing datatable display">
+<table id="approved-list" width="100%" class="listing datatable display">
     <thead>
         <tr>
             <th width="8%">N&deg;</th>

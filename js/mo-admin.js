@@ -7,6 +7,7 @@ $.ajaxSetup({
 });
 
 var oTable;
+if (typeof mod === undefined) var mod = null;
 $(document).on("ready", function() {
     var nav = eval($("#nav").height() - 30);
     if(nav > $("#content").height()) $("#content").css("min-height", nav + "px");
@@ -95,13 +96,14 @@ $(document).on("ready", function() {
         mo_list(mod);
         $(document).on("click", ".list", function(){mo_list(mod);return false;});
         $(document).on("click", ".update", function(){mo_update(mod, $(this));return false;});
+        $(document).on("click", ".status", function(){ mo_status(mod, $(this)); return false; });
         $(document).on("click", ".delete", function(){mo_delete(mod, $(this));return false;});
-        $(document).on("submit", "form", function(){mo_submit(mod, 5);return false;});        
+        $(document).on("submit", "form", function(){mo_submit(mod, 5);return false;});
     }
     
     var profesion, especializacion, intervencion;
     $(document).on("click", "#clear_filter", function() {
-        mo_list(20);
+        mo_list(mod);
         setTimeout(function() {
             $('#content .datatable th:first').trigger("click");
         }, 1000);
@@ -156,7 +158,7 @@ function mo_list(mod){
             $("#list").html(html);
             $(".search, #list, a.new").fadeIn();
             mo_style();
-            if (mod === 20) {
+            if (mod === 20 || mod === 21) {
                 oTable = $('#content .datatable').dataTable({
                     "bProcessing": true,
                     "bServerSide": true,
@@ -167,6 +169,10 @@ function mo_list(mod){
                     },
                     "sServerMethod": "POST",
                     "bStateSave": true,
+                    "fnCookieCallback": function (sName, oData, sExpires, sPath) {
+                        sName = 'my_DataTables_' + $("#list table").attr("id");
+                        return sName + "="+JSON.stringify(oData)+"; expires=" + sExpires +"; path=" + sPath;
+                    },
                     "aoColumnDefs": [
                         {"mRender": 
                             function ( data, type, row ) {
@@ -215,7 +221,7 @@ function mo_update(mod, e){
             $("#form").html(html);
             $("#form table.table-detail tr:nth-child(odd)").addClass("odd");
             $("#form, a.cancel").fadeIn();
-            if (mod !== 20) mo_style();
+            if (mod !== 20 && mod !== 21) mo_style();
         }
     });
 }
@@ -227,6 +233,17 @@ function mo_submit(mod, $do){
             mo_list(mod);
         }
     });
+}
+
+function mo_status(mod, e){
+	var value = e.data("value");
+    var field = e.data("field") != "" ? e.data("field") : "status";
+	$.ajax({
+		data: "mod=" + mod + "&do=3&id=" + e.attr("id") + "&field=" + field + "&value=" + value,
+		success: function(){
+			document.location = "./?mod=" + mod;
+		}
+	});
 }
 
 function mo_delete(mod, e){

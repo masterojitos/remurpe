@@ -60,6 +60,6 @@ if(!empty($id)){
         <tr><td><strong>Zonas de Intervención:</strong></td><td><?php echo $intervenciones_text; ?></td></tr>
         <tr><td><strong>Curriculum Vitae:</strong></td><td><?php echo ($row['curriculum'] !== "" ? '<a href="../userfiles/' . $row['curriculum'] . '">Ver</a>' : ''); ?></td></tr>
         <tr><td><strong>Fecha de Registro:</strong></td><td><?php echo date("d-m-Y H:i:s", strtotime($row['fecha_creacion'])); ?></td></tr>
-        <tr><td colspan="2"><br /><a href="#" id="<?php echo $row['id']; ?>" class="status" data-field="aprobado" data-value="0">Aprobar</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#" id="<?php echo $row['id']; ?>" class="delete">Eliminar</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="./?mod=20">Retornar</a></td></tr>
+        <tr><td colspan="2"><br /><a href="#" id="<?php echo $row['id']; ?>" class="delete">Eliminar</a> &nbsp; <a href="./?mod=20">Retornar</a></td></tr>
     </table>
 </fieldset>

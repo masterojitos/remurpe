@@ -6,6 +6,29 @@ require "includes/functions.php";
 
 require "includes/ubigeo.php";
 
+$aliados = array(
+    array("Carlos López", "clopez@remurpe.org.pe", "Lima"), 
+    array("Wilbert Rozas", "wilbertrozas@yahoo.es", "Cusco"), 
+    array("Rómulo Antúnez", "rantunez@remurpe.org.pe", "Lima"), 
+    array("Carlos Arana", "carana@remurpe.org.pe", "Lima"), 
+    array("Mayra Asmat", "kasmat@remurpe.org.pe", "Lima"), 
+    array("Federico Fernández", "ffernandez@remurpe.org.pe", "Lima"), 
+    array("Marivel Ccala", "mccala@remurpe.org.pe", "Lima"), 
+    array("Martín Castillo", "vcastillo@remurpe.org.pe", "Lima"), 
+    array("Leonardo Montes", "lemontca@hotmail.com", "Huancavelica"), 
+    array("Alex Rojas", "alexrojas40@gmail.com", "Piura"), 
+    array("Cristina Chambizea", "xtinachr@hotmail.com", "Cajamarca"), 
+    array("César Vigo", "vigoreli@hotmail.com", "Cajamarca"), 
+    array("Genaro Sánchez", "gesara2004@yahoo.es", "San Martín"), 
+    array("Fidel Rodríguez", "fidelrori@hotmail.com", "Ancash"), 
+    array("Gianina Vargas", "janina22_6@hotmail.com", "Huanuco"), 
+    array("Alicia Carrasco", "alicg2501@hotmail.com", "Ayacucho"), 
+    array("Ernesto Vizacardo", "jesusevv@hotmail.com", "Cusco"), 
+    array("Lourdes Betancur", "lubeth9@hotmail.com", "Puno"), 
+    array("Flor Herrera", "fherrera@remurpe.org.pe", "Apurimac"), 
+    array("Jorge Aparcana", "jaaparcana1@gmail.com", "Ica")
+);
+
 $profesiones = array();
 $profesiones["Medicina Humana"] = array("Obstetricia", "Enfermería", "Tecnología Médica", "Laboratorio Clínico y Anatomía Patológica", "Terapia Física y Rehabilitación", "Radiología", "Terapia Ocupacional", "Nutrición", "Farmacia y Bioquímica", "Ciencias de los Alimentos", "Toxicología", "Odontología", "Medicina Veterinaria", "Psicología");
 $profesiones["HUMANIDADES"] = array("Literatura", "Filosofía", "Lingüística", "Comunicación Social", "Periodismo", "Arte", "Bibliotecología y Ciencias de la Información", "Danza", "Conservación y Restauración", "Educación", "Educación Inicial", "Educación Primaria", "Educación Secundaría", "Educación Física");

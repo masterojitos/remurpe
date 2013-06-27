@@ -66,6 +66,11 @@ $(document).on("ready", function() {
                 alert("Debe aceptar las condiciones de los requesitos necesarios para inscribirse.");
             });
             return false;
+        } else if ($('table#aliados input[type=checkbox]:checked').length <= 0) {
+            $("html").animate({scrollTop : $('table#aliados').prev().position().top}, 500, function() {
+                alert("Debe marcar por lo menos un aliado.");
+            });
+            return false;
         } else if ($('div.especializacion-1 input[type=checkbox]:checked, div.especializacion-2 input[type=checkbox]:checked, div.especializacion-3 input[type=checkbox]:checked').length <= 0) {
             $("html").animate({scrollTop : $('div.especializacion-1').prev().position().top}, 500, function() {
                 alert("Debe marcar por lo menos un área de especialización.");

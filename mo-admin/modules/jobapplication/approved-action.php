@@ -1,9 +1,6 @@
 <?php
 require_once "../config.php";
 switch ($do) {
-	case 3: 
-		$cn->query("UPDATE postulante SET " . $_POST['field'] . " = '" . ($_POST['value'] == 1 ? 0 : 1) . "' WHERE id = '" . $cn->scape($_POST['id']) . "'");
-		break;
     case 4:
         $cn->query("DELETE FROM postulante WHERE id = '" . $cn->scape($_POST['id']) . "'");
         break;
@@ -85,9 +82,9 @@ switch ($do) {
          * Get data to display
          */
         if ($sWhere == "") {
-            $sWhere = "WHERE aprobado = 0";
+            $sWhere = "WHERE aprobado = 1";
         } else {
-            $sWhere .= " AND aprobado = 0";
+            $sWhere .= " AND aprobado = 1";
         }
         $sQuery = "SELECT SQL_CALC_FOUND_ROWS `" . str_replace(" , ", " ", implode("`, `", $aColumns)) . "` 
 		FROM $sTable $sWhere $sOrder $sLimit";

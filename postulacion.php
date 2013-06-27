@@ -8,11 +8,9 @@ if (isset($_POST['submit'])) {
     $telefono = $_POST['telefono'];
     $email = $_POST['email'];
     $departamento = $_POST['departamento'];
-    $provincia = $_POST['provincia'];
-    $distrito = $_POST['distrito'];
-    $recomendado_nombre = $_POST['recomendado_nombre'];
-    $recomendado_email = $_POST['recomendado_email'];
-    $recomendado_telefono = $_POST['recomendado_telefono'];
+    $provincia = isset($_POST['provincia']) ? $_POST['provincia'] : '';
+    $distrito = isset($_POST['distrito']) ? $_POST['distrito'] : '';
+    $aliados = isset($_POST['aliados']) && is_array($_POST['aliados']) ? implode(",", $_POST['aliados']) : '';
     $nivel_estudios = $_POST['nivel_estudios'];
     $profesion = $_POST['profesion'];
     $experiencia_3_ultimos_anos = $_POST['experiencia_3_ultimos_anos'];
@@ -22,8 +20,8 @@ if (isset($_POST['submit'])) {
     $referencia_email = $_POST['referencia_email'];
     $referencia_telefono = $_POST['referencia_telefono'];
     $referencia_rpm = $_POST['referencia_rpm'];
-    $especializacion = $cn->scape(serialize($_POST['especializacion']));
-    $intervencion = $cn->scape(serialize($_POST['intervencion']));
+    $especializacion = isset($_POST['especializacion']) ? $cn->scape(serialize($_POST['especializacion'])) : '';
+    $intervencion = isset($_POST['intervencion']) ? $cn->scape(serialize($_POST['intervencion'])) : '';
     
 //    $files = array('image' => 'fotografia', 'pdf' => 'curriculum');
     $fotografia = '';
@@ -49,11 +47,11 @@ if (isset($_POST['submit'])) {
     }
     
     $query = 'INSERT INTO `postulante` (`nombre`, `apellido`, `dni`, `telefono`, `email`, `foto`, `departamento`, `provincia`, `distrito`, 
-        `recomendado_nombre`, `recomendado_email`, `recomendado_telefono`, `nivel_estudios`, `profesion`, `experiencia_3_ultimos_anos`, `experiencia_gobiernos_locales`, `experiencia_gobiernos_regionales`, 
+        `aliados`, `nivel_estudios`, `profesion`, `experiencia_3_ultimos_anos`, `experiencia_gobiernos_locales`, `experiencia_gobiernos_regionales`, 
         `referencia_nombre`, `referencia_email`, `referencia_telefono`, `referencia_rpm`, `especializacion`, `intervencion`, `curriculum`) 
         VALUES ("' . $nombre . '", "' . $apellido . '", "' . $dni . '", "' . $telefono . '", "' . $email . '", "' . $fotografia . '", 
-        "' . $departamento . '", "' . $provincia . '", "' . $distrito . '", "' . $recomendado_nombre . '", "' . $recomendado_email . '", "' . $recomendado_telefono . '", 
-        "' . $nivel_estudios . '", "' . $profesion . '", "' . $experiencia_3_ultimos_anos . '", "' . $experiencia_gobiernos_locales . '", "' . $experiencia_gobiernos_regionales . '", 
+        "' . $departamento . '", "' . $provincia . '", "' . $distrito . '", "' . $aliados . '", "' . $nivel_estudios . '", 
+        "' . $profesion . '", "' . $experiencia_3_ultimos_anos . '", "' . $experiencia_gobiernos_locales . '", "' . $experiencia_gobiernos_regionales . '", 
         "' . $referencia_nombre . '", "' . $referencia_email . '", "' . $referencia_telefono . '", "' . $referencia_rpm . '", "' . $especializacion . '", "' . $intervencion . '", "' . $curriculum . '");';
     $cn->query($query);
 }
@@ -131,16 +129,29 @@ if (isset($_POST['submit'])) {
                         <option value="">Seleccione un distrito</option>
                     </select>
                 </p>
-                <p>
-                    <label for="recomendado_nombre">Recomendado por el siguiente aliado de REMURPE <small class="input-help">*</small></label>
-                    <span class="span-block">
-                        <input type="text" name="recomendado_nombre" id="recomendado_nombre" placeholder="Recomendado por" required="required" maxlength="100" class="input-full" />
-                        <label for="recomendado_email">Email <small class="input-help">*</small></label>
-                        <input type="email" name="recomendado_email" id="recomendado_email" placeholder="Email del Recomendado" required="required" class="input-small" />
-                        <label for="recomendado_telefono">Teléfono <small class="input-help">*</small></label>
-                        <input type="tel" name="recomendado_telefono" id="recomendado_telefono" placeholder="Teléfono del Recomendado" required="required" maxlength="11" class="input-small" />
-                    </span>
-                </p>
+                <div>
+                    <label>Recomendado por los siguientes aliados de REMURPE <small class="input-help">*</small></label>
+                    <table id="aliados">
+                        <thead>
+                            <th>Nombres</th>
+                            <th>Correo Electrónico</th>
+                            <th>Región</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                        <?php
+                        foreach ($aliados as $indice => $aliado) {
+                            echo '<tr>
+                                <td>' . $aliado[0] . '</td>
+                                <td>' . $aliado[1] . '</td>
+                                <td>' . $aliado[2] . '</td>
+                                <td><input type="checkbox" name="aliados[]" value="' . $indice . '" /></td>
+                            </tr>';
+                        }
+                        ?>
+                        </tbody>
+                    </table>
+                </div>
             </section>
             <section class="formation-profession">
                 <h3>Formación / Profesión</h3>

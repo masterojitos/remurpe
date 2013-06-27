@@ -3,7 +3,7 @@ $mod = isset($_REQUEST['mod']) ? $_REQUEST['mod'] : 0;
 $nav = array(
     "0-Inicio",
     "10-Configuración", "10-Acceso", "11-Apariencia", "12-Empresa", "13-Aplicaciones",
-    "20-Postulaciones"
+    "20-Postulaciones", "20-Inscritos", "21-Aprobados"
 );
 $last_mod = $status = 0;
 foreach ($nav as $k => $v) {

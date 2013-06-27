@@ -18,6 +18,7 @@ switch($mod){
 //    case 13: include "modules/configuration/api$page.php"; break;
 
     case 20: include "modules/jobapplication/postulation$page.php"; break;
+    case 21: include "modules/jobapplication/approved$page.php"; break;
 
     default: include "modules/sale.php"; break;
 }
