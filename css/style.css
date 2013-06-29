@@ -4,6 +4,7 @@ body
     color: #333;
     font-family: Arial;
     font-size: 16px;
+    min-width: 467px;
 }
 a, a:hover, a:focus, a:active
 {
@@ -131,6 +132,7 @@ h1, h2, h3, h3, h4, h5, h6
 .container-poll section div table#aliados
 {
     display: inline-block;
+    min-width: 467px;
     width: 75%;
 }
 .container-poll section div table#aliados th
@@ -308,7 +310,7 @@ h1, h2, h3, h3, h4, h5, h6
     background-color: #B0CFF2;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
     .container-poll a#reglamento
     {
         margin-left: 0;
@@ -359,6 +361,11 @@ h1, h2, h3, h3, h4, h5, h6
     {
         width: 90%;
     }
+    .container-poll section div table#aliados
+    {
+        display: block;
+        width: 98%;
+    }
     .container-poll section.personal-data p > span > .input-small
     {
         display: inline-block;
@@ -380,7 +387,7 @@ h1, h2, h3, h3, h4, h5, h6
     }
     .container-poll section.formation-profession p > label + span.input-options > label
     {
-        width: 84%;
+        width: 92%;
     }
     .container-poll section.formation-profession p > span > input.input-small
     {
