@@ -218,6 +218,95 @@ h1, h2, h3, h3, h4, h5, h6
     padding: 20px 20px 10px;
     text-align: right;
 }
+#terms-conditions-modal
+{
+	background: #fff;
+	border-radius: 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-shadow: 0 3px 7px rgba(0,0,0,.25);
+	-moz-box-shadow: 0 3px 7px rgba(0,0,0,.25);
+	-webkit-box-shadow: 0 3px 7px rgba(0,0,0,.25);
+    height: 80%;
+	left: -100%;
+	margin: 0px 0 0 -40%;
+	position: fixed;
+    text-align: justify;
+	top: 10%;
+	width: 80%;
+    z-index: 200;
+}
+/* Make the modal appear when targeted */
+#terms-conditions-modal:target
+{
+    left: 50%;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+#terms-conditions-modal header
+{
+	background: #f7f7f7;
+	border-bottom: 1px solid #e7e7e7;
+	border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+    min-height: 32px;
+    overflow: hidden;
+}
+#terms-conditions-modal header, #terms-conditions-modal section
+{
+	padding: 1em;
+}
+#terms-conditions-modal header h2
+{
+    float: left;
+	margin: 0;
+}
+#terms-conditions-modal header a
+{
+	float: right;
+    margin: 0;
+}
+#terms-conditions-modal section
+{
+    height: 78%;
+    overflow-y: scroll;
+}
+#terms-conditions-modal p, #terms-conditions-modal ol, #terms-conditions-modal table
+{
+    margin: 1em 0;
+}
+#terms-conditions-modal p.title1, #terms-conditions-modal p.title2
+{
+    font-size: 1.25em;
+    text-align: center;
+    text-decoration: underline;
+}
+#terms-conditions-modal p.title2
+{
+    font-size: 1.1em;
+}
+#terms-conditions-modal ol
+{
+    list-style-type: lower-alpha;
+}
+#terms-conditions-modal table
+{
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 95%;
+}
+#terms-conditions-modal table th, #terms-conditions-modal table td
+{
+    border: 1px solid #666;
+    padding: 3px;
+}
+#terms-conditions-modal table th
+{
+    background-color: #B0CFF2;
+}
 
 @media (max-width: 480px) {
     .container-poll a#reglamento

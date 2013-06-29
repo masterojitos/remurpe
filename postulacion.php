@@ -212,7 +212,7 @@ if (isset($_POST['submit'])) {
                         <label for="condiciones_si" class="radio">Sí</label>
                         <input type="radio" name="condiciones" id="condiciones_no" value="No" />
                         <label for="condiciones_no" class="radio">No</label>
-                        <a href="#" id="reglamento">Requisitos Necesarios</a>
+                        <a href="#terms-conditions-modal" id="reglamento">Requisitos Necesarios</a>
                     </span>
                 </p>
                 <p>&nbsp;</p>
@@ -278,6 +278,82 @@ if (isset($_POST['submit'])) {
             <span id="variables" data-provincias='<?php echo json_encode($provincias); ?>' data-distritos='<?php echo json_encode($distritos); ?>'></span>
             <?php } ?>
         </form>
+        <div id="terms-conditions-modal">
+            <header>
+                <h2>Requisitos Necesarios</h2>
+                <a href="#" class="MOButton">Cerrar</a>
+            </header>
+            <section>
+                <p class="title1">RED DE MUNICIPALIDADES URBANAS Y RURALES DEL PERU - REMURPE</p>
+                <p class="title1">RED NACIONAL DE EXPERTOS EN GESTION PUBLICA DESCENTRALIZADA RNE-GPD</p>
+                <p class="title2">REGLAMENTO INTERNO</p>
+                <p><strong>PRINCIPIOS, OBJETIVOS Y FINES</strong></p>
+                <p><strong>Art&iacute;culo 1&deg;.- </strong>La Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD, es una plataforma creada por REMURPE para dar soporte t&eacute;cnico, pol&iacute;tico-institucional especializado con competencia exclusiva. La RNE-GPD, est&aacute; integrada por profesionales expertos en temas de alta especializaci&oacute;n en administraci&oacute;n, asesoramiento, desarrollo de capacidades y en proyectos y pol&iacute;ticas p&uacute;blicas para Gobiernos Locales y Regionales. Su funci&oacute;n es ser el soporte t&eacute;cnico de la REMURPE para el cumplimiento de su Plan Institucional, as&iacute; como de los Gobiernos Locales asociados a REMURPE.</p>
+                <p><strong>Articulo 2&deg;.-</strong> La Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD, estar&aacute; integrado por profesionales de todas las disciplinas que cuenten con la m&aacute;s amplia trayectoria profesional, acad&eacute;mica, pol&iacute;tica-institucional ligada a la Gesti&oacute;n P&uacute;blica Municipal y de Gobiernos Regionales, que han acreditado formaci&oacute;n, dominio y experiencia laboral m&iacute;nima de cinco a&ntilde;os.</p>
+                <p><strong>Art&iacute;culo 3&deg;.- </strong>Los integrantes de la Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD, ser&aacute;n seleccionados previa evaluaci&oacute;n basada en su Curriculum Vitae detallado y por la recomendaci&oacute;n de 02 representantes acreditados por REMURPE consignados en el cuadro adjunto. La selecci&oacute;n se dar&aacute; en condiciones objetivas y transparentes. La misma que ser&aacute; publicada en la p&aacute;gina web de REMURPE. La aceptaci&oacute;n y la acreditaci&oacute;n para formar parte integrante de la Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD, ser&aacute; comunicada mediante un documento rubricado por el Secretario Ejecutivo Nacional de REMURPE.</p>
+                <p><strong>Art&iacute;culo 4&deg;.- </strong>Los Expertos ejercer&aacute;n su funci&oacute;n dentro de la REMURPE por el periodo que &eacute;stos lo decidan. Asimismo, se tomar&aacute;n en cuenta para la evaluaci&oacute;n del Experto el cumplimiento de los fines y objetivos de REMURPE, pudiendo la REMURPE o el Experto rescindir su permanencia en la Red.</p>
+                <p><strong>Art&iacute;culo 5&deg;.- </strong>La funci&oacute;n de los integrantes de la Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD, no es incompatible con la condici&oacute;n de funcionario de REMURPE, as&iacute; como director, gerente, trabajador dependiente, asesor, consultor independiente de cualquier instituci&oacute;n descentralizada, gobierno regional o local.</p>
+                <p><strong>Art&iacute;culo 6&deg;.- </strong>La Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD, es una organizaci&oacute;n perteneciente a REMURPE, todas las acciones que emprendan ser&aacute;n gestionadas y administradas por el Secretaria Ejecutiva Nacional de&nbsp; REMURPE y estar&aacute;n sujetas al Plan Institucional y Estatutos de REMURPE.</p>
+                <p><strong>DE LA ORGANIZACI&Oacute;N Y FUNCIONAMIENTO</strong></p>
+                <p><strong>Art&iacute;culo 7&deg;.- </strong>La Coordinaci&oacute;n de la Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD, estar&aacute; integrada por el Secretario Ejecutivo Nacional de REMURPE, Un miembro del Equipo T&eacute;cnico; Un Coordinador Regional donde REMURPE acredite una Organizaci&oacute;n de Municipalidades; Un coordinador Tem&aacute;tico de Gesti&oacute;n del Territorio y de Recursos Naturales, Un Coordinador Tem&aacute;tico de Gesti&oacute;n P&uacute;blica Descentralizada y Un Coordinador de Gesti&oacute;n de Pol&iacute;ticas Sociales Descentralizada.</p>
+                <p><strong>Art&iacute;culo 8&deg;.-</strong> El rol de Coordinador ser&aacute; ejercido por el Secretario Ejecutivo de la REMURPE. El Coordinador ser&aacute; un Experto Nacional que representar&aacute; y coordinar&aacute; la Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD y ejercer&aacute; las funciones previstas en este Reglamento y en su normativa interna, la que tambi&eacute;n definir&aacute; su r&eacute;gimen.</p>
+                <p><strong>Art&iacute;culo 9&deg;.- </strong>La Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD, tendr&aacute; sesiones de trabajo previa convocatoria formal a nivel de REMURPE Nacional o en la REDES Regionales de REMURPE, generalmente un d&iacute;a antes de las Conferencias Anuales de Municipalidades &ndash; CAMUR Nacional y Regionales, donde se discutir&aacute;n una agenda previamente consensuada durante la convocatoria y adoptar&aacute; sus acuerdos, compromisos, metodolog&iacute;as, documentaci&oacute;n y otros que considere importante para beneficio de los integrantes de la Red y la institucionalidad de REMURPE.</p>
+                <p><strong>Art&iacute;culo 10&deg;.- </strong>La Coordinaci&oacute;n de la Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD, sesionar&aacute; al menos una cada semestre para efectos analizar, evaluar y programar avances del plan y cumplimiento de metas.</p>
+                <p><strong>Art&iacute;culo 11&deg;.- </strong>La sede de la Coordinaci&oacute;n de la Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD, est&aacute; ubicada en las oficinas de REMURPE &nbsp;Nacional y en las Redes Regionales u organizaciones de municipalidades acreditadas por REMURPE.</p>
+                <p><strong>Art&iacute;culo 12&deg;.- </strong>El Coordinador de la Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD, tendr&aacute; las siguientes funciones:</p>
+                <ol>
+                    <li>Llevar el registro de Actas y dem&aacute;s presentaciones que se formulen a la Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD.</li>
+                    <li>Efectuar el examen de admisibilidad formal de los nuevos integrantes que se presenten a conocimiento de la Coordinaci&oacute;n de la Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD.</li>
+                    <li>Poner en conocimiento del consejo directivo la nomina de los expertos nacionales registrados en el sistema inform&aacute;tico de REMURPE.</li>
+                    <li>Informar de los acuerdos tomados en las sesiones de trabajo.</li>
+                    <li>Certificar las actuaciones de la Coordinaci&oacute;n y ejercer la custodia de sus archivos.</li>
+                    <li>Levantar acta fiel e &iacute;ntegra de las sesiones de la Coordinaci&oacute;n de la Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD.</li>
+                    <li>Asistir a la Coordinaci&oacute;n de la Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD en sus actividades.</li>
+                </ol>
+                <p><strong>DE LAS RESPONSABILIDADES, BENEFICIOS Y SANCIONES</strong></p>
+                <p><strong>Art&iacute;culo 13&deg;.- </strong>Los integrantes de la Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD, son responsables de los documentos adjuntos en el Curriculum Vitae consignado en el registro electr&oacute;nico de la Pagina Web de REMURPE, los que tienen el valor de Declaraci&oacute;n Jurada.</p>
+                <p><strong>Art&iacute;culo 14&deg;.- </strong>Corresponder&aacute; a la Secretaria Ejecutiva Nacional de REMURPE, en calidad de Coordinador de la RNE-GPD y de los integrantes de la Coordinaci&oacute;n evaluar permanentemente&nbsp; el desempe&ntilde;o y cumplimiento de las actividades de cada Asociado a la Red.</p>
+                <p><strong>Art&iacute;culo 15&deg;.- </strong>Los beneficios para el Asociado a la Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD, son los siguientes.</p>
+                <ol>
+                    <li>Especializaci&oacute;n profesional en temas que el Experto crea de su inter&eacute;s a nivel de talleres, diplomados y post grados implementados directamente por REMURPE. As&iacute; como de capacitaciones con instituciones nacionales y extranjeras; p&uacute;blicas o privadas con las que REMURPE tiene convenios de formaci&oacute;n de capacidades, o con Universidades de prestigio nacional e internacional aliadas de REMURPE.</li>
+                    <li>Elecci&oacute;n preferente en los servicios de consultor&iacute;a especializados que los Asociados de REMURPE requieran.</li>
+                    <li>Elecci&oacute;n preferente en los servicios de consultor&iacute;a especializados que la REMURPE y sus instituciones aliadas requieran.</li>
+                    <li>Acceso a oportunidades laborales afines la especialidad del Experto.</li>
+                    <li>Acceso a informaci&oacute;n exclusiva de REMURPE, sobre temas de especializaci&oacute;n y de inter&eacute;s.</li>
+                </ol>
+                <p><strong>DEL INGRESO AL RNE-GPD</strong></p>
+                <p><strong>Art&iacute;culo 16&deg;.- </strong>La actualizaci&oacute;n de la RNE-GPD es libre y voluntaria y est&aacute; dirigido a todas las personas que deseen pertenecer al Equipo Nacional de expertos de REMURPE, quienes deber&aacute;n cumplir con los siguientes requisitos:</p>
+                <ol>
+                    <li>Llenar la ficha de datos que se encuentra en la p&aacute;gina WEB de la REMURPE.</li>
+                    <li>Consignar el nombre y la autorizaci&oacute;n de 02 miembros responsables de REMURPE que garantizan conocer su experiencia laboral.</li>
+                    <li>Presentar su Curriculum Vitae en f&iacute;sico con documentaci&oacute;n detallada, que ser&aacute; entregado a una persona responsable que se consigna en el cuadro adjunto.</li>
+                </ol>
+                <p>Cuadro: Miembros de REMURPE Nacional acreditados para autorizaci&oacute;n.<br />
+                <table>
+                    <thead>
+                        <th>Nombres</th>
+                        <th>Correo Electrónico</th>
+                        <th>Región</th>
+                    </thead>
+                    <tbody>
+                    <?php
+                    foreach ($aliados as $aliado) {
+                        echo '<tr>
+                            <td>' . $aliado[0] . '</td>
+                            <td>' . $aliado[1] . '</td>
+                            <td>' . $aliado[2] . '</td>
+                        </tr>';
+                    }
+                    ?>
+                    </tbody>
+                </table>
+                <p><strong>Art&iacute;culo 17&deg;.- </strong>El responsable del manejo de la Pagina WEB de REMURPE, recibir&aacute; la ficha la cual tiene car&aacute;cter de declaraci&oacute;n jurada y la derivar&aacute; al correo correspondiente para su evaluaci&oacute;n. Posterior se otorgar&aacute; el CERTIFICADO que lo habilita como experto de REMURPE, previo cumplimiento de los 3 requisitos mencionados.</p>
+                <p><strong>Art&iacute;culo 18&deg;</strong>.- Cumplido los 03 requisitos fundamentales y aceptadas las condiciones del presente reglamento, los Expertos se sujetan a estas condiciones.</p>
+                <p><strong>Art&iacute;culo 19&deg;</strong>.- El Experto puede renunciar a ser parte del equipo de REMURPE, mediante Carta Simple dirigida a la Secretar&iacute;a Ejecutiva Nacional, la misma que deber&aacute; de ser presentada en un plazo m&aacute;ximo de 30 d&iacute;as debiendo de entregar el informe final de su permanencia como socio de la RNE-GPD.</p>
+                <p><strong>Art&iacute;culo 20&deg;.-</strong> EL Consejo Directivo previa informaci&oacute;n documentada y sustentada por el Secretario Ejecutivo, otorgar&aacute; el reconocimiento de los miembros de REMURPE Nacional acreditados para autorizaci&oacute;n.</p>
+                <p>EL Consejo Directivo deber&aacute; de aprobar en su primera sesi&oacute;n pr&oacute;xima que el Secretario Ejecutivo Nacional de REMURPE, es el coordinador de la Red Nacional de Expertos en Gesti&oacute;n P&uacute;blica Descentralizada RNE-GPD, y es este quien deber&aacute; de informar semestralmente al Consejo Directivo de los avances e ingresos generados por la red a favor de REMURPE.</p>
+            </section>
+        </div>
         <script src="js/respond.min.js"></script>
         <script src="js/prefixfree.min.js"></script>
         <script src="js/jquery.min.js"></script>

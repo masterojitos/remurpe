@@ -1,6 +1,14 @@
 $(document).on("ready", function() {
     var $this;
     
+    //Unsupported CSS3 Code
+    $("#reglamento").on("click", function() {
+        $("#terms-conditions-modal").animate({ left: '50%' }, 500);
+    });
+    $("#terms-conditions-modal header a").on("click", function() {
+        $("#terms-conditions-modal").css("left", "-100%");
+    });
+    
     var moFile = function(e) {
         e.preventDefault();
         $(".mo_file_trigger[name='" + $(this).data("filename") + "']").trigger("click");
