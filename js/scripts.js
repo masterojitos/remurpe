@@ -2,11 +2,13 @@ $(document).on("ready", function() {
     var $this;
     
     //Unsupported CSS3 Code
-    $("#reglamento").on("click", function() {
+    $("#reglamento").on("click", function(e) {
+        e.preventDefault();
         $("#terms-conditions-modal").animate({ left: '50%' }, 500);
     });
-    $("#terms-conditions-modal header a").on("click", function() {
-        $("#terms-conditions-modal").css("left", "-100%");
+    $("#terms-conditions-modal header a").on("click", function(e) {
+        e.preventDefault();
+        $("#terms-conditions-modal").animate({ left: '-100%'}, 500);
     });
     
     var moFile = function(e) {
