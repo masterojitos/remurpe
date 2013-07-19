@@ -71,15 +71,21 @@ if (isset($_POST['submit'])) {
     </head>
     <body>
         <form class="container-poll MOForm" method="POST" enctype="multipart/form-data">
-            <div class="title-poll">
-                <h2>Consultas / preguntas</h2>
-                <ul class="social-icons color">
-                    <li><a href="http://www.youtube.com/user/remurpe" class="youtube">Youtube</a></li>
-                    <li><a href="skype:beltus20?chat" class="skype">Skype</a></li>
-                    <li><a href="https://www.facebook.com/remurpe.prensa" class="facebook">Facebook</a></li>
-                    <li><a href="https://twitter.com/remurpe" class="twitter">Twitter</a></li>
-                </ul>
-            </div>
+            <section class="header-poll">
+                <header>
+                    <img src="img/logo.png" alt="Remurpe" />
+                    <h1>Red Nacional de Expertos en<br /> Gestión Pública Descentralizada</h1>
+                </header>
+                <footer class="title-poll">
+                    <a href="http://www.remurpe.org.pe/component/rsform/?formId=1" target="_blank">Consultas</a>
+                    <ul class="social-icons color">
+                        <li><a href="http://www.youtube.com/user/remurpe" class="youtube">Youtube</a></li>
+                        <li><a href="skype:beltus20?chat" class="skype">Skype</a></li>
+                        <li><a href="https://www.facebook.com/remurpe.prensa" class="facebook">Facebook</a></li>
+                        <li><a href="https://twitter.com/remurpe" class="twitter">Twitter</a></li>
+                    </ul>
+                </footer>
+            </section>
             <?php if (isset($_POST['submit'])) { ?>
             <p class="alert alert-success">Gracias por inscribirte.</p>
             <a href="./">Volver al inicio.</a>
@@ -157,7 +163,12 @@ if (isset($_POST['submit'])) {
                 <h3>Formación / Profesión</h3>
                 <p>
                     <label for="nivel_estudios">Nivel de estudios</label>
-                    <input type="text" name="nivel_estudios" id="nivel_estudios" placeholder="Nivel de estudios" maxlength="100" class="input-full" />
+                    <select name="nivel_estudios" id="nivel_estudios" class="input-full">
+                        <option value="">Seleccione un Nivel de estudios</option>
+                        <option value="Bachiller">Bachiller</option>
+                        <option value="Post Grado">Post Grado</option>
+                        <option value="Doctorado">Doctorado</option>
+                    </select>
                 </p>
                 <p>
                     <label for="profesion">Profesión <small class="input-help">*</small></label>
@@ -172,6 +183,7 @@ if (isset($_POST['submit'])) {
                             echo '</optgroup>';
                         }
                         ?>
+                        <option value="Otra">Otra</option>
                     </select>
                 </p>
                 <p>
@@ -190,19 +202,32 @@ if (isset($_POST['submit'])) {
                     <textarea name="experiencia_gobiernos_regionales" id="experiencia_gobiernos_regionales" placeholder="Gobiernos Regionales" class="input-full"></textarea>
                 </p>
                 <p>
-                    <label for="referencia_nombre">Referencias <small class="input-help">*</small></label>
-                    <input type="text" name="referencia_nombre" id="referencia_nombre" placeholder="Referencias" required="required" maxlength="100" class="input-full" />
+                    <label>Referencias</label>
                 </p>
+                <div class="bloque">
+                    <p>
+                        <label for="referencia_nombre_1" class="normal-text">Nombre <small class="input-help">*</small></label>
+                        <input type="text" name="referencia_nombre[]" id="referencia_nombre_1" placeholder="Nombre" required="required" maxlength="100" class="input-full" />
+                    </p>
+                    <p>
+                        <label for="referencia_lugar_trabajo_1" class="normal-text">Lugar de Trabajo <small class="input-help">*</small></label>
+                        <input type="text" name="referencia_lugar_trabajo[]" id="referencia_lugar_trabajo_1" placeholder="Lugar de Trabajo" required="required" class="input-full" />
+                    </p>
+                    <p>
+                        <label for="referencia_cargo_1" class="normal-text">Cargo <small class="input-help">*</small></label>
+                        <input type="text" name="referencia_cargo[]" id="referencia_cargo_1" placeholder="Cargo" required="required" maxlength="11" class="input-full" />
+                    </p>
+                    <p>
+                        <label for="referencia_email_1" class="normal-text normal-width">Email <small class="input-help">*</small></label>
+                        <input type="email" name="referencia_email[]" id="referencia_email_1" placeholder="Email" required="required" class="input-small" />
+                        <label for="referencia_telefono" class="normal-text normal-width">Teléfono <small class="input-help">*</small></label>
+                        <input type="tel" name="referencia_telefono[]" id="referencia_telefono_1" placeholder="Teléfono" required="required" maxlength="11" class="input-small" />
+                        <label for="referencia_rpm" class="normal-text normal-width">RPM</label>
+                        <input type="tel" name="referencia_rpm[]" id="referencia_rpm_1" placeholder="RPM" maxlength="11" class="input-small" />
+                    </p>
+                </div>
                 <p>
-                    <label></label>
-                    <span>
-                        <label for="referencia_email">Email <small class="input-help">*</small></label>
-                        <input type="email" name="referencia_email" id="referencia_email" placeholder="Email" required="required" class="input-small" />
-                        <label for="referencia_telefono">Teléfono <small class="input-help">*</small></label>
-                        <input type="tel" name="referencia_telefono" id="referencia_telefono" placeholder="Teléfono" required="required" maxlength="11" class="input-small" />
-                        <label for="referencia_rpm">RPM</label>
-                        <input type="tel" name="referencia_rpm" id="referencia_rpm" placeholder="RPM" maxlength="11" class="input-small" />
-                    </span>
+                    <input type="button" id="agregar_referencia" value="Agregar Referencia" />
                 </p>
                 <p>&nbsp;</p>
                 <p>
@@ -222,17 +247,17 @@ if (isset($_POST['submit'])) {
                 <?php
                 $i = 0;
                 foreach ($especializaciones as $espececializacion_categoria => $especializacion_items) {
-                echo '<div class="column especializacion-' . ++$i . ' input-options" data-checkname="especializacion">
+                echo '<div class="column input-options" data-checkname="especializacion">
                     <label class="checkbox">
-                        <input type="checkbox" class="checkall" data-trigger="especializacion-' . $i . '" />
-                        <span><h4>' . $espececializacion_categoria . '</h4></span>
+                        <input type="checkbox" name="especializacion[' . $espececializacion_categoria . '][]" value="' . $espececializacion_categoria . '" />
+                        <span><strong class="criterio-especializacion">' . $letras[$i++] . '</strong> <h4>' . $espececializacion_categoria . '</h4></span>
                     </label>
                     <ul>';
-                    foreach ($especializacion_items as $especializacion) {
+                    foreach ($especializacion_items as $number => $especializacion) {
                         echo '<li>
                             <label class="checkbox">
-                                <input type="checkbox" name="especializacion[' . $espececializacion_categoria . '][]" value="' . $especializacion . '" class="checkbox-checkall" data-trigger="especializacion-' . $i . '" />
-                                <span>' . ucwords($especializacion) . '</span>
+                                <input type="checkbox" name="especializacion[' . $espececializacion_categoria . '][]" value="' . $especializacion . '" />
+                                <span><strong class="criterio-especializacion">' . str_pad(++$number, 2, 0, STR_PAD_LEFT) . '</strong> ' . ucwords($especializacion) . '</span>
                             </label>
                         </li>';
                     }

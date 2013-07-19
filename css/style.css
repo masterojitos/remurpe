@@ -20,20 +20,45 @@ h1, h2, h3, h3, h4, h5, h6
     margin: 0 auto;
     max-width: 767px;
 }
-.container-poll .title-poll
+.container-poll section.header-poll header
+{
+    background-color: #D8EDD3;
+    min-height: 92px;
+    overflow: hidden;
+    padding: 5px 10px;
+    position: relative;
+}
+.container-poll section.header-poll header > img
+{
+    left: 10px;
+    height: 92px;
+    position: absolute;
+    top: 5px;
+}
+.container-poll section.header-poll header > h1
+{
+    color: #000;
+    font-weight: 700;
+    padding-top: 0.75em;
+    text-align: center;
+}
+.container-poll section.header-poll footer
 {
     background-color: #D8FBD8;
     min-height: 50px;
-    padding: 0 10px;
     overflow: hidden;
+    padding: 0 10px;
 }
-.container-poll .title-poll h2
+.container-poll section.header-poll footer > a
 {
     color: #F00;
     display: inline-block;
+    font-size: 1.5em;
+    font-weight: 700;
     line-height: 50px;
+    text-decoration: none;
 }
-.container-poll .title-poll ul.social-icons
+.container-poll section.header-poll footer > ul.social-icons
 {
     float: right;
     margin: 6px 0;
@@ -54,6 +79,12 @@ h1, h2, h3, h3, h4, h5, h6
 {
     padding-left: 10px;
     margin: 0.5em 0;
+}
+.container-poll section div.bloque
+{
+    border: 1px solid #ccc;
+    margin: 0.5em 2%;
+    width: 88%;
 }
 .container-poll a#reglamento
 {
@@ -84,6 +115,10 @@ h1, h2, h3, h3, h4, h5, h6
 .container-poll section label.normal-text
 {
     font-weight: 400;
+}
+.container-poll section label.normal-width
+{
+    width: auto;
 }
 .container-poll section label.label-full
 {
@@ -162,9 +197,9 @@ h1, h2, h3, h3, h4, h5, h6
     vertical-align: middle;
     width: auto;
 }
-.container-poll section.formation-profession p > span > input.input-small
+.container-poll section.formation-profession p > input.input-small
 {
-    width: 15%;
+    width: 20%;
 }
 .container-poll section.formation-profession div.column
 {
@@ -191,6 +226,14 @@ h1, h2, h3, h3, h4, h5, h6
     font-weight: 400;
     display: inline;
 }
+.container-poll section.formation-profession div.column strong.criterio-especializacion
+{
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #f00;
+    padding: 0 6px;
+    text-align: center;
+}
 .container-poll section.formation-profession div.column ul
 {
     margin: 0;
@@ -201,6 +244,11 @@ h1, h2, h3, h3, h4, h5, h6
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+.container-poll section.formation-profession div.column ul li strong.criterio-especializacion
+{
+    border: none;
+    padding: 0 3px;
 }
 .container-poll section.formation-profession div.row ul li
 {
@@ -318,9 +366,14 @@ h1, h2, h3, h3, h4, h5, h6
     }
     .container-poll section label
     {
-        padding-left: 2px;
         display: block;
+        padding-left: 2px;
         width: 90%;
+    }
+    .container-poll section label.normal-width
+    {
+        display: inline-block;
+        width: auto;
     }
     .container-poll section input, .container-poll section textarea
     {
@@ -387,12 +440,12 @@ h1, h2, h3, h3, h4, h5, h6
     }
     .container-poll section.formation-profession p > label + span.input-options > label
     {
-        width: 92%;
+        width: 88%;
     }
-    .container-poll section.formation-profession p > span > input.input-small
+    .container-poll section.formation-profession p > input.input-small
     {
         display: inline-block;
-        width: 59%;
+        width: 16%;
     }
     .container-poll section.formation-profession div.column
     {

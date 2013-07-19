@@ -4,11 +4,11 @@ $(document).on("ready", function() {
     //Unsupported CSS3 Code
     $("#reglamento").on("click", function(e) {
         e.preventDefault();
-        $("#terms-conditions-modal").animate({ left: '50%' }, 500);
+        $("#terms-conditions-modal").animate({left: '50%'}, 500);
     });
     $("#terms-conditions-modal header a").on("click", function(e) {
         e.preventDefault();
-        $("#terms-conditions-modal").animate({ left: '-100%'}, 500);
+        $("#terms-conditions-modal").animate({left: '-100%'}, 500);
     });
     
     var moFile = function(e) {
@@ -69,6 +69,18 @@ $(document).on("ready", function() {
         checkbox_name = $("." + $this.data("trigger")).data("checkname");
         $("." + $this.data("trigger") + " input[type=checkbox][name^=" + checkbox_name + "]").prop("checked", $this.is(":checked"));
     });
+    
+    var aliados_disabled = false;
+    $('table#aliados input[type=checkbox]').on("click", function() {
+        if ($('table#aliados input[type=checkbox]:checked').length >= 2) {
+            $('table#aliados input[type=checkbox]').attr("disabled", true);
+            $('table#aliados input[type=checkbox]:checked').removeAttr("disabled");
+            aliados_disabled = true;
+        } else if (aliados_disabled) {
+            $('table#aliados input[type=checkbox]').removeAttr("disabled");
+            aliados_disabled = false;
+        }
+    });
 
     $("form").on("submit", function() {
         if ($('#condiciones_no').is(":checked")) {
@@ -76,9 +88,9 @@ $(document).on("ready", function() {
                 alert("Debe aceptar las condiciones de los requesitos necesarios para inscribirse.");
             });
             return false;
-        } else if ($('table#aliados input[type=checkbox]:checked').length <= 0) {
+        } else if ($('table#aliados input[type=checkbox]:checked').length != 2) {
             $("html").animate({scrollTop : $('table#aliados').prev().position().top}, 500, function() {
-                alert("Debe marcar por lo menos un aliado.");
+                alert("Debe marcar 2 aliados obligatoriamente.");
             });
             return false;
         } else if ($('div.especializacion-1 input[type=checkbox]:checked, div.especializacion-2 input[type=checkbox]:checked, div.especializacion-3 input[type=checkbox]:checked').length <= 0) {
@@ -87,7 +99,7 @@ $(document).on("ready", function() {
             });
             return false;
         } else if ($('div.zonas-intervencion input[type=checkbox]:checked').length <= 0) {
-            $("html").animate({scrollTop : $(document).height() }, 500, function() {
+            $("html").animate({scrollTop : $(document).height()}, 500, function() {
                 alert("Debe marcar por lo menos una zona de internvención.");
             });
             return false;
