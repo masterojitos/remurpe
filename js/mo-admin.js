@@ -101,25 +101,26 @@ $(document).on("ready", function() {
         $(document).on("submit", "form", function(){mo_submit(mod, 5);return false;});
     }
     
-    var profesion, especializacion, intervencion;
     $(document).on("click", "#clear_filter", function() {
+        oTable.fnFilter('******', 6);
         mo_list(mod);
         setTimeout(function() {
             $('#content .datatable th:first').trigger("click");
-        }, 1000);
+        }, 100);
     });
-    var filters = [];
+    var filters, profesion, especializacion_area, especializacion_opcion, intervencion;
     $(document).on("click", "#special_filter", function() {
         filters = [];
-        var profesion = $("#profesion").val();
-        var especializacion = $("#especializacion").val();
-        var intervencion = $("#intervencion").val();
+        profesion = $("#profesion").val();
+        especializacion_area = $("#especializacion_area").val();
+        especializacion_opcion = $("#especializacion_opcion").val();
+        intervencion = $("#intervencion").val();
         if (profesion) {
             filters.push(profesion.join('|||'));
         }
         filters.push('***');
-        if (especializacion) {
-            filters.push(especializacion.join('|||'));
+        if (especializacion_area) {
+            filters.push(especializacion_opcion ? especializacion_area + '|||' + especializacion_opcion : especializacion_area);
         }
         filters.push('***');
         if (intervencion) {

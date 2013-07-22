@@ -462,15 +462,21 @@ div.message {
 }
 
 .special-filter p.block-profesion {
-    width: 250px;
+    width: 300px;
 }
 
 .special-filter p.block-especializacion {
-    width: 310px;
+    width: 180px;
+}
+
+.special-filter p.block-especializacion select {
+    margin: 0;
+    width: auto;
+    height: auto;
 }
 
 .special-filter p.block-intervencion {
-    width: 120px;
+    width: 200px;
 }
 
 .special-filter p select {

@@ -11,6 +11,24 @@ $(document).on("ready", function() {
         $("#terms-conditions-modal").animate({left: '-100%'}, 500);
     });
     
+    var referencia_bloque;
+    var quitar_referencia = $.parseHTML('<p class="text-right"><button type="button" class="quitar_referencia">Quitar Referencia</button></p>');
+    $("#agregar_referencia").on("click", function() {
+        referencia_bloque = $(".bloque:last").clone();
+        referencia_bloque.find("label").attr("for", value_increment);
+        referencia_bloque.find("input").attr("id", value_increment).val("");
+        if (!referencia_bloque.find(".quitar_referencia").length) {
+            referencia_bloque.append(quitar_referencia);
+        }
+        $(this).parent().before(referencia_bloque);
+    });
+    $(document).on("click", ".quitar_referencia", function() {
+        $(this).parent().parent().fadeOut(500, function() { $(this).remove(); });
+    });
+    var value_increment = function(i, value) {
+        return value + 1;
+    };
+    
     var moFile = function(e) {
         e.preventDefault();
         $(".mo_file_trigger[name='" + $(this).data("filename") + "']").trigger("click");
@@ -93,8 +111,8 @@ $(document).on("ready", function() {
                 alert("Debe marcar 2 aliados obligatoriamente.");
             });
             return false;
-        } else if ($('div.especializacion-1 input[type=checkbox]:checked, div.especializacion-2 input[type=checkbox]:checked, div.especializacion-3 input[type=checkbox]:checked').length <= 0) {
-            $("html").animate({scrollTop : $('div.especializacion-1').prev().position().top}, 500, function() {
+        } else if ($('div.especializacion input[type=checkbox]:checked').length <= 0) {
+            $("html").animate({scrollTop : $('div.especializacion').prev().position().top}, 500, function() {
                 alert("Debe marcar por lo menos un área de especialización.");
             });
             return false;

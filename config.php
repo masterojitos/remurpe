@@ -37,6 +37,7 @@ $profesiones["INGENIERÍAS"] = array("Ingeniería Química", "Ingeniería Agroin
 $profesiones["ECONÓMICO-EMPRESARIALES"] = array("Administración", "Administración de Turismo", "Administración de Negocios Internacionales", "Contabilidad", "Gestión Tributaria", "Auditoria Empresarial y del Sector Público", "Economía", "Economía Pública", "Economía Internacional", "Economía y Gestión Ambiental", "Arquitectura");
 
 $letras = array("A", "B", "C");
+$areas = array("POLÍTICAS PÚBLICAS DESCENTRALIZADAS" => "A", "POLÍTICAS SOCIALES DESCENTRALIZADAS" => "B", "GESTIÓN DEL TERRITORIO Y RECURSOS NATURALES" => "C");
 $especializaciones = array();
 $especializaciones["POLÍTICAS PÚBLICAS DESCENTRALIZADAS"] = array("diseño de políticas públicas", "planeamiento territorial e institucional", "gestión financiera y presupuestal", "contrataciones y adquisiciones", "servicios públicos", "administración tributaria", "proyectos de preinversión e inversión", "recursos humanos", "participación ciudadana", "soporte jurídico municipal");
 $especializaciones["POLÍTICAS SOCIALES DESCENTRALIZADAS"] = array("educación rural", "programas alimentarios y sociales", "saneamiento básico", "discapacidad e inclusión", "generación de empleo", "jóvenes y género");

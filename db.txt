@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 17-06-2013 a las 15:50:45
+-- Tiempo de generación: 22-07-2013 a las 12:20:27
 -- Versión del servidor: 5.5.8
 -- Versión de PHP: 5.3.5
 
@@ -50,31 +50,30 @@ CREATE TABLE IF NOT EXISTS `postulante` (
   `departamento` varchar(100) NOT NULL,
   `provincia` varchar(100) NOT NULL,
   `distrito` varchar(100) NOT NULL,
-  `recomendado_nombre` varchar(100) NOT NULL,
-  `recomendado_email` varchar(255) NOT NULL,
-  `recomendado_telefono` int(11) NOT NULL DEFAULT '0',
+  `aliados` varchar(100) NOT NULL COMMENT 'indices del arreglo de aliados',
   `nivel_estudios` varchar(100) NOT NULL,
   `profesion` varchar(100) NOT NULL,
   `experiencia_3_ultimos_anos` text NOT NULL,
   `experiencia_gobiernos_locales` text NOT NULL,
   `experiencia_gobiernos_regionales` text NOT NULL,
-  `referencia_nombre` varchar(100) NOT NULL,
-  `referencia_email` varchar(255) NOT NULL,
-  `referencia_telefono` int(11) NOT NULL DEFAULT '0',
-  `referencia_rpm` int(11) NOT NULL DEFAULT '0',
+  `referencia_nombre` text NOT NULL,
+  `referencia_lugar_trabajo` text NOT NULL,
+  `referencia_cargo` text NOT NULL,
+  `referencia_email` text NOT NULL,
+  `referencia_telefono` text NOT NULL,
+  `referencia_rpm` text NOT NULL,
   `especializacion` text NOT NULL,
   `intervencion` text NOT NULL,
   `curriculum` varchar(100) NOT NULL,
   `fecha_creacion` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `aprobado` char(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Volcar la base de datos para la tabla `postulante`
 --
 
-INSERT INTO `postulante` (`id`, `nombre`, `apellido`, `dni`, `telefono`, `email`, `foto`, `departamento`, `provincia`, `distrito`, `recomendado_nombre`, `recomendado_email`, `recomendado_telefono`, `nivel_estudios`, `profesion`, `experiencia_3_ultimos_anos`, `experiencia_gobiernos_locales`, `experiencia_gobiernos_regionales`, `referencia_nombre`, `referencia_email`, `referencia_telefono`, `referencia_rpm`, `especializacion`, `intervencion`, `curriculum`, `fecha_creacion`) VALUES
-(1, 'Ricardo Gerald', 'Garcia Rodriguez', 46287426, 4294675, 'master.ojitos@gmail.com', '', 'CALLAO', 'CALLAO', 'CALLAO', 'Lisbeth Eleorreaga Lanchipa', 'liseleorreaga@gmail.com', 4294676, 'Superior', 'Ingenier�a de Sistemas', 'a', 'b', 'c\r\nde\r\n', 'Hector Leon', 'hleon@gmail.com', 456, 0, 'a:2:{s:35:"POLITICAS PUBLICAS DESCENTRALIZADAS";a:2:{i:0;s:29:"Gestion De Politicas Publicas";i:1;s:26:"Planeamiento Institucional";}s:35:"POLITICAS SOCIALES DESCENTRALIZADAS";a:2:{i:0;s:5:"Salud";i:1;s:12:"Sanieamiento";}}', 'a:2:{i:0;s:6:"Callao";i:1;s:4:"Lima";}', '', '2013-06-10 11:24:57'),
-(2, 'Andres Sebastian', 'Garcia Rodriguez', 0, 4294630, 'andresgarciadev@gmail.com', '51b5cdbc7c4d5_SDC12262.JPG', 'AREQUIPA', 'CAYLLOMA', '', '', '', 0, '', 'Odontolog�a', '', 'Ni�os del �rbol\r\nfin.', '', '', '', 0, 0, 'a:2:{s:35:"POLITICAS SOCIALES DESCENTRALIZADAS";a:1:{i:0;s:9:"Educacion";}i:0;s:34:"GESTION DEL TERRITORIO Y AMBIENTAL";}', 'a:1:{i:0;s:5:"Todas";}', '51b5cdbc7c4d5_Curriculum Vitae.pdf', '2013-06-10 12:59:40'),
-(3, 'Joe', 'Robles', 8509, 0, 'joe.robles.pdj@gmail.com', '', 'CUSCO', 'CALCA', '', '', '', 0, '', '', '', 'Niños del árbol.\r\nfinish.', '', '', '', 0, 0, 'a:2:{s:35:"POLITICAS PUBLICAS DESCENTRALIZADAS";a:2:{i:0;s:29:"Gestion De Politicas Publicas";i:1;s:24:"Planeamiento Territorial";}s:35:"POLITICAS SOCIALES DESCENTRALIZADAS";a:6:{i:0;s:9:"Educacion";i:1;s:5:"Salud";i:2;s:22:"Programas Alimentarios";i:3;s:12:"Sanieamiento";i:4;s:12:"Discapacidad";i:5;s:15:"Empleo Temporal";}}', 'a:1:{i:0;s:6:"Callao";}', '51b5f34912183_AISB08.pdf', '2013-06-10 15:39:53'),
-(5, 'Lisbeth Julia', 'Eleorreaga Lanchipa', 46577037, 4294675, 'lisbeth_21_15@hotmail.com', '', 'LIMA', 'LIMA', 'MIRAFLORES', 'Ricardo Garcia', 'master.ojitos@gmail.com', 4294630, 'Secundario', 'Administración', '\r\n', 'sorry\r\nbye.', '', 'Jorge Antonio', 'jorge@bimbo.pe', 4294675, 0, 'a:1:{s:37:"POLÍTICAS PÚBLICAS DESCENTRALIZADAS";a:1:{i:0;s:26:"Administración Tributaria";}}', 'a:2:{i:0;s:8:"Arequipa";i:1;s:6:"Callao";}', '', '2013-06-17 08:15:12');
+INSERT INTO `postulante` (`id`, `nombre`, `apellido`, `dni`, `telefono`, `email`, `foto`, `departamento`, `provincia`, `distrito`, `aliados`, `nivel_estudios`, `profesion`, `experiencia_3_ultimos_anos`, `experiencia_gobiernos_locales`, `experiencia_gobiernos_regionales`, `referencia_nombre`, `referencia_lugar_trabajo`, `referencia_cargo`, `referencia_email`, `referencia_telefono`, `referencia_rpm`, `especializacion`, `intervencion`, `curriculum`, `fecha_creacion`, `aprobado`) VALUES
+(1, 'Ricardo Gerald', 'Garcia Rodriguez', 46287426, 4294630, 'master.ojitos@gmail.com', '', 'CALLAO', 'CALLAO', 'CALLAO', '1,3', 'Bachiller', 'Ingeniería de Sistemas', 'a\r\nbc', '', 'niños de árbol\r\n....', 'a:1:{i:0;s:23:"Andres Garcia Rodriguez";}', 'a:1:{i:0;s:11:"Movitecnica";}', 'a:1:{i:0;s:17:"Desarrollador Web";}', 'a:1:{i:0;s:25:"andresgarciadev@gmail.com";}', 'a:1:{i:0;s:7:"4294630";}', 'a:1:{i:0;s:0:"";}', 'a:3:{s:37:"POLÍTICAS PÚBLICAS DESCENTRALIZADAS";a:1:{i:0;s:26:"administración tributaria";}s:36:"POLÍTICAS SOCIALES DESCENTRALIZADAS";a:1:{i:0;s:36:"POLÍTICAS SOCIALES DESCENTRALIZADAS";}s:44:"GESTIÓN DEL TERRITORIO Y RECURSOS NATURALES";a:1:{i:0;s:30:"mancomunidades / asociativismo";}}', 'a:2:{i:0;s:6:"Callao";i:1;s:4:"Lima";}', '51ecfeb699178_Curriculum Vitae.pdf', '2013-07-22 04:43:18', '1'),
+(2, 'Lisbeth Julia', 'Eleorreaga Lanchipa', 46577037, 4294675, 'lisbeth_21_15@hotmail.com', '', 'LIMA', 'LIMA', 'SAN MIGUEL', '17,18', '', 'Administración', '...', 'yes and\r\nno !!', '', 'a:2:{i:0;s:25:"Jorge Eleorreaga Lanchipa";i:1;s:23:"Andres Garcia Rodriguez";}', 'a:2:{i:0;s:4:"Casa";i:1;s:11:"Movitecnica";}', 'a:2:{i:0;s:7:"Hermano";i:1;s:11:"Programador";}', 'a:2:{i:0;s:21:"jorge_sba@hotmail.com";i:1;s:25:"andresgarciadev@gmail.com";}', 'a:2:{i:0;s:3:"555";i:1;s:7:"4294630";}', 'a:2:{i:0;s:7:"1234321";i:1;s:0:"";}', 'a:1:{s:44:"GESTIÓN DEL TERRITORIO Y RECURSOS NATURALES";a:2:{i:0;s:44:"GESTIÓN DEL TERRITORIO Y RECURSOS NATURALES";i:1;s:30:"mancomunidades / asociativismo";}}', 'a:1:{i:0;s:6:"Callao";}', '', '2013-07-22 05:05:04', '1');

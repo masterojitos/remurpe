@@ -12,7 +12,7 @@
     font-weight: 700;
 }
 
-.MOForm input, .MOForm select, .MOForm textarea, a.MOButton {
+.MOForm input, .MOForm select, .MOForm textarea, .MOForm button, a.MOButton {
     color: #333;
     padding: 3px;
     margin: 2px 2px 5px;
@@ -62,7 +62,7 @@
     color: #0058A2;
 }
 
-.MOForm input[type="submit"], .MOForm input[type="reset"], .MOForm input[type="button"], a.MOButton {
+.MOForm input[type="submit"], .MOForm input[type="reset"], .MOForm input[type="button"], .MOForm button, a.MOButton {
     width: auto;
     height: 25px;
     color: #FFF;
@@ -89,7 +89,7 @@ a.MOButton {
     padding: 5px 15px
 }
 
-.MOForm input[type="submit"]:hover, .MOForm input[type="reset"]:hover, .MOForm input[type="button"]:hover, a.MOButton:hover {
+.MOForm input[type="submit"]:hover, .MOForm input[type="reset"]:hover, .MOForm input[type="button"]:hover, .MOForm button:hover, a.MOButton:hover {
     text-decoration: none;
     background-color: #026789;
     background-image: -moz-linear-gradient(top, #026789, #00AEEF);

@@ -67,14 +67,28 @@ switch ($do) {
                         if ($values_column != "") {
                             if (0 === $column_count++) $sWhere .= "( ";
                             $mo_rows = explode("|||", $values_column);
-                            foreach ($mo_rows as $value_search) {
+                            if ($i == 7) {
                                 if ($row_count++ > 0) $sWhere .= " OR ";
+                                if (count($mo_rows) > 1) {
+                                    if (count($especializaciones[array_search($mo_rows[0], $areas)]) >= $mo_rows[1])
+                                        $value_search = $especializaciones[array_search($mo_rows[0], $areas)][$mo_rows[1] - 1];
+                                    else
+                                        $value_search = 'masterojitos'; //By values not found
+                                } else {
+                                    $value_search = array_search($mo_rows[0], $areas);
+                                }
                                 $sWhere .= "`" . $aColumns[$i] . "` LIKE '%" . $value_search . "%' ";
+                            } else {
+                                foreach ($mo_rows as $value_search) {
+                                    if ($row_count++ > 0) $sWhere .= " OR ";
+                                    $sWhere .= "`" . $aColumns[$i] . "` LIKE '%" . $value_search . "%' ";
+                                }
                             }
                         }
                         $i++;
                     }
                     if ($column_count > 0) $sWhere .= ") ";
+                    else $sWhere .= " 1=1";
                 } else {
                     $sWhere .= "`" . $aColumns[$i] . "` LIKE '%" . mysql_real_escape_string($_POST['sSearch_' . $i]) . "%' ";
                 }

@@ -17,15 +17,24 @@
         </select>
     </p>
     <p class="block-especializacion">
-        <label for="especializacion">Áreas de especialización</label>
-        <select name="especializacion" id="especializacion" multiple="multiple">
+        <label for="especializacion_area">Áreas de especialización</label>
+        <br />
+        <select name="especializacion_area" id="especializacion_area">
+            <option value=""></option>
             <?php
-            foreach ($especializaciones as $espececializacion_categoria => $especializacion_items) {
-                echo '<optgroup label="' . $espececializacion_categoria . '" title="' . $espececializacion_categoria . '">';
-                foreach ($especializacion_items as $especializacion) {
-                    echo '<option value="' . $especializacion . '" title="' . $especializacion . '">' . ucwords($especializacion) . '</option>';
-                }
-                echo '</optgroup>';
+            foreach ($letras as $letra) {
+                echo '<option value="' . $letra . '">' . $letra . '</option>';
+            }
+            ?>
+        </select>
+        <br /><br />
+        <label for="especializacion_opcion">Opción de especialización</label>
+        <br />
+        <select name="especializacion_opcion" id="especializacion_opcion">
+            <option value=""></option>
+            <?php
+            foreach (range(1, 10) as $numero) {
+                echo '<option value="' . $numero . '">' . str_pad($numero, 2, 0, STR_PAD_LEFT) . '</option>';
             }
             ?>
         </select>

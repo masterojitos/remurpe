@@ -12,6 +12,12 @@ if(!empty($id)){
             $aliados_text.= '- ' . $aliados[$indice][0] . ' / ' . $aliados[$indice][1] . ' / ' . $aliados[$indice][2] . '<br />';
         }
     }
+    $referencia_nombre = unserialize($row['referencia_nombre']);
+    $referencia_lugar_trabajo = unserialize($row['referencia_lugar_trabajo']);
+    $referencia_cargo = unserialize($row['referencia_cargo']);
+    $referencia_email = unserialize($row['referencia_email']);
+    $referencia_telefono = unserialize($row['referencia_telefono']);
+    $referencia_rpm = unserialize($row['referencia_rpm']);
     $especializaciones = unserialize($row['especializacion']);
     $especializaciones_text = "";
     if (count($especializaciones)) {
@@ -52,10 +58,15 @@ if(!empty($id)){
         <tr><td><?php echo $tab; ?><strong>3 Últimos años:</strong></td><td><?php echo nl2br($row['experiencia_3_ultimos_anos']); ?></td></tr>
         <tr><td><?php echo $tab; ?><strong>Gobiernos locales:</strong></td><td><?php echo nl2br($row['experiencia_gobiernos_locales']); ?></td></tr>
         <tr><td><?php echo $tab; ?><strong>Gobiernos regionales:</strong></td><td><?php echo nl2br($row['experiencia_gobiernos_regionales']); ?></td></tr>
-        <tr><td><strong>Referenciado por:</strong></td><td><?php echo $row['referencia_nombre']; ?></td></tr>
-        <tr><td><?php echo $tab; ?><strong>Email:</strong></td><td><?php echo $row['referencia_email']; ?></td></tr>
-        <tr><td><?php echo $tab; ?><strong>Teléfono:</strong></td><td><?php echo $row['referencia_telefono']; ?></td></tr>
-        <tr><td><?php echo $tab; ?><strong>RPM:</strong></td><td><?php echo $row['referencia_rpm']; ?></td></tr>
+        <?php for ($i = 0; $i < count($referencia_nombre); $i++) { ?>
+        <tr><td colspan="2"><strong>Referenciado N° <?php echo $i + 1; ?>:</strong></td></tr>
+        <tr><td><?php echo $tab; ?><strong>Nombre:</strong></td><td><?php echo $referencia_nombre[$i]; ?></td></tr>
+        <tr><td><?php echo $tab; ?><strong>Lugar de Trabajo:</strong></td><td><?php echo $referencia_lugar_trabajo[$i]; ?></td></tr>
+        <tr><td><?php echo $tab; ?><strong>Cargo:</strong></td><td><?php echo $referencia_cargo[$i]; ?></td></tr>
+        <tr><td><?php echo $tab; ?><strong>Email:</strong></td><td><?php echo $referencia_email[$i]; ?></td></tr>
+        <tr><td><?php echo $tab; ?><strong>Teléfono:</strong></td><td><?php echo $referencia_telefono[$i]; ?></td></tr>
+        <tr><td><?php echo $tab; ?><strong>RPM:</strong></td><td><?php echo $referencia_rpm[$i]; ?></td></tr>
+        <?php } ?>
         <tr><td><strong>Áreas de especialización:</strong></td><td><?php echo $especializaciones_text; ?></td></tr>
         <tr><td><strong>Zonas de Intervención:</strong></td><td><?php echo $intervenciones_text; ?></td></tr>
         <tr><td><strong>Curriculum Vitae:</strong></td><td><?php echo ($row['curriculum'] !== "" ? '<a href="../userfiles/' . $row['curriculum'] . '">Ver</a>' : ''); ?></td></tr>

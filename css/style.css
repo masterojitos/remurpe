@@ -14,6 +14,10 @@ h1, h2, h3, h3, h4, h5, h6
 {
     margin: 0;
 }
+.text-right
+{
+    text-align: right;
+}
 
 .container-poll
 {
@@ -85,6 +89,10 @@ h1, h2, h3, h3, h4, h5, h6
     border: 1px solid #ccc;
     margin: 0.5em 2%;
     width: 88%;
+}
+.container-poll section div.bloque .quitar_referencia
+{
+    margin-right: 2%;
 }
 .container-poll a#reglamento
 {
@@ -356,6 +364,25 @@ h1, h2, h3, h3, h4, h5, h6
 #terms-conditions-modal table th
 {
     background-color: #B0CFF2;
+}
+#terms-conditions-modal table.especialidades
+{
+    width: 70%;
+}
+#terms-conditions-modal table.especialidades td
+{
+    border: 1px solid #666;
+    padding: 3px;
+}
+#terms-conditions-modal table.especialidades td.none
+{
+    border: none;
+    padding: 3px;
+}
+#terms-conditions-modal table.especialidades th p, #terms-conditions-modal table.especialidades td p
+{
+    margin: 0;
+    padding: 0;
 }
 
 @media (max-width: 640px) {
