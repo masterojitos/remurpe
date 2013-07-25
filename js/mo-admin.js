@@ -96,18 +96,18 @@ $(document).on("ready", function() {
         mo_list(mod);
         $(document).on("click", ".list", function(){mo_list(mod);return false;});
         $(document).on("click", ".update", function(){mo_update(mod, $(this));return false;});
-        $(document).on("click", ".status", function(){ mo_status(mod, $(this)); return false; });
+        $(document).on("click", ".status", function(){mo_status(mod, $(this));return false;});
         $(document).on("click", ".delete", function(){mo_delete(mod, $(this));return false;});
         $(document).on("submit", "form", function(){mo_submit(mod, 5);return false;});
     }
     
     $(document).on("click", "#clear_filter", function() {
-        oTable.fnFilter('******', 6);
-        mo_list(mod);
-        setTimeout(function() {
+        mo_list(mod, function() {
+            $("#special_filter").trigger("click");
             $('#content .datatable th:first').trigger("click");
-        }, 100);
+        });
     });
+    
     var filters, profesion, especializacion_area, especializacion_opcion, intervencion;
     $(document).on("click", "#special_filter", function() {
         filters = [];
@@ -150,7 +150,7 @@ function mo_search(mod){
     });
 }
 
-function mo_list(mod){
+function mo_list(mod, callback){
     var add_data = $(".filter").length > 0 ? "&filter=" + $(".filter").val() : "";
     $.ajax({
         data: "mod=" + mod + add_data,
@@ -179,7 +179,7 @@ function mo_list(mod){
                             function ( data, type, row ) {
                                 return '<a href="#" id="' + data + '" class="update no-background" title="Ver detalle">' + data + '</a>';
                             }, "aTargets": [ 0 ]},
-                        { "bVisible": false, "aTargets": [ 6, 7, 8 ] },
+                        {"bVisible": false, "aTargets": [ 6, 7, 8 ]},
                         {"sClass": "center", "aTargets": [ 0, 3 ]}
                     ],
                     "oLanguage": {
@@ -208,6 +208,7 @@ function mo_list(mod){
                     $(this).removeClass("hover");
                 }
             );
+            if (callback) callback();
         }
     });
 }
