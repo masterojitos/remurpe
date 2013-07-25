@@ -1,0 +1,492 @@
+body
+{
+    background: #fff;
+    color: #333;
+    font-family: Arial;
+    font-size: 16px;
+    min-width: 467px;
+}
+a, a:hover, a:focus, a:active
+{
+    outline: none;
+}
+h1, h2, h3, h3, h4, h5, h6
+{
+    margin: 0;
+}
+.text-right
+{
+    text-align: right;
+}
+
+.container-poll
+{
+    margin: 0 auto;
+    max-width: 767px;
+}
+.container-poll section.header-poll header
+{
+    background-color: #D8EDD3;
+    min-height: 92px;
+    overflow: hidden;
+    padding: 5px 10px;
+    position: relative;
+}
+.container-poll section.header-poll header > img
+{
+    left: 10px;
+    height: 92px;
+    position: absolute;
+    top: 5px;
+}
+.container-poll section.header-poll header > h1
+{
+    color: #000;
+    font-weight: 700;
+    padding-top: 0.75em;
+    text-align: center;
+}
+.container-poll section.header-poll footer
+{
+    background-color: #D8FBD8;
+    min-height: 50px;
+    overflow: hidden;
+    padding: 0 10px;
+}
+.container-poll section.header-poll footer > a
+{
+    color: #F00;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 50px;
+    text-decoration: none;
+}
+.container-poll section.header-poll footer > ul.social-icons
+{
+    float: right;
+    margin: 6px 0;
+}
+.container-poll section
+{
+    background-color: #D8F6A6;
+    clear: both;
+    overflow: hidden;
+}
+.container-poll section h3
+{
+    background-color: #fff;
+    line-height: 50px;
+    padding-left: 10px;
+}
+.container-poll section p, .container-poll section div
+{
+    padding-left: 10px;
+    margin: 0.5em 0;
+}
+.container-poll section div.bloque
+{
+    border: 1px solid #ccc;
+    margin: 0.5em 2%;
+    width: 88%;
+}
+.container-poll section div.bloque .quitar_referencia
+{
+    margin-right: 2%;
+}
+.container-poll a#reglamento
+{
+    background-color: #FF0;
+    border: 1px solid #000;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 18px #C8C8C8;
+    color: #333;
+    display: inline-block;
+    font-weight: 700;
+    min-height: 30px;
+    line-height: 30px;
+    margin: 10px 20px;
+    padding: 0 2em;
+    text-shadow: 1px 1px 1px #FFF;
+    text-decoration: none;
+    vertical-align: middle;
+}
+.container-poll section label
+{
+    display: inline-block;
+    font-weight: 700;
+    line-height: 26px;
+    padding-left: 10px;
+    width: 20%;
+    vertical-align: top;
+}
+.container-poll section label.normal-text
+{
+    font-weight: 400;
+}
+.container-poll section label.normal-width
+{
+    width: auto;
+}
+.container-poll section label.label-full
+{
+    width: 100%;
+}
+.container-poll section input, .container-poll section textarea
+{
+    display: inline-block;
+    padding-left: 10px;
+}
+.container-poll section p > .input-full
+{
+    width: 73%;
+}
+.container-poll section p > select.input-full
+{
+    width: 75%;
+}
+.container-poll section p small.input-help, .container-poll section div small.input-help
+{
+    color: red;
+}
+.container-poll section p > input.input-large
+{
+    width: 40%;
+}
+.container-poll section.personal-data p > span > label
+{
+    font-weight: 400;
+    padding-left: 0;
+    width: auto;
+}
+.container-poll section p > span.span-block
+{
+    display: inline-block;
+    width: 75%;
+}
+.container-poll section p > span > .input-full
+{
+    width: 98%;
+}
+.container-poll section.personal-data p > span > .input-small
+{
+    width: 30%;
+}
+.container-poll section div table#aliados
+{
+    display: inline-block;
+    min-width: 467px;
+    width: 75%;
+}
+.container-poll section div table#aliados th
+{
+    border-bottom: 1px solid #999;
+    text-align: left;
+}
+.container-poll section div table#aliados td
+{
+    border-bottom: 1px solid #ccc;
+    padding: 0 1em 0 0;
+}
+.container-poll section.formation-profession p > span > label
+{
+    background-color: #fff;
+    font-weight: 400;
+    line-height: 1.5em;
+    padding-left: 30px;
+    vertical-align: top;
+    width: 17%;
+}
+.container-poll section.formation-profession p > label + span > label
+{
+    background-color: transparent;
+    font-weight: 400;
+    padding-left: 0;
+    vertical-align: middle;
+    width: auto;
+}
+.container-poll section.formation-profession p > input.input-small
+{
+    width: 20%;
+}
+.container-poll section.formation-profession div.column
+{
+    box-shadow: 0 0 3px #000;
+    float: left;
+    margin: 10px 20px;
+    padding: 10px;
+    vertical-align: top;
+    max-width: 300px;
+}
+.container-poll section.formation-profession div.row
+{
+    margin: 10px 20px 20px;
+    padding: 10px;
+    max-width: none;
+}
+.container-poll section.formation-profession div.column h4
+{
+    text-shadow: 2px 2px 0 #fff;
+    text-decoration: underline;
+}
+.container-poll section.formation-profession div.column h4, .container-poll section.formation-profession div.column label
+{
+    font-weight: 400;
+    display: inline;
+}
+.container-poll section.formation-profession div.column strong.criterio-especializacion
+{
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #f00;
+    padding: 0 6px;
+    text-align: center;
+}
+.container-poll section.formation-profession div.column ul
+{
+    margin: 0;
+    padding: 10px 0px;
+}
+.container-poll section.formation-profession div.column ul li
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.container-poll section.formation-profession div.column ul li strong.criterio-especializacion
+{
+    border: none;
+    padding: 0 3px;
+}
+.container-poll section.formation-profession div.row ul li
+{
+    float: left;
+    width: 140px;
+}
+.container-poll section.formation-profession div.column ul li label
+{
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+}
+.container-poll section.formation-profession p.row-submit
+{
+    background-color: #fff;
+    margin: 0;
+    padding: 20px 20px 10px;
+    text-align: right;
+}
+#terms-conditions-modal
+{
+	background: #fff;
+	border-radius: 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-shadow: 0 3px 7px rgba(0,0,0,.25);
+	-moz-box-shadow: 0 3px 7px rgba(0,0,0,.25);
+	-webkit-box-shadow: 0 3px 7px rgba(0,0,0,.25);
+    height: 80%;
+	left: -100%;
+	margin: 0px 0 0 -40%;
+	position: fixed;
+    text-align: justify;
+	top: 10%;
+	width: 80%;
+    z-index: 200;
+}
+/* Make the modal appear when targeted */
+#terms-conditions-modal:target
+{
+    left: 50%;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+#terms-conditions-modal header
+{
+	background: #f7f7f7;
+	border-bottom: 1px solid #e7e7e7;
+	border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+    min-height: 32px;
+    overflow: hidden;
+}
+#terms-conditions-modal header, #terms-conditions-modal section
+{
+	padding: 1em;
+}
+#terms-conditions-modal header h2
+{
+    float: left;
+	margin: 0;
+}
+#terms-conditions-modal header a
+{
+	float: right;
+    margin: 0;
+}
+#terms-conditions-modal section
+{
+    height: 78%;
+    overflow-y: scroll;
+}
+#terms-conditions-modal p, #terms-conditions-modal ol, #terms-conditions-modal table
+{
+    margin: 1em 0;
+}
+#terms-conditions-modal p.title1, #terms-conditions-modal p.title2
+{
+    font-size: 1.25em;
+    text-align: center;
+    text-decoration: underline;
+}
+#terms-conditions-modal p.title2
+{
+    font-size: 1.1em;
+}
+#terms-conditions-modal ol
+{
+    list-style-type: lower-alpha;
+}
+#terms-conditions-modal table
+{
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 95%;
+}
+#terms-conditions-modal table th, #terms-conditions-modal table td
+{
+    border: 1px solid #666;
+    padding: 3px;
+}
+#terms-conditions-modal table th
+{
+    background-color: #B0CFF2;
+}
+#terms-conditions-modal table.especialidades
+{
+    width: 70%;
+}
+#terms-conditions-modal table.especialidades td
+{
+    border: 1px solid #666;
+    padding: 3px;
+}
+#terms-conditions-modal table.especialidades td.none
+{
+    border: none;
+    padding: 3px;
+}
+#terms-conditions-modal table.especialidades th p, #terms-conditions-modal table.especialidades td p
+{
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 640px) {
+    .container-poll a#reglamento
+    {
+        margin-left: 0;
+        text-align: center;
+    }
+    .container-poll section label
+    {
+        display: block;
+        padding-left: 2px;
+        width: 90%;
+    }
+    .container-poll section label.normal-width
+    {
+        display: inline-block;
+        width: auto;
+    }
+    .container-poll section input, .container-poll section textarea
+    {
+        display: block;
+        margin-left: 0;
+    }
+    .container-poll section .input-options input
+    {
+        display: inline-block;
+    }
+    .container-poll section textarea
+    {
+        max-width: 90%;
+    }
+    .container-poll section p > .input-full
+    {
+        width: 90%;
+    }
+    .container-poll section p > select.input-full
+    {
+        width: 93%;
+    }
+    .container-poll section p > input.input-large
+    {
+        width: 90%;
+    }
+    .container-poll section.personal-data p > span > label
+    {
+        display: inline-block;
+        width: 30%;
+    }
+    .container-poll section p > span.span-block
+    {
+        display: block;
+        width: 100%;
+    }
+    .container-poll section p > span > .input-full
+    {
+        width: 90%;
+    }
+    .container-poll section div table#aliados
+    {
+        display: block;
+        width: 98%;
+    }
+    .container-poll section.personal-data p > span > .input-small
+    {
+        display: inline-block;
+        width: 59%;
+    }
+    .container-poll section.formation-profession p > span > label
+    {
+        padding-left: 5%;
+        width: 88%;
+    }
+    .container-poll section.formation-profession p > label + span > label
+    {
+        display: inline-block;
+        width: 30%;
+    }
+    .container-poll section.formation-profession p > label + span.input-options > input
+    {
+        width: 10%;
+    }
+    .container-poll section.formation-profession p > label + span.input-options > label
+    {
+        width: 88%;
+    }
+    .container-poll section.formation-profession p > input.input-small
+    {
+        display: inline-block;
+        width: 16%;
+    }
+    .container-poll section.formation-profession div.column
+    {
+        margin: 10px 5%;
+        max-width: 84%;
+        padding: 3%;
+        width: 84%;
+    }
+    .container-poll section.formation-profession div.row ul li
+    {
+        width: 100%;
+    }
+    .container-poll section.formation-profession p.row-submit input
+    {
+        display: inline-block;
+    }
+}

@@ -1,0 +1,59 @@
+/* Warning - Editing below can break the script */
+html.accordion-menu-js dd.a-m-d{
+	display:none;
+}
+
+html.accordion-menu-js dd.a-m-d-expand {
+	display:block;
+
+}
+
+html.accordion-menu-js dd.a-m-d-before-expand {
+	display:block;
+	position:relative;
+	z-index:-1;
+/*	opacity:0;*/
+	height:auto !important;
+	visibility:hidden;
+	overflow:visible;
+}
+
+html.accordion-menu-js dt.a-m-t-expand {
+}
+
+html.accordion-menu-js dd.a-m-d-anim {
+	overflow:hidden;
+	display:block;	
+}
+
+dl.accordion-menu dd.a-m-d .bd{
+
+}
+
+.sbdhidden{ display: none; }
+/* Warning - Editing above can break the script */
+
+/* Editable section below */
+
+dl, dt, dd         { width: 170px; margin: 0; padding: 4px; list-style-type: none;}
+dl.accordion-menu dt         { color: #000000; font-size: 13px; height: 30px; line-height: 18px; border-bottom: 2px dotted #ffffff; /*white-space: nowrap;*/ background:#6A9016; color:#FFFFFF; font-family:Verdana, Arial, Helvetica, sans-serif; }
+dl.accordion-menu dt:hover   { color: #003366; font-size: 13px; cursor: pointer; display:block;}
+dl.accordion-menu dt a       { color: #000000; font-size: 13px; text-decoration: none; color:#FFFFFF;}
+dl.accordion-menu dt a:hover { color: #003366; font-size: 13px}
+
+dl.accordion-menu dd         { /*line-height: 12px;background:url(../../../templates/remurpe/images/arrow.gif) left no-repeat*/;
+padding-left:10px;
+border-left:3px solid #CCCCCC;
+}
+dl.accordion-menu dd a       { color: #000000; font-size: 11px; text-decoration: none; display: block; padding:4px; }
+dl.accordion-menu dd a:hover { color: #003366; text-decoration:underline; }
+
+span.rollmainlevel{ cursor: pointer; }
+
+
+/* Example CSS to control active menu/submenu a link */
+#active_roll_menu{ color: #ff0000; }
+a:hover#active_roll_menu { color: #f500f5; }
+
+/* Example CSS to override CSS for top level expanded menu */
+#activeparent_roll_menu{ color: #00ff00; }

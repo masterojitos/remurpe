@@ -1,0 +1,154 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # Youjoomla LLC 
+|| # ---------------------------------------------------------------- # ||
+|| # Copyright ©2006-2009 Youjoomla LLC. All Rights Reserved.           ||
+|| # This file may not be redistributed in whole or significant part. # ||
+|| # ---------------- THIS IS NOT FREE SOFTWARE ---------------- #      ||
+|| # http://www.youjoomla.com | http://www.youjoomla.com/license.html # ||
+|| #################################################################### ||
+\*======================================================================*/
+/* news item holder*/
+.yjnewsflash5{
+	display:block;
+	position:relative;
+	clear:both;
+	width:auto;
+	margin:0px 0px 5px 0px !important;
+	padding:5px 5px !important;
+	border-bottom:1px solid #efefef;
+	font-size:12px;
+	
+}
+
+
+/* image style*/
+.yjnewsflash5 img{
+	padding:3px;
+	margin:0px 5px 0px 0px;
+	border:1px solid #ccc;
+	background:#efefef;
+	clear:both;
+	position:relative;
+}
+/* create date */
+.yjnewsflash5_date{
+	display:block;
+	width:80px;
+	float:left;
+	text-align:left;
+	clear:left;
+	font-size: 9px;
+	line-height:13px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+/* div class read more */
+.yjnsreadon5{
+	display:block;
+	height:20px;
+	padding:0px;
+	float:right;
+	clear:right;
+	text-align:center;
+	font-size: 11px;
+	margin:5px;
+}
+/* a class read more */
+.yjns_rm5{
+	display:block;
+	border:1px solid #efefef;
+	height:20px;
+	padding:0 5px;
+}
+/* title class*/
+.yjnewsflash_title5{
+font: bold normal 13px/13px Arial, Helvetica, sans-serif;
+display:block;
+padding:3px 0;
+}
+/* holder module class */
+.yjsquare_yjnf5 .yjsquare_in,
+.yjsquare_yjnf5,.module_yjnf5,
+.moduletable_yjnf5{
+	margin:0px 0 0px 0;
+	padding:0;
+	clear:both;
+	overflow:hidden;
+}
+/* main module holder */
+#yjnf5_co,#yjnf5_co_1,
+#yjnf5_co_2,#yjnf5_co_3,
+#yjnf5_co_4,#yjnf5_co_5{
+	display:block; 
+	position:relative;
+	overflow:hidden;
+	background:url(images/blank.gif);
+/*	height:150px;*/
+}
+
+#yjnf5_ci .clear,#yjnf5_ci_1 .clear,
+#yjnf5_ci_2 .clear,#yjnf5_ci_3 .clear,
+#yjnf5_ci_4 .clear,#yjnf5_ci_5 .clear{
+	display:block;
+	position:relative;
+	height:0px;
+	line-height:0px;
+	clear:both;
+}
+.yjnf5_h,.yjnf5_h_1,
+.yjnf5_h_2,.yjnf5_h_3,
+.yjnf5_h_4,.yjnf5_h_5{
+background-color:#f7f6f6;
+}
+
+/* navigation */
+.yjnf5_nav,.yjnf5_nav_1,
+.yjnf5_nav_2,.yjnf5_nav_3,
+.yjnf5_nav_4,.yjnf5_nav_5{
+display:block;
+height:25px;
+width:100%;
+overflow:hidden;
+line-height:25px;
+/*background:#f6f6f6;
+border:1px solid #ccc;*/
+padding:0;
+margin:0 0 10px 0;
+}
+.yjmf5_nav_b{
+width:70px;
+height:25px;
+float:right;
+display:block;
+margin:0;
+padding:0;
+overflow:hidden;
+clear:both;
+}
+#up,#down,#up_1,#down_1,
+#up_2,#down_2,#up_3,#down_3,
+#up_4,#down_4,#up_5,#down_5{
+text-indent:-7500px;
+display:block;
+height:18px;
+width:20px;
+margin:0 5px;
+float:right;
+overflow:hidden;
+}
+#down,#down_1,#down_2,#down_3,
+#down_4,#down_5{
+background:url(images/down.gif) no-repeat left center;
+}
+#down:hover,#down_1:hover,#down_2:hover,#down_3:hover,
+#down_4:hover,#down_5:hover{
+background:url(images/downh.gif) no-repeat left center;
+}
+#up,#up_1,#up_2,#up_3,#up_4,#up_5{
+background:url(images/up.gif) no-repeat left center;
+}
+#up:hover,#up_1:hover,#up_2:hover,#up_3:hover,#up_4:hover,#up_5:hover{
+background:url(images/uph.gif) no-repeat left center;
+}

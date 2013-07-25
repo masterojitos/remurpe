@@ -1,3 +1,5 @@
+(function($){
+
 $(document).on("ready", function() {
     var $this;
     
@@ -126,3 +128,5 @@ $(document).on("ready", function() {
         }
     });
 });
+
+})(jQuery);

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+	<name>JSN ImageShow</name>
+	<version>3.1.0</version>
+	<creationDate>December 2009</creationDate>
+	<copyright>Copyright (c) 2008 - 2011 - JoomlaShine.com</copyright>
+	<license>GNU/GPL v2 http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<author>JoomlaShine.com</author>
+	<authorEmail>admin@joomlashine.com</authorEmail>
+	<authorUrl>http://www.joomlashine.com</authorUrl>
+	<description>JSN IMAGESHOW MODULE</description>
+	<files>
+		<filename module="mod_imageshow">mod_imageshow.php</filename>
+        <filename>index.html</filename>
+		<filename>helper.php</filename>
+        <folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	<params addpath="/administrator/components/com_imageshow/elements">
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="@sp1" type="jsnspacer" default="Gallery Settings (required)" label="" description="" />
+		<param name="showlist_id" type="jsnshowlist" section="com_imageshow" default="0" label="JSN MODULE SHOWLIST" description="JSN MODULE SHOWLIST DESC" />
+		<param name="showcase_id" type="jsnshowcase" section="com_imageshow" default="0" label="JSN MODULE SHOWCASE" description="JSN MODULE SHOWCASE DESC" />
+		<param name="@sp2" type="jsnspacer" default="Parameters Override (optional)" label="" description=""/>
+		<param name="width" type="jsnoverallwidth" default="" label="JSN MODULE OVERALL WIDTH" description="JSN MODULE OVERALL WIDTH DESC" />
+		<param name="height" type="jsnoverallheight" default="" label="JSN MODULE OVERALL HEIGHT" description="JSN MODULE OVERALL HEIGHT DESC" postfix="px" />
+	</params>	
+</install>

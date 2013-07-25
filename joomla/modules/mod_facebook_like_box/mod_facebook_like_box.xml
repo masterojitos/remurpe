@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5">
+	<name>Facebook Like Button</name>
+	<author>Sunento Wu</author>
+	<authorEmail>sunwu2007@gmail.com</authorEmail>
+	<authorUrl>http://vivociti.com</authorUrl>
+	<creationDate>2010-05-16</creationDate>
+	<copyright>Copyright (C) 2010 Sunento Wul. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL 2.0</license>
+	<version>1.0</version>
+	<description> 
+		Facebook Like Box is a social module that enables Facebook Page owners to attract and gain Likes from their own website. The Like Box enables users to: see how many users already like this page, and which of their friends like it too, read recent posts from the page and Like the page with one click, without needing to visit the page.</description>
+	<files>
+		<filename module="mod_facebook_like_box">mod_facebook_like_box.php</filename>
+	</files>
+	<params>
+		<param name="pageID" type="text" default="123961057630124" label="Facebook Page ID" description="The ID of the Facebook Page for this Like Box"/>
+		<param name="width" type="text" default="292" label="Width" description="The Width of the module in pixes"/>
+		<param name="height" type="text" default="255" label="Height" description="The Height of the module in pixes"/>
+		<param name="connection" type="text" default="10" label="Connections" description="Show a sample of this many users who have liked this Page"/>
+		<param name="streams" type="list" default="yes" label="Streams" description="Show the profile stream for Public Profile">
+				<option value="yes">yes</option>
+				<option value="no">no</option>
+		</param>
+		<param name="header" type="list" default="yes" label="Header" description="Show the Find Us on Facebook bar at top. Only shown when either stream or connections are present">
+				<option value="yes">yes</option>
+				<option value="no">no</option>
+		</param>
+		<param name="moduleBy" type="list" default="yes" label="Show Author Share Button (Visit: http://bit.ly/9Njzpo)" description="Show Author Credit, this is free module. Support us or set to No by donating to us - Visit : http://bit.ly/9Njzpo">
+				<option value="yes">yes</option>
+				<option value="no">no</option>
+		</param>
+	</params>
+</install>

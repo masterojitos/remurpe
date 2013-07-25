@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<install type="module" version="1.5">
+	<name>Twitter Widget</name>
+	<author>Sharif Mamdouh</author>
+	<creationDate>23-June-2009</creationDate>
+	<copyright>Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>sharif@inowweb.com</authorEmail>
+	<authorUrl>www.inowweb.com</authorUrl>
+	<version>1.0.0</version>
+	<description>
+		<![CDATA[
+		iNow Twitter Widget For Joomla! module let you configure the default twitter widgets fast , if you want the html widget or flash widget also you can configure the widget from the module parameters easily .HaveFun! http://www.iNowWeb.com
+		<br/>
+		<p>
+
+		]]>
+	</description>
+	<files>
+		<filename module="mod_TwitterWidget">mod_TwitterWidget.php</filename>
+
+	</files>
+
+<params>
+<param name="moduleclass_sfx" type="text" default="" label="Class:" description="specify class to apply" />
+
+<param name="username" type="text" default="iNowWeb" label="Twitter UserName" description="Twitter UserName" />
+
+				<param name="style" type="radio" default="1" label="Style" description="Flash or html.">
+			<option value="0">Html</option> 
+			<option value="1">Java</option> 
+		</param>
+		
+		<param name="count" type="text" default="10" label="Twitter update count" description="Twitter Count" />
+		
+		<param name="width" type="text" default="200" label="width" description="width" />
+		<param name="height" type="text" default="350" label="height" description="height" />
+
+						
+
+	</params>
+
+
+		
+		
+</install>

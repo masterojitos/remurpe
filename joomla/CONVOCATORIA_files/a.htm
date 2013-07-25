@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html class=" -moz-" lang="es"><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--[if ie]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Postulación a Remurpe</title>
+        <link rel="stylesheet" fonohref="css/normalize.css">
+        <link rel="stylesheet" href="a_data/MOStyles.css">
+        <link rel="stylesheet" href="a_data/social-icons.css">
+        <link rel="stylesheet" href="a_data/style.css">
+        <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    </head>
+    <body>
+        <form class="container-poll MOForm" method="POST" enctype="multipart/form-data">
+            <section class="header-poll">
+                <header>
+                    <img src="a_data/logo.png" alt="Remurpe">
+                    <h1>Red Nacional de Expertos en<br> Gestión Pública Descentralizada</h1>
+                </header>
+                <footer class="title-poll">
+                    <a href="http://www.remurpe.org.pe/component/rsform/?formId=1" target="_blank">Consultas</a>
+                    <ul class="social-icons color">
+                        <li><a href="http://www.youtube.com/user/remurpe" class="youtube">Youtube</a></li>
+                        <li><a href="skype:beltus20?chat" class="skype">Skype</a></li>
+                        <li><a href="https://www.facebook.com/remurpe.prensa" class="facebook">Facebook</a></li>
+                        <li><a href="https://twitter.com/remurpe" class="twitter">Twitter</a></li>
+                    </ul>
+                </footer>
+            </section>
+                        <section class="personal-data">
+                <h3>Datos personales</h3>
+                <p>
+                    <label for="nombre">Nombre <small class="input-help">*</small></label>
+                    <input name="nombre" id="nombre" placeholder="Nombre" required="required" maxlength="100" class="input-full" type="text">
+                </p>
+                <p>
+                    <label for="apellido">Apellidos <small class="input-help">*</small></label>
+                    <input name="apellido" id="apellido" placeholder="Apellidos" required="required" maxlength="100" class="input-full" type="text">
+                </p>
+                <p>
+                    <label for="dni">DNI <small class="input-help">*</small></label>
+                    <input name="dni" id="dni" placeholder="DNI" required="required" maxlength="8" class="input-large" type="text">
+                </p>
+                <p>
+                    <label for="telefono">Teléfono <small class="input-help">*</small></label>
+                    <input name="telefono" id="telefono" placeholder="Telefono" required="required" maxlength="11" class="input-large" type="tel">
+                </p>
+                <p>
+                    <label for="email">Email <small class="input-help">*</small></label>
+                    <input name="email" id="email" placeholder="Email" required="required" class="input-large" type="email">
+                </p>
+                <p>
+                    <label for="departamento">Departamento <small class="input-help">*</small></label>
+                    <select name="departamento" id="departamento" required="required" class="input-full">
+                        <option selected="selected" value="">Seleccione un departamento</option>
+                        <option value="AMAZONAS">AMAZONAS</option><option value="ANCASH">ANCASH</option><option value="APURIMAC">APURIMAC</option><option value="AREQUIPA">AREQUIPA</option><option value="AYACUCHO">AYACUCHO</option><option value="CAJAMARCA">CAJAMARCA</option><option value="CALLAO">CALLAO</option><option value="CUSCO">CUSCO</option><option value="HUANCAVELICA">HUANCAVELICA</option><option value="HUANUCO">HUANUCO</option><option value="ICA">ICA</option><option value="JUNIN">JUNIN</option><option value="LA LIBERTAD">LA LIBERTAD</option><option value="LAMBAYEQUE">LAMBAYEQUE</option><option value="LIMA">LIMA</option><option value="LORETO">LORETO</option><option value="MADRE DE DIOS">MADRE DE DIOS</option><option value="MOQUEGUA">MOQUEGUA</option><option value="PASCO">PASCO</option><option value="PIURA">PIURA</option><option value="PUNO">PUNO</option><option value="SAN MARTIN">SAN MARTIN</option><option value="TACNA">TACNA</option><option value="TUMBES">TUMBES</option><option value="UCAYALI">UCAYALI</option>                    </select>
+                </p>
+                <p>
+                    <label for="provincia">Provincia <small class="input-help">*</small></label>
+                    <select name="provincia" id="provincia" required="required" class="input-full" disabled="disabled">
+                        <option selected="selected" value="">Seleccione una provincia</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="distrito">Distrito <small class="input-help">*</small></label>
+                    <select name="distrito" id="distrito" required="required" class="input-full" disabled="disabled">
+                        <option selected="selected" value="">Seleccione un distrito</option>
+                    </select>
+                </p>
+                <div>
+                    <label>Recomendado por los siguientes aliados de REMURPE <small class="input-help">*</small></label>
+                    <table id="aliados">
+                        <thead>
+                            <tr><th>Nombres</th>
+                            <th>Correo Electrónico</th>
+                            <th>Región</th>
+                            <th></th>
+                        </tr></thead>
+                        <tbody>
+                        <tr>
+                                <td>Carlos López</td>
+                                <td>clopez@remurpe.org.pe</td>
+                                <td>Lima</td>
+                                <td><input name="aliados[]" value="0" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Wilbert Rozas</td>
+                                <td>wilbertrozas@yahoo.es</td>
+                                <td>Cusco</td>
+                                <td><input name="aliados[]" value="1" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Rómulo Antúnez</td>
+                                <td>rantunez@remurpe.org.pe</td>
+                                <td>Lima</td>
+                                <td><input name="aliados[]" value="2" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Carlos Arana</td>
+                                <td>carana@remurpe.org.pe</td>
+                                <td>Lima</td>
+                                <td><input name="aliados[]" value="3" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Mayra Asmat</td>
+                                <td>kasmat@remurpe.org.pe</td>
+                                <td>Lima</td>
+                                <td><input name="aliados[]" value="4" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Federico Fernández</td>
+                                <td>ffernandez@remurpe.org.pe</td>
+                                <td>Lima</td>
+                                <td><input name="aliados[]" value="5" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Marivel Ccala</td>
+                                <td>mccala@remurpe.org.pe</td>
+                                <td>Lima</td>
+                                <td><input name="aliados[]" value="6" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Leonardo Montes</td>
+                                <td>lemontca@hotmail.com</td>
+                                <td>Huancavelica</td>
+                                <td><input name="aliados[]" value="7" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Alex Rojas</td>
+                                <td>alexrojas40@gmail.com</td>
+                                <td>Piura</td>
+                                <td><input name="aliados[]" value="8" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Cristina Chambizea</td>
+                                <td>xtinachr@hotmail.com</td>
+                                <td>Cajamarca</td>
+                                <td><input name="aliados[]" value="9" type="checkbox"></td>
+                            </tr><tr>
+                                <td>César Vigo</td>
+                                <td>vigoreli@hotmail.com</td>
+                                <td>Cajamarca</td>
+                                <td><input name="aliados[]" value="10" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Genaro Sánchez</td>
+                                <td>gesara2004@yahoo.es</td>
+                                <td>San Martín</td>
+                                <td><input name="aliados[]" value="11" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Fidel Rodríguez</td>
+                                <td>fidelrori@hotmail.com</td>
+                                <td>Ancash</td>
+                                <td><input name="aliados[]" value="12" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Gianina Vargas</td>
+                                <td>janina22_6@hotmail.com</td>
+                                <td>Huanuco</td>
+                                <td><input name="aliados[]" value="13" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Alicia Carrasco</td>
+                                <td>alicg2501@hotmail.com</td>
+                                <td>Ayacucho</td>
+                                <td><input name="aliados[]" value="14" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Ernesto Vizacardo</td>
+                                <td>ernesto.vizcardo@gmail.com</td>
+                                <td>Cusco</td>
+                                <td><input name="aliados[]" value="15" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Lourdes Betancur</td>
+                                <td>lubeth9@yahoo.es</td>
+                                <td>Puno</td>
+                                <td><input name="aliados[]" value="16" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Flor Herrera</td>
+                                <td>fherrera@remurpe.org.pe</td>
+                                <td>Apurimac</td>
+                                <td><input name="aliados[]" value="17" type="checkbox"></td>
+                            </tr><tr>
+                                <td>Jorge Aparcana</td>
+                                <td>jaaparcana1@gmail.com</td>
+                                <td>Ica</td>
+                                <td><input name="aliados[]" value="18" type="checkbox"></td>
+                            </tr>                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="formation-profession">
+                <h3>Formación / Profesión</h3>
+                <p>
+                    <label for="nivel_estudios">Nivel de estudios</label>
+                    <select name="nivel_estudios" id="nivel_estudios" class="input-full">
+                        <option selected="selected" value="">Seleccione un Nivel de estudios</option>
+                        <option value="Bachiller">Bachiller</option>
+                        <option value="Post Grado">Post Grado</option>
+                        <option value="Doctorado">Doctorado</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="profesion">Profesión <small class="input-help">*</small></label>
+                    <select name="profesion" id="profesion" required="required" class="input-full">
+                        <option selected="selected" value="">Seleccione una profesión</option>
+                        <optgroup label="Medicina Humana"><option value="Obstetricia">Obstetricia</option><option value="Enfermería">Enfermería</option><option value="Tecnología Médica">Tecnología Médica</option><option value="Laboratorio Clínico y Anatomía Patológica">Laboratorio Clínico y Anatomía Patológica</option><option value="Terapia Física y Rehabilitación">Terapia Física y Rehabilitación</option><option value="Radiología">Radiología</option><option value="Terapia Ocupacional">Terapia Ocupacional</option><option value="Nutrición">Nutrición</option><option value="Farmacia y Bioquímica">Farmacia y Bioquímica</option><option value="Ciencias de los Alimentos">Ciencias de los Alimentos</option><option value="Toxicología">Toxicología</option><option value="Odontología">Odontología</option><option value="Medicina Veterinaria">Medicina Veterinaria</option><option value="Psicología">Psicología</option></optgroup><optgroup label="HUMANIDADES"><option value="Literatura">Literatura</option><option value="Filosofía">Filosofía</option><option value="Lingüística">Lingüística</option><option value="Comunicación Social">Comunicación Social</option><option value="Periodismo">Periodismo</option><option value="Arte">Arte</option><option value="Bibliotecología y Ciencias de la Información">Bibliotecología y Ciencias de la Información</option><option value="Danza">Danza</option><option value="Conservación y Restauración">Conservación y Restauración</option><option value="Educación">Educación</option><option value="Educación Inicial">Educación Inicial</option><option value="Educación Primaria">Educación Primaria</option><option value="Educación Secundaría">Educación Secundaría</option><option value="Educación Física">Educación Física</option></optgroup><optgroup label="CIENCIAS SOCIALES"><option value="Derecho">Derecho</option><option value="Ciencia Política">Ciencia Política</option><option value="Historia">Historia</option><option value="Sociología">Sociología</option><option value="Antropología">Antropología</option><option value="Arqueología">Arqueología</option><option value="Trabajo Social">Trabajo Social</option><option value="Geografía">Geografía</option><option value="Politología">Politología</option></optgroup><optgroup label="CIENCIAS BÁSICAS"><option value="Química">Química</option><option value="Ciencias Biológicas">Ciencias Biológicas</option><option value="Genética y Biotecnología">Genética y Biotecnología</option><option value="Microbiología y Parasitología">Microbiología y Parasitología</option><option value="Física">Física</option><option value="Matemática">Matemática</option><option value="Estadística">Estadística</option><option value="Investigación Operativa">Investigación Operativa</option><option value="Computación Científica">Computación Científica</option></optgroup><optgroup label="INGENIERÍAS"><option value="Ingeniería Química">Ingeniería Química</option><option value="Ingeniería Agroindustrial">Ingeniería Agroindustrial</option><option value="Ingeniería Mecánica de Fluidos">Ingeniería Mecánica de Fluidos</option><option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option><option value="Ingeniería Geológica">Ingeniería Geológica</option><option value="Ingeniería Geográfica">Ingeniería Geográfica</option><option value="Ingeniería de Minas">Ingeniería de Minas</option><option value="Ingeniería Metalúrgica">Ingeniería Metalúrgica</option><option value="Ingeniería Civil">Ingeniería Civil</option><option value="Ingeniería Industrial">Ingeniería Industrial</option><option value="Ingeniería Textil y Confecciones">Ingeniería Textil y Confecciones</option><option value="Ingeniería Electrónica">Ingeniería Electrónica</option><option value="Ingeniería Eléctrica">Ingeniería Eléctrica</option><option value="Ingeniería de Telecomunicaciones">Ingeniería de Telecomunicaciones</option><option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option><option value="Ingeniería de Software">Ingeniería de Software</option><option value="Ingeniería Sanitaria y Ambiental">Ingeniería Sanitaria y Ambiental</option><option value="Ingeniería Naval">Ingeniería Naval</option><option value="Ingeniería Económica">Ingeniería Económica</option></optgroup><optgroup label="ECONÓMICO-EMPRESARIALES"><option value="Administración">Administración</option><option value="Administración de Turismo">Administración de Turismo</option><option value="Administración de Negocios Internacionales">Administración de Negocios Internacionales</option><option value="Contabilidad">Contabilidad</option><option value="Gestión Tributaria">Gestión Tributaria</option><option value="Auditoria Empresarial y del Sector Público">Auditoria Empresarial y del Sector Público</option><option value="Economía">Economía</option><option value="Economía Pública">Economía Pública</option><option value="Economía Internacional">Economía Internacional</option><option value="Economía y Gestión Ambiental">Economía y Gestión Ambiental</option><option value="Arquitectura">Arquitectura</option></optgroup>                        <option value="Otra">Otra</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Experiencia laboral</label>
+                </p>
+                <p>
+                    <span><label for="experiencia_3_ultimos_anos">3 Últimos años <small class="input-help">*</small></label></span>
+                    <textarea name="experiencia_3_ultimos_anos" id="experiencia_3_ultimos_anos" placeholder="3 Últimos años" required="required" class="input-full"></textarea>
+                </p>
+                <p>
+                    <span><label for="experiencia_gobiernos_locales">Gobiernos Locales</label></span>
+                    <textarea name="experiencia_gobiernos_locales" id="experiencia_gobiernos_locales" placeholder="Gobiernos Locales" class="input-full"></textarea>
+                </p>
+                <p>
+                    <span><label for="experiencia_gobiernos_regionales">Gobiernos Regionales</label></span>
+                    <textarea name="experiencia_gobiernos_regionales" id="experiencia_gobiernos_regionales" placeholder="Gobiernos Regionales" class="input-full"></textarea>
+                </p>
+                <p>
+                    <label>Referencias</label>
+                </p>
+                <div class="bloque">
+                    <p>
+                        <label for="referencia_nombre_1" class="normal-text">Nombre <small class="input-help">*</small></label>
+                        <input name="referencia_nombre[]" id="referencia_nombre_1" placeholder="Nombre" required="required" maxlength="100" class="input-full" type="text">
+                    </p>
+                    <p>
+                        <label for="referencia_lugar_trabajo_1" class="normal-text">Lugar de Trabajo <small class="input-help">*</small></label>
+                        <input name="referencia_lugar_trabajo[]" id="referencia_lugar_trabajo_1" placeholder="Lugar de Trabajo" required="required" class="input-full" type="text">
+                    </p>
+                    <p>
+                        <label for="referencia_cargo_1" class="normal-text">Cargo <small class="input-help">*</small></label>
+                        <input name="referencia_cargo[]" id="referencia_cargo_1" placeholder="Cargo" required="required" class="input-full" type="text">
+                    </p>
+                    <p>
+                        <label for="referencia_email_1" class="normal-text normal-width">Email <small class="input-help">*</small></label>
+                        <input name="referencia_email[]" id="referencia_email_1" placeholder="Email" required="required" class="input-small" type="email">
+                        <label for="referencia_telefono_1" class="normal-text normal-width">Teléfono <small class="input-help">*</small></label>
+                        <input name="referencia_telefono[]" id="referencia_telefono_1" placeholder="Teléfono" required="required" maxlength="11" class="input-small" type="tel">
+                        <label for="referencia_rpm_1" class="normal-text normal-width">RPM</label>
+                        <input name="referencia_rpm[]" id="referencia_rpm_1" placeholder="RPM" maxlength="11" class="input-small" type="tel">
+                    </p>
+                </div>
+                <p>
+                    <button type="button" id="agregar_referencia">Agregar Referencia</button>
+                </p>
+                <p>&nbsp;</p>
+                <p>
+                    <label class="normal-text">Acepto las condiciones</label>
+                    <span class="input-options">
+                        <input name="condiciones" id="condiciones_si" value="Sí" checked="checked" type="radio">
+                        <label for="condiciones_si" class="radio">Sí</label>
+                        <input name="condiciones" id="condiciones_no" value="No" type="radio">
+                        <label for="condiciones_no" class="radio">No</label>
+                        <a href="#terms-conditions-modal" id="reglamento">Requisitos Necesarios</a>
+                    </span>
+                </p>
+                <p>&nbsp;</p>
+                <p>
+                    <label class="label-full">Áreas de especialización <small class="input-help">*</small></label>
+                </p>
+                <div class="column especializacion input-options">
+                    <label class="checkbox">
+                        <input name="especializacion[POLÍTICAS PÚBLICAS DESCENTRALIZADAS][]" value="POLÍTICAS PÚBLICAS DESCENTRALIZADAS" type="checkbox">
+                        <span><strong class="criterio-especializacion">A</strong> <h4>POLÍTICAS PÚBLICAS DESCENTRALIZADAS</h4></span>
+                    </label>
+                    <ul><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS PÚBLICAS DESCENTRALIZADAS][]" value="diseño de políticas públicas" type="checkbox">
+                                <span><strong class="criterio-especializacion">01</strong> Diseño De Políticas Públicas</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS PÚBLICAS DESCENTRALIZADAS][]" value="planeamiento territorial e institucional" type="checkbox">
+                                <span><strong class="criterio-especializacion">02</strong> Planeamiento Territorial E Institucional</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS PÚBLICAS DESCENTRALIZADAS][]" value="gestión financiera y presupuestal" type="checkbox">
+                                <span><strong class="criterio-especializacion">03</strong> Gestión Financiera Y Presupuestal</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS PÚBLICAS DESCENTRALIZADAS][]" value="contrataciones y adquisiciones" type="checkbox">
+                                <span><strong class="criterio-especializacion">04</strong> Contrataciones Y Adquisiciones</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS PÚBLICAS DESCENTRALIZADAS][]" value="servicios públicos" type="checkbox">
+                                <span><strong class="criterio-especializacion">05</strong> Servicios Públicos</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS PÚBLICAS DESCENTRALIZADAS][]" value="administración tributaria" type="checkbox">
+                                <span><strong class="criterio-especializacion">06</strong> Administración Tributaria</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS PÚBLICAS DESCENTRALIZADAS][]" value="proyectos de preinversión e inversión" type="checkbox">
+                                <span><strong class="criterio-especializacion">07</strong> Proyectos De Preinversión E Inversión</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS PÚBLICAS DESCENTRALIZADAS][]" value="recursos humanos" type="checkbox">
+                                <span><strong class="criterio-especializacion">08</strong> Recursos Humanos</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS PÚBLICAS DESCENTRALIZADAS][]" value="participación ciudadana" type="checkbox">
+                                <span><strong class="criterio-especializacion">09</strong> Participación Ciudadana</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS PÚBLICAS DESCENTRALIZADAS][]" value="soporte jurídico municipal" type="checkbox">
+                                <span><strong class="criterio-especializacion">10</strong> Soporte Jurídico Municipal</span>
+                            </label>
+                        </li></ul>
+                </div><div class="column especializacion input-options">
+                    <label class="checkbox">
+                        <input name="especializacion[POLÍTICAS SOCIALES DESCENTRALIZADAS][]" value="POLÍTICAS SOCIALES DESCENTRALIZADAS" type="checkbox">
+                        <span><strong class="criterio-especializacion">B</strong> <h4>POLÍTICAS SOCIALES DESCENTRALIZADAS</h4></span>
+                    </label>
+                    <ul><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS SOCIALES DESCENTRALIZADAS][]" value="educación rural" type="checkbox">
+                                <span><strong class="criterio-especializacion">01</strong> Educación Rural</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS SOCIALES DESCENTRALIZADAS][]" value="programas alimentarios y sociales" type="checkbox">
+                                <span><strong class="criterio-especializacion">02</strong> Programas Alimentarios Y Sociales</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS SOCIALES DESCENTRALIZADAS][]" value="saneamiento básico" type="checkbox">
+                                <span><strong class="criterio-especializacion">03</strong> Saneamiento Básico</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS SOCIALES DESCENTRALIZADAS][]" value="discapacidad e inclusión" type="checkbox">
+                                <span><strong class="criterio-especializacion">04</strong> Discapacidad E Inclusión</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS SOCIALES DESCENTRALIZADAS][]" value="generación de empleo" type="checkbox">
+                                <span><strong class="criterio-especializacion">05</strong> Generación De Empleo</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[POLÍTICAS SOCIALES DESCENTRALIZADAS][]" value="jóvenes y género" type="checkbox">
+                                <span><strong class="criterio-especializacion">06</strong> Jóvenes Y Género</span>
+                            </label>
+                        </li></ul>
+                </div><div class="column especializacion input-options">
+                    <label class="checkbox">
+                        <input name="especializacion[GESTIÓN DEL TERRITORIO Y RECURSOS NATURALES][]" value="GESTIÓN DEL TERRITORIO Y RECURSOS NATURALES" type="checkbox">
+                        <span><strong class="criterio-especializacion">C</strong> <h4>GESTIÓN DEL TERRITORIO Y RECURSOS NATURALES</h4></span>
+                    </label>
+                    <ul><li>
+                            <label class="checkbox">
+                                <input name="especializacion[GESTIÓN DEL TERRITORIO Y RECURSOS NATURALES][]" value="ordenamiento territorial" type="checkbox">
+                                <span><strong class="criterio-especializacion">01</strong> Ordenamiento Territorial</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[GESTIÓN DEL TERRITORIO Y RECURSOS NATURALES][]" value="desarrollo económico territorial" type="checkbox">
+                                <span><strong class="criterio-especializacion">02</strong> Desarrollo Económico Territorial</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[GESTIÓN DEL TERRITORIO Y RECURSOS NATURALES][]" value="gestión de obras" type="checkbox">
+                                <span><strong class="criterio-especializacion">03</strong> Gestión De Obras</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[GESTIÓN DEL TERRITORIO Y RECURSOS NATURALES][]" value="gestión ambiental y residuos sólidos" type="checkbox">
+                                <span><strong class="criterio-especializacion">04</strong> Gestión Ambiental Y Residuos Sólidos</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[GESTIÓN DEL TERRITORIO Y RECURSOS NATURALES][]" value="gestión integrada de recursos hídricos" type="checkbox">
+                                <span><strong class="criterio-especializacion">05</strong> Gestión Integrada De Recursos Hídricos</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[GESTIÓN DEL TERRITORIO Y RECURSOS NATURALES][]" value="catastro y desarrollo urbano" type="checkbox">
+                                <span><strong class="criterio-especializacion">06</strong> Catastro Y Desarrollo Urbano</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="especializacion[GESTIÓN DEL TERRITORIO Y RECURSOS NATURALES][]" value="mancomunidades / asociativismo" type="checkbox">
+                                <span><strong class="criterio-especializacion">07</strong> Mancomunidades / Asociativismo</span>
+                            </label>
+                        </li></ul>
+                </div>                <p>
+                    <label class="label-full">Zonas de intervención <small class="input-help">*</small></label>
+                </p>
+                <div class="column row zonas-intervencion input-options" data-checkname="intervencion">
+                    <label class="checkbox">
+                        <input class="checkall" data-trigger="zonas-intervencion" type="checkbox">
+                        <span><h4>Todas</h4></span>
+                    </label>
+                    <ul>
+                    <li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Amazonas" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Amazonas</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Ancash" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Ancash</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Apurimac" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Apurimac</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Arequipa" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Arequipa</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Ayacucho" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Ayacucho</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Cajamarca" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Cajamarca</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Callao" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Callao</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Cusco" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Cusco</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Huancavelica" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Huancavelica</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Huanuco" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Huanuco</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Ica" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Ica</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Junin" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Junin</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="La Libertad" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>La Libertad</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Lambayeque" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Lambayeque</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Lima" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Lima</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Loreto" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Loreto</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Madre De Dios" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Madre De Dios</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Moquegua" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Moquegua</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Pasco" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Pasco</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Piura" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Piura</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Puno" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Puno</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="San Martin" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>San Martin</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Tacna" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Tacna</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Tumbes" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Tumbes</span>
+                            </label>
+                        </li><li>
+                            <label class="checkbox">
+                                <input name="intervencion[]" value="Ucayali" class="checkbox-checkall" data-trigger="zonas-intervencion" type="checkbox">
+                                <span>Ucayali</span>
+                            </label>
+                        </li>                    </ul>
+                </div>
+                <p>
+                    <label for="curriculum">Currículum Vitae</label>
+                    <input id="curriculum" class="mo_file input-large" placeholder="Currículum Vitae" readonly="readonly" data-filename="curriculum" type="text">
+                    <input value="Examinar" data-filename="curriculum" type="button">
+                    <small class="input-help"> (Solo formato pdf)</small>
+                </p>
+                <p>&nbsp;</p>
+                <p class="row-submit">
+                    <input name="submit" value="Enviar" type="submit">
+                </p>
+            </section>
+            <input name="fotografia" class="mo_file_trigger" type="file">
+            <input name="curriculum" class="mo_file_trigger" type="file">
+            <span id="variables" data-provincias="{&quot;AMAZONAS&quot;:[&quot;BAGUA&quot;,&quot;CHACHAPOYAS&quot;,&quot;BONGARA&quot;,&quot;LUYA&quot;,&quot;RODRIGUEZ DE MENDOZA&quot;,&quot;CONDORCANQUI&quot;,&quot;UTCUBAMBA&quot;],&quot;ANCASH&quot;:[&quot;HUARAZ&quot;,&quot;AIJA&quot;,&quot;BOLOGNESI&quot;,&quot;CARHUAZ&quot;,&quot;CASMA&quot;,&quot;CORONGO&quot;,&quot;HUAYLAS&quot;,&quot;HUARI&quot;,&quot;MARISCAL LUZURIAGA&quot;,&quot;PALLASCA&quot;,&quot;POMABAMBA&quot;,&quot;RECUAY&quot;,&quot;SANTA&quot;,&quot;SIHUAS&quot;,&quot;YUNGAY&quot;,&quot;ANTONIO RAIMONDI&quot;,&quot;CARLOS FERMIN FITZCARRALD&quot;,&quot;ASUNCION&quot;,&quot;HUARMEY&quot;,&quot;OCROS&quot;],&quot;APURIMAC&quot;:[&quot;ABANCAY&quot;,&quot;AYMARAES&quot;,&quot;ANDAHUAYLAS&quot;,&quot;ANTABAMBA&quot;,&quot;COTABAMBAS&quot;,&quot;GRAU&quot;,&quot;CHINCHEROS&quot;],&quot;AREQUIPA&quot;:[&quot;AREQUIPA&quot;,&quot;CAYLLOMA&quot;,&quot;CAMANA&quot;,&quot;CARAVELI&quot;,&quot;CASTILLA&quot;,&quot;CONDESUYOS&quot;,&quot;ISLAY&quot;,&quot;LA UNION&quot;],&quot;AYACUCHO&quot;:[&quot;HUAMANGA&quot;,&quot;CANGALLO&quot;,&quot;HUANTA&quot;,&quot;LA MAR&quot;,&quot;LUCANAS&quot;,&quot;PARINACOCHAS&quot;,&quot;VICTOR FAJARDO&quot;,&quot;HUANCA SANCOS&quot;,&quot;VILCAS HUAMAN&quot;,&quot;PAUCAR DEL SARA SARA&quot;,&quot;SUCRE&quot;],&quot;CAJAMARCA&quot;:[&quot;CAJAMARCA&quot;,&quot;CAJABAMBA&quot;,&quot;CELENDIN&quot;,&quot;CONTUMAZA&quot;,&quot;CUTERVO&quot;,&quot;CHOTA&quot;,&quot;HUALGAYOC&quot;,&quot;JAEN&quot;,&quot;SANTA CRUZ&quot;,&quot;SAN MIGUEL&quot;,&quot;SAN IGNACIO&quot;,&quot;SAN MARCOS&quot;,&quot;SAN PABLO&quot;],&quot;CALLAO&quot;:[&quot;CALLAO&quot;],&quot;CUSCO&quot;:[&quot;CUSCO&quot;,&quot;ACOMAYO&quot;,&quot;ANTA&quot;,&quot;CALCA&quot;,&quot;CANAS&quot;,&quot;CANCHIS&quot;,&quot;CHUMBIVILCAS&quot;,&quot;ESPINAR&quot;,&quot;LA CONVENCION&quot;,&quot;PARURO&quot;,&quot;PAUCARTAMBO&quot;,&quot;QUISPICANCHI&quot;,&quot;URUBAMBA&quot;],&quot;HUANCAVELICA&quot;:[&quot;HUANCAVELICA&quot;,&quot;ACOBAMBA&quot;,&quot;ANGARAES&quot;,&quot;CASTROVIRREYNA&quot;,&quot;TAYACAJA&quot;,&quot;HUAYTARA&quot;,&quot;CHURCAMPA&quot;],&quot;HUANUCO&quot;:[&quot;HUANUCO&quot;,&quot;AMBO&quot;,&quot;DOS DE MAYO&quot;,&quot;HUAMALIES&quot;,&quot;MARA\u00c3\u2018ON&quot;,&quot;LEONCIO PRADO&quot;,&quot;PACHITEA&quot;,&quot;PUERTO INCA&quot;,&quot;HUACAYBAMBA&quot;,&quot;LAURICOCHA&quot;,&quot;YAROWILCA&quot;],&quot;ICA&quot;:[&quot;ICA&quot;,&quot;CHINCHA&quot;,&quot;NAZCA&quot;,&quot;PISCO&quot;,&quot;PALPA&quot;],&quot;JUNIN&quot;:[&quot;HUANCAYO&quot;,&quot;CONCEPCION&quot;,&quot;JAUJA&quot;,&quot;JUNIN&quot;,&quot;TARMA&quot;,&quot;YAULI&quot;,&quot;SATIPO&quot;,&quot;CHANCHAMAYO&quot;,&quot;CHUPACA&quot;],&quot;LA LIBERTAD&quot;:[&quot;TRUJILLO&quot;,&quot;BOLIVAR&quot;,&quot;SANCHEZ CARRION&quot;,&quot;OTUZCO&quot;,&quot;PACASMAYO&quot;,&quot;PATAZ&quot;,&quot;SANTIAGO DE CHUCO&quot;,&quot;ASCOPE&quot;,&quot;CHEPEN&quot;,&quot;JULCAN&quot;,&quot;GRAN CHIMU&quot;,&quot;VIRU&quot;],&quot;LAMBAYEQUE&quot;:[&quot;CHICLAYO&quot;,&quot;FERRE\u00c3\u2018AFE&quot;,&quot;LAMBAYEQUE&quot;],&quot;LIMA&quot;:[&quot;LIMA&quot;,&quot;CAJATAMBO&quot;,&quot;CANTA&quot;,&quot;CA\u00c3\u2018ETE&quot;,&quot;HUAURA&quot;,&quot;HUAROCHIRI&quot;,&quot;YAUYOS&quot;,&quot;HUARAL&quot;,&quot;BARRANCA&quot;,&quot;OYON&quot;],&quot;LORETO&quot;:[&quot;MAYNAS&quot;,&quot;ALTO AMAZONAS&quot;,&quot;LORETO&quot;,&quot;REQUENA&quot;,&quot;UCAYALI&quot;,&quot;MARISCAL RAMON CASTILLA&quot;,&quot;DATEM DEL MARA\u00c3\u2018ON&quot;],&quot;MADRE DE DIOS&quot;:[&quot;TAMBOPATA&quot;,&quot;MANU&quot;,&quot;TAHUAMANU&quot;],&quot;MOQUEGUA&quot;:[&quot;MARISCAL NIETO&quot;,&quot;GENERAL SANCHEZ CERRO&quot;,&quot;ILO&quot;],&quot;PASCO&quot;:[&quot;PASCO&quot;,&quot;DANIEL ALCIDES CARRION&quot;,&quot;OXAPAMPA&quot;],&quot;PIURA&quot;:[&quot;PIURA&quot;,&quot;AYABACA&quot;,&quot;HUANCABAMBA&quot;,&quot;MORROPON&quot;,&quot;PAITA&quot;,&quot;SULLANA&quot;,&quot;TALARA&quot;,&quot;SECHURA&quot;],&quot;PUNO&quot;:[&quot;PUNO&quot;,&quot;AZANGARO&quot;,&quot;CARABAYA&quot;,&quot;CHUCUITO&quot;,&quot;HUANCANE&quot;,&quot;LAMPA&quot;,&quot;MELGAR&quot;,&quot;SANDIA&quot;,&quot;SAN ROMAN&quot;,&quot;YUNGUYO&quot;,&quot;SAN ANTONIO DE PUTINA&quot;,&quot;EL COLLAO&quot;,&quot;MOHO&quot;],&quot;SAN MARTIN&quot;:[&quot;MOYOBAMBA&quot;,&quot;HUALLAGA&quot;,&quot;LAMAS&quot;,&quot;MARISCAL CACERES&quot;,&quot;RIOJA&quot;,&quot;SAN MARTIN&quot;,&quot;BELLAVISTA&quot;,&quot;TOCACHE&quot;,&quot;PICOTA&quot;,&quot;EL DORADO&quot;],&quot;TACNA&quot;:[&quot;TACNA&quot;,&quot;TARATA&quot;,&quot;JORGE BASADRE&quot;,&quot;CANDARAVE&quot;],&quot;TUMBES&quot;:[&quot;TUMBES&quot;,&quot;CONTRALMIRANTE VILLAR&quot;,&quot;ZARUMILLA&quot;],&quot;UCAYALI&quot;:[&quot;CORONEL PORTILLO&quot;,&quot;PADRE ABAD&quot;,&quot;ATALAYA&quot;,&quot;PURUS&quot;]}" data-distritos="{&quot;AMAZONAS&quot;:{&quot;BAGUA&quot;:[&quot;BAGUA&quot;,&quot;LA PECA&quot;,&quot;ARAMANGO&quot;,&quot;COPALLIN&quot;,&quot;EL PARCO&quot;,&quot;IMAZA&quot;],&quot;CHACHAPOYAS&quot;:[&quot;CHACHAPOYAS&quot;,&quot;ASUNCION&quot;,&quot;BALSAS&quot;,&quot;CHETO&quot;,&quot;CHILIQUIN&quot;,&quot;CHUQUIBAMBA&quot;,&quot;GRANADA&quot;,&quot;HUANCAS&quot;,&quot;LA JALCA&quot;,&quot;LEIMEBAMBA&quot;,&quot;LEVANTO&quot;,&quot;MAGDALENA&quot;,&quot;MARISCAL CASTILLA&quot;,&quot;MOLINOPAMPA&quot;,&quot;MONTEVIDEO&quot;,&quot;OLLEROS&quot;,&quot;QUINJALCA&quot;,&quot;SAN FCO DE DAGUAS&quot;,&quot;SAN ISIDRO DE MAINO&quot;,&quot;SOLOCO&quot;,&quot;SONCHE&quot;],&quot;BONGARA&quot;:[&quot;JUMBILLA&quot;,&quot;COROSHA&quot;,&quot;CUISPES&quot;,&quot;CHISQUILLA&quot;,&quot;CHURUJA&quot;,&quot;FLORIDA&quot;,&quot;RECTA&quot;,&quot;SAN CARLOS&quot;,&quot;SHIPASBAMBA&quot;,&quot;VALERA&quot;,&quot;YAMBRASBAMBA&quot;,&quot;JAZAN&quot;],&quot;LUYA&quot;:[&quot;LAMUD&quot;,&quot;CAMPORREDONDO&quot;,&quot;COCABAMBA&quot;,&quot;COLCAMAR&quot;,&quot;CONILA&quot;,&quot;INGUILPATA&quot;,&quot;LONGUITA&quot;,&quot;LONYA CHICO&quot;,&quot;LUYA&quot;,&quot;LUYA VIEJO&quot;,&quot;MARIA&quot;,&quot;OCALLI&quot;,&quot;OCUMAL&quot;,&quot;PISUQUIA&quot;,&quot;SAN CRISTOBAL&quot;,&quot;SAN FRANCISCO DE YESO&quot;,&quot;SAN JERONIMO&quot;,&quot;SAN JUAN DE LOPECANCHA&quot;,&quot;SANTA CATALINA&quot;,&quot;SANTO TOMAS&quot;,&quot;TINGO&quot;,&quot;TRITA&quot;,&quot;PROVIDENCIA&quot;],&quot;RODRIGUEZ DE MENDOZA&quot;:[&quot;SAN NICOLAS&quot;,&quot;COCHAMAL&quot;,&quot;CHIRIMOTO&quot;,&quot;HUAMBO&quot;,&quot;LIMABAMBA&quot;,&quot;LONGAR&quot;,&quot;MILPUC&quot;,&quot;MCAL BENAVIDES&quot;,&quot;OMIA&quot;,&quot;SANTA ROSA&quot;,&quot;TOTORA&quot;,&quot;VISTA ALEGRE&quot;],&quot;CONDORCANQUI&quot;:[&quot;NIEVA&quot;,&quot;RIO SANTIAGO&quot;,&quot;EL CENEPA&quot;],&quot;UTCUBAMBA&quot;:[&quot;BAGUA GRANDE&quot;,&quot;CAJARURO&quot;,&quot;CUMBA&quot;,&quot;EL MILAGRO&quot;,&quot;JAMALCA&quot;,&quot;LONYA GRANDE&quot;,&quot;YAMON&quot;]},&quot;ANCASH&quot;:{&quot;HUARAZ&quot;:[&quot;HUARAZ&quot;,&quot;INDEPENDENCIA&quot;,&quot;COCHABAMBA&quot;,&quot;COLCABAMBA&quot;,&quot;HUANCHAY&quot;,&quot;JANGAS&quot;,&quot;LA LIBERTAD&quot;,&quot;OLLEROS&quot;,&quot;PAMPAS&quot;,&quot;PARIACOTO&quot;,&quot;PIRA&quot;,&quot;TARICA&quot;],&quot;AIJA&quot;:[&quot;AIJA&quot;,&quot;CORIS&quot;,&quot;HUACLLAN&quot;,&quot;LA MERCED&quot;,&quot;SUCCHA&quot;],&quot;BOLOGNESI&quot;:[&quot;CHIQUIAN&quot;,&quot;A PARDO LEZAMETA&quot;,&quot;AQUIA&quot;,&quot;CAJACAY&quot;,&quot;HUAYLLACAYAN&quot;,&quot;HUASTA&quot;,&quot;MANGAS&quot;,&quot;PACLLON&quot;,&quot;SAN MIGUEL DE CORPANQUI&quot;,&quot;TICLLOS&quot;,&quot;ANTONIO RAIMONDI&quot;,&quot;CANIS&quot;,&quot;COLQUIOC&quot;,&quot;LA PRIMAVERA&quot;,&quot;HUALLANCA&quot;],&quot;CARHUAZ&quot;:[&quot;CARHUAZ&quot;,&quot;ACOPAMPA&quot;,&quot;AMASHCA&quot;,&quot;ANTA&quot;,&quot;ATAQUERO&quot;,&quot;MARCARA&quot;,&quot;PARIAHUANCA&quot;,&quot;SAN MIGUEL DE ACO&quot;,&quot;SHILLA&quot;,&quot;TINCO&quot;,&quot;YUNGAR&quot;],&quot;CASMA&quot;:[&quot;CASMA&quot;,&quot;BUENA VISTA ALTA&quot;,&quot;COMANDANTE NOEL&quot;,&quot;YAUTAN&quot;],&quot;CORONGO&quot;:[&quot;CORONGO&quot;,&quot;ACO&quot;,&quot;BAMBAS&quot;,&quot;CUSCA&quot;,&quot;LA PAMPA&quot;,&quot;YANAC&quot;,&quot;YUPAN&quot;],&quot;HUAYLAS&quot;:[&quot;CARAZ&quot;,&quot;HUALLANCA&quot;,&quot;HUATA&quot;,&quot;HUAYLAS&quot;,&quot;MATO&quot;,&quot;PAMPAROMAS&quot;,&quot;PUEBLO LIBRE&quot;,&quot;SANTA CRUZ&quot;,&quot;YURACMARCA&quot;,&quot;SANTO TORIBIO&quot;],&quot;HUARI&quot;:[&quot;HUARI&quot;,&quot;CAJAY&quot;,&quot;CHAVIN DE HUANTAR&quot;,&quot;HUACACHI&quot;,&quot;HUACHIS&quot;,&quot;HUACCHIS&quot;,&quot;HUANTAR&quot;,&quot;MASIN&quot;,&quot;PAUCAS&quot;,&quot;PONTO&quot;,&quot;RAHUAPAMPA&quot;,&quot;RAPAYAN&quot;,&quot;SAN MARCOS&quot;,&quot;SAN PEDRO DE CHANA&quot;,&quot;UCO&quot;,&quot;ANRA&quot;],&quot;MARISCAL LUZURIAGA&quot;:[&quot;PISCOBAMBA&quot;,&quot;CASCA&quot;,&quot;LUCMA&quot;,&quot;FIDEL OLIVAS ESCUDERO&quot;,&quot;LLAMA&quot;,&quot;LLUMPA&quot;,&quot;MUSGA&quot;,&quot;ELEAZAR GUZMAN BARRON&quot;],&quot;PALLASCA&quot;:[&quot;CABANA&quot;,&quot;BOLOGNESI&quot;,&quot;CONCHUCOS&quot;,&quot;HUACASCHUQUE&quot;,&quot;HUANDOVAL&quot;,&quot;LACABAMBA&quot;,&quot;LLAPO&quot;,&quot;PALLASCA&quot;,&quot;PAMPAS&quot;,&quot;SANTA ROSA&quot;,&quot;TAUCA&quot;],&quot;POMABAMBA&quot;:[&quot;POMABAMBA&quot;,&quot;HUAYLLAN&quot;,&quot;PAROBAMBA&quot;,&quot;QUINUABAMBA&quot;],&quot;RECUAY&quot;:[&quot;RECUAY&quot;,&quot;COTAPARACO&quot;,&quot;HUAYLLAPAMPA&quot;,&quot;MARCA&quot;,&quot;PAMPAS CHICO&quot;,&quot;PARARIN&quot;,&quot;TAPACOCHA&quot;,&quot;TICAPAMPA&quot;,&quot;LLACLLIN&quot;,&quot;CATAC&quot;],&quot;SANTA&quot;:[&quot;CHIMBOTE&quot;,&quot;CACERES DEL PERU&quot;,&quot;MACATE&quot;,&quot;MORO&quot;,&quot;NEPE\u00c3\u2018A&quot;,&quot;SAMANCO&quot;,&quot;SANTA&quot;,&quot;COISHCO&quot;,&quot;NUEVO CHIMBOTE&quot;],&quot;SIHUAS&quot;:[&quot;SIHUAS&quot;,&quot;ALFONSO UGARTE&quot;,&quot;CHINGALPO&quot;,&quot;HUAYLLABAMBA&quot;,&quot;QUICHES&quot;,&quot;SICSIBAMBA&quot;,&quot;ACOBAMBA&quot;,&quot;CASHAPAMPA&quot;,&quot;RAGASH&quot;,&quot;SAN JUAN&quot;],&quot;YUNGAY&quot;:[&quot;YUNGAY&quot;,&quot;CASCAPARA&quot;,&quot;MANCOS&quot;,&quot;MATACOTO&quot;,&quot;QUILLO&quot;,&quot;RANRAHIRCA&quot;,&quot;SHUPLUY&quot;,&quot;YANAMA&quot;],&quot;ANTONIO RAIMONDI&quot;:[&quot;LLAMELLIN&quot;,&quot;ACZO&quot;,&quot;CHACCHO&quot;,&quot;CHINGAS&quot;,&quot;MIRGAS&quot;,&quot;SAN JUAN DE RONTOY&quot;],&quot;CARLOS FERMIN FITZCARRALD&quot;:[&quot;SAN LUIS&quot;,&quot;YAUYA&quot;,&quot;SAN NICOLAS&quot;],&quot;ASUNCION&quot;:[&quot;CHACAS&quot;,&quot;ACOCHACA&quot;],&quot;HUARMEY&quot;:[&quot;HUARMEY&quot;,&quot;COCHAPETI&quot;,&quot;HUAYAN&quot;,&quot;MALVAS&quot;,&quot;CULEBRAS&quot;],&quot;OCROS&quot;:[&quot;ACAS&quot;,&quot;CAJAMARQUILLA&quot;,&quot;CARHUAPAMPA&quot;,&quot;COCHAS&quot;,&quot;CONGAS&quot;,&quot;LLIPA&quot;,&quot;OCROS&quot;,&quot;SAN CRISTOBAL DE RAJAN&quot;,&quot;SAN PEDRO&quot;,&quot;SANTIAGO DE CHILCAS&quot;]},&quot;APURIMAC&quot;:{&quot;ABANCAY&quot;:[&quot;ABANCAY&quot;,&quot;CIRCA&quot;,&quot;CURAHUASI&quot;,&quot;CHACOCHE&quot;,&quot;HUANIPACA&quot;,&quot;LAMBRAMA&quot;,&quot;PICHIRHUA&quot;,&quot;SAN PEDRO DE CACHORA&quot;,&quot;TAMBURCO&quot;],&quot;AYMARAES&quot;:[&quot;CHALHUANCA&quot;,&quot;CAPAYA&quot;,&quot;CARAYBAMBA&quot;,&quot;COLCABAMBA&quot;,&quot;COTARUSE&quot;,&quot;CHAPIMARCA&quot;,&quot;IHUAYLLO&quot;,&quot;LUCRE&quot;,&quot;POCOHUANCA&quot;,&quot;SA\u00c3\u2018AICA&quot;,&quot;SORAYA&quot;,&quot;TAPAIRIHUA&quot;,&quot;TINTAY&quot;,&quot;TORAYA&quot;,&quot;YANACA&quot;,&quot;SAN JUAN DE CHAC\u00c3\u2018A&quot;,&quot;JUSTO APU SAHUARAURA&quot;],&quot;ANDAHUAYLAS&quot;:[&quot;ANDAHUAYLAS&quot;,&quot;ANDARAPA&quot;,&quot;CHIARA&quot;,&quot;HUANCARAMA&quot;,&quot;HUANCARAY&quot;,&quot;KISHUARA&quot;,&quot;PACOBAMBA&quot;,&quot;PAMPACHIRI&quot;,&quot;SAN ANTONIO DE CACHI&quot;,&quot;SAN JERONIMO&quot;,&quot;TALAVERA&quot;,&quot;TURPO&quot;,&quot;PACUCHA&quot;,&quot;POMACOCHA&quot;,&quot;STA MARIA DE CHICMO&quot;,&quot;TUMAY HUARACA&quot;,&quot;HUAYANA&quot;,&quot;SAN MIGUEL DE CHACCRAMPA&quot;,&quot;KAQUIABAMBA&quot;],&quot;ANTABAMBA&quot;:[&quot;ANTABAMBA&quot;,&quot;EL ORO&quot;,&quot;HUAQUIRCA&quot;,&quot;JUAN ESPINOZA MEDRANO&quot;,&quot;OROPESA&quot;,&quot;PACHACONAS&quot;,&quot;SABAINO&quot;],&quot;COTABAMBAS&quot;:[&quot;TAMBOBAMBA&quot;,&quot;COYLLURQUI&quot;,&quot;COTABAMBAS&quot;,&quot;HAQUIRA&quot;,&quot;MARA&quot;,&quot;CHALLHUAHUACHO&quot;],&quot;GRAU&quot;:[&quot;CHUQUIBAMBILLA&quot;,&quot;CURPAHUASI&quot;,&quot;HUAILLATI&quot;,&quot;MAMARA&quot;,&quot;MARISCAL GAMARRA&quot;,&quot;MICAELA BASTIDAS&quot;,&quot;PROGRESO&quot;,&quot;PATAYPAMPA&quot;,&quot;SAN ANTONIO&quot;,&quot;TURPAY&quot;,&quot;VILCABAMBA&quot;,&quot;VIRUNDO&quot;,&quot;SANTA ROSA&quot;,&quot;CURASCO&quot;],&quot;CHINCHEROS&quot;:[&quot;CHINCHEROS&quot;,&quot;ONGOY&quot;,&quot;OCOBAMBA&quot;,&quot;COCHARCAS&quot;,&quot;ANCO HUALLO&quot;,&quot;HUACCANA&quot;,&quot;URANMARCA&quot;,&quot;RANRACANCHA&quot;]},&quot;AREQUIPA&quot;:{&quot;AREQUIPA&quot;:[&quot;AREQUIPA&quot;,&quot;CAYMA&quot;,&quot;CERRO COLORADO&quot;,&quot;CHARACATO&quot;,&quot;CHIGUATA&quot;,&quot;LA JOYA&quot;,&quot;MIRAFLORES&quot;,&quot;MOLLEBAYA&quot;,&quot;PAUCARPATA&quot;,&quot;POCSI&quot;,&quot;POLOBAYA&quot;,&quot;QUEQUE\u00c3\u2018A&quot;,&quot;SABANDIA&quot;,&quot;SACHACA&quot;,&quot;SAN JUAN DE SIGUAS&quot;,&quot;SAN JUAN DE TARUCANI&quot;,&quot;SANTA ISABEL DE SIGUAS&quot;,&quot;STA RITA DE SIGUAS&quot;,&quot;SOCABAYA&quot;,&quot;TIABAYA&quot;,&quot;UCHUMAYO&quot;,&quot;VITOR&quot;,&quot;YANAHUARA&quot;,&quot;YARABAMBA&quot;,&quot;YURA&quot;,&quot;MARIANO MELGAR&quot;,&quot;JACOBO HUNTER&quot;,&quot;ALTO SELVA ALEGRE&quot;,&quot;JOSE LUIS BUSTAMANTE Y RIVERO&quot;],&quot;CAYLLOMA&quot;:[&quot;CHIVAY&quot;,&quot;ACHOMA&quot;,&quot;CABANACONDE&quot;,&quot;CAYLLOMA&quot;,&quot;CALLALLI&quot;,&quot;COPORAQUE&quot;,&quot;HUAMBO&quot;,&quot;HUANCA&quot;,&quot;ICHUPAMPA&quot;,&quot;LARI&quot;,&quot;LLUTA&quot;,&quot;MACA&quot;,&quot;MADRIGAL&quot;,&quot;SAN ANTONIO DE CHUCA&quot;,&quot;SIBAYO&quot;,&quot;TAPAY&quot;,&quot;TISCO&quot;,&quot;TUTI&quot;,&quot;YANQUE&quot;,&quot;MAJES&quot;],&quot;CAMANA&quot;:[&quot;CAMANA&quot;,&quot;JOSE MARIA QUIMPER&quot;,&quot;MARIANO N VALCARCEL&quot;,&quot;MARISCAL CACERES&quot;,&quot;NICOLAS DE PIEROLA&quot;,&quot;OCO\u00c3\u2018A&quot;,&quot;QUILCA&quot;,&quot;SAMUEL PASTOR&quot;],&quot;CARAVELI&quot;:[&quot;CARAVELI&quot;,&quot;ACARI&quot;,&quot;ATICO&quot;,&quot;ATIQUIPA&quot;,&quot;BELLA UNION&quot;,&quot;CAHUACHO&quot;,&quot;CHALA&quot;,&quot;CHAPARRA&quot;,&quot;HUANUHUANU&quot;,&quot;JAQUI&quot;,&quot;LOMAS&quot;,&quot;QUICACHA&quot;,&quot;YAUCA&quot;],&quot;CASTILLA&quot;:[&quot;APLAO&quot;,&quot;ANDAGUA&quot;,&quot;AYO&quot;,&quot;CHACHAS&quot;,&quot;CHILCAYMARCA&quot;,&quot;CHOCO&quot;,&quot;HUANCARQUI&quot;,&quot;MACHAGUAY&quot;,&quot;ORCOPAMPA&quot;,&quot;PAMPACOLCA&quot;,&quot;TIPAN&quot;,&quot;URACA&quot;,&quot;U\u00c3\u2018ON&quot;,&quot;VIRACO&quot;],&quot;CONDESUYOS&quot;:[&quot;CHUQUIBAMBA&quot;,&quot;ANDARAY&quot;,&quot;CAYARANI&quot;,&quot;CHICHAS&quot;,&quot;IRAY&quot;,&quot;SALAMANCA&quot;,&quot;YANAQUIHUA&quot;,&quot;RIO GRANDE&quot;],&quot;ISLAY&quot;:[&quot;MOLLENDO&quot;,&quot;COCACHACRA&quot;,&quot;DEAN VALDIVIA&quot;,&quot;ISLAY&quot;,&quot;MEJIA&quot;,&quot;PUNTA DE BOMBON&quot;],&quot;LA UNION&quot;:[&quot;COTAHUASI&quot;,&quot;ALCA&quot;,&quot;CHARCANA&quot;,&quot;HUAYNACOTAS&quot;,&quot;PAMPAMARCA&quot;,&quot;PUYCA&quot;,&quot;QUECHUALLA&quot;,&quot;SAYLA&quot;,&quot;TAURIA&quot;,&quot;TOMEPAMPA&quot;,&quot;TORO&quot;]},&quot;AYACUCHO&quot;:{&quot;HUAMANGA&quot;:[&quot;AYACUCHO&quot;,&quot;ACOS VINCHOS&quot;,&quot;CARMEN ALTO&quot;,&quot;CHIARA&quot;,&quot;QUINUA&quot;,&quot;SAN JOSE DE TICLLAS&quot;,&quot;SAN JUAN BAUTISTA&quot;,&quot;SANTIAGO DE PISCHA&quot;,&quot;VINCHOS&quot;,&quot;TAMBILLO&quot;,&quot;ACOCRO&quot;,&quot;SOCOS&quot;,&quot;OCROS&quot;,&quot;PACAYCASA&quot;,&quot;JESUS NAZARENO&quot;],&quot;CANGALLO&quot;:[&quot;CANGALLO&quot;,&quot;CHUSCHI&quot;,&quot;LOS MOROCHUCOS&quot;,&quot;PARAS&quot;,&quot;TOTOS&quot;,&quot;MARIA PARADO DE BELLIDO&quot;],&quot;HUANTA&quot;:[&quot;HUANTA&quot;,&quot;AYAHUANCO&quot;,&quot;HUAMANGUILLA&quot;,&quot;IGUAIN&quot;,&quot;LURICOCHA&quot;,&quot;SANTILLANA&quot;,&quot;SIVIA&quot;,&quot;LLOCHEGUA&quot;],&quot;LA MAR&quot;:[&quot;SAN MIGUEL&quot;,&quot;ANCO&quot;,&quot;AYNA&quot;,&quot;CHILCAS&quot;,&quot;CHUNGUI&quot;,&quot;TAMBO&quot;,&quot;LUIS CARRANZA&quot;,&quot;SANTA ROSA&quot;],&quot;LUCANAS&quot;:[&quot;PUQUIO&quot;,&quot;AUCARA&quot;,&quot;CABANA&quot;,&quot;CARMEN SALCEDO&quot;,&quot;CHAVI\u00c3\u2018A&quot;,&quot;CHIPAO&quot;,&quot;HUAC-HUAS&quot;,&quot;LARAMATE&quot;,&quot;LEONCIO PRADO&quot;,&quot;LUCANAS&quot;,&quot;LLAUTA&quot;,&quot;OCA\u00c3\u2018A&quot;,&quot;OTOCA&quot;,&quot;SANCOS&quot;,&quot;SAN JUAN&quot;,&quot;SAN PEDRO&quot;,&quot;STA ANA DE HUAYCAHUACHO&quot;,&quot;SANTA LUCIA&quot;,&quot;SAISA&quot;,&quot;SAN PEDRO DE PALCO&quot;,&quot;SAN CRISTOBAL&quot;],&quot;PARINACOCHAS&quot;:[&quot;CORACORA&quot;,&quot;CORONEL CASTA\u00c3\u2018EDA&quot;,&quot;CHUMPI&quot;,&quot;PACAPAUSA&quot;,&quot;PULLO&quot;,&quot;PUYUSCA&quot;,&quot;SAN FCO DE RAVACAYCO&quot;,&quot;UPAHUACHO&quot;],&quot;VICTOR FAJARDO&quot;:[&quot;HUANCAPI&quot;,&quot;ALCAMENCA&quot;,&quot;APONGO&quot;,&quot;CANARIA&quot;,&quot;CAYARA&quot;,&quot;COLCA&quot;,&quot;HUAYA&quot;,&quot;HUAMANQUIQUIA&quot;,&quot;HUANCARAYLLA&quot;,&quot;SARHUA&quot;,&quot;VILCANCHOS&quot;,&quot;ASQUIPATA&quot;],&quot;HUANCA SANCOS&quot;:[&quot;SANCOS&quot;,&quot;SACSAMARCA&quot;,&quot;SANTIAGO DE LUCANAMARCA&quot;,&quot;CARAPO&quot;],&quot;VILCAS HUAMAN&quot;:[&quot;VILCAS HUAMAN&quot;,&quot;VISCHONGO&quot;,&quot;ACCOMARCA&quot;,&quot;CARHUANCA&quot;,&quot;CONCEPCION&quot;,&quot;HUAMBALPA&quot;,&quot;SAURAMA&quot;,&quot;INDEPENDENCIA&quot;],&quot;PAUCAR DEL SARA SARA&quot;:[&quot;PAUSA&quot;,&quot;COLTA&quot;,&quot;CORCULLA&quot;,&quot;LAMPA&quot;,&quot;MARCABAMBA&quot;,&quot;OYOLO&quot;,&quot;PARARCA&quot;,&quot;SAN JAVIER DE ALPABAMBA&quot;,&quot;SAN JOSE DE USHUA&quot;,&quot;SARA SARA&quot;],&quot;SUCRE&quot;:[&quot;QUEROBAMBA&quot;,&quot;BELEN&quot;,&quot;CHALCOS&quot;,&quot;SAN SALVADOR DE QUIJE&quot;,&quot;PAICO&quot;,&quot;SANTIAGO DE PAUCARAY&quot;,&quot;SAN PEDRO DE LARCAY&quot;,&quot;SORAS&quot;,&quot;HUACA\u00c3\u2018A&quot;,&quot;CHILCAYOC&quot;,&quot;MORCOLLA&quot;]},&quot;CAJAMARCA&quot;:{&quot;CAJAMARCA&quot;:[&quot;CAJAMARCA&quot;,&quot;ASUNCION&quot;,&quot;COSPAN&quot;,&quot;CHETILLA&quot;,&quot;ENCA\u00c3\u2018ADA&quot;,&quot;JESUS&quot;,&quot;LOS BA\u00c3\u2018OS DEL INCA&quot;,&quot;LLACANORA&quot;,&quot;MAGDALENA&quot;,&quot;MATARA&quot;,&quot;NAMORA&quot;,&quot;SAN JUAN&quot;],&quot;CAJABAMBA&quot;:[&quot;CAJABAMBA&quot;,&quot;CACHACHI&quot;,&quot;CONDEBAMBA&quot;,&quot;SITACOCHA&quot;],&quot;CELENDIN&quot;:[&quot;CELENDIN&quot;,&quot;CORTEGANA&quot;,&quot;CHUMUCH&quot;,&quot;HUASMIN&quot;,&quot;JORGE CHAVEZ&quot;,&quot;JOSE GALVEZ&quot;,&quot;MIGUEL IGLESIAS&quot;,&quot;OXAMARCA&quot;,&quot;SOROCHUCO&quot;,&quot;SUCRE&quot;,&quot;UTCO&quot;,&quot;LA LIBERTAD DE PALLAN&quot;],&quot;CONTUMAZA&quot;:[&quot;CONTUMAZA&quot;,&quot;CHILETE&quot;,&quot;GUZMANGO&quot;,&quot;SAN BENITO&quot;,&quot;CUPISNIQUE&quot;,&quot;TANTARICA&quot;,&quot;YONAN&quot;,&quot;STA CRUZ DE TOLEDO&quot;],&quot;CUTERVO&quot;:[&quot;CUTERVO&quot;,&quot;CALLAYUC&quot;,&quot;CUJILLO&quot;,&quot;CHOROS&quot;,&quot;LA RAMADA&quot;,&quot;PIMPINGOS&quot;,&quot;QUEROCOTILLO&quot;,&quot;SAN ANDRES DE CUTERVO&quot;,&quot;SAN JUAN DE CUTERVO&quot;,&quot;SAN LUIS DE LUCMA&quot;,&quot;SANTA CRUZ&quot;,&quot;SANTO DOMINGO DE LA CAPILLA&quot;,&quot;SANTO TOMAS&quot;,&quot;SOCOTA&quot;,&quot;TORIBIO CASANOVA&quot;],&quot;CHOTA&quot;:[&quot;CHOTA&quot;,&quot;ANGUIA&quot;,&quot;COCHABAMBA&quot;,&quot;CONCHAN&quot;,&quot;CHADIN&quot;,&quot;CHIGUIRIP&quot;,&quot;CHIMBAN&quot;,&quot;HUAMBOS&quot;,&quot;LAJAS&quot;,&quot;LLAMA&quot;,&quot;MIRACOSTA&quot;,&quot;PACCHA&quot;,&quot;PION&quot;,&quot;QUEROCOTO&quot;,&quot;TACABAMBA&quot;,&quot;TOCMOCHE&quot;,&quot;SAN JUAN DE LICUPIS&quot;,&quot;CHOROPAMPA&quot;,&quot;CHALAMARCA&quot;],&quot;HUALGAYOC&quot;:[&quot;BAMBAMARCA&quot;,&quot;CHUGUR&quot;,&quot;HUALGAYOC&quot;],&quot;JAEN&quot;:[&quot;JAEN&quot;,&quot;BELLAVISTA&quot;,&quot;COLASAY&quot;,&quot;CHONTALI&quot;,&quot;POMAHUACA&quot;,&quot;PUCARA&quot;,&quot;SALLIQUE&quot;,&quot;SAN FELIPE&quot;,&quot;SAN JOSE DEL ALTO&quot;,&quot;SANTA ROSA&quot;,&quot;LAS PIRIAS&quot;,&quot;HUABAL&quot;],&quot;SANTA CRUZ&quot;:[&quot;SANTA CRUZ&quot;,&quot;CATACHE&quot;,&quot;CHANCAIBA\u00c3\u2018OS&quot;,&quot;LA ESPERANZA&quot;,&quot;NINABAMBA&quot;,&quot;PULAN&quot;,&quot;SEXI&quot;,&quot;UTICYACU&quot;,&quot;YAUYUCAN&quot;,&quot;ANDABAMBA&quot;,&quot;SAUCEPAMPA&quot;],&quot;SAN MIGUEL&quot;:[&quot;SAN MIGUEL&quot;,&quot;CALQUIS&quot;,&quot;LA FLORIDA&quot;,&quot;LLAPA&quot;,&quot;NANCHOC&quot;,&quot;NIEPOS&quot;,&quot;SAN GREGORIO&quot;,&quot;SAN SILVESTRE DE COCHAN&quot;,&quot;EL PRADO&quot;,&quot;UNION AGUA BLANCA&quot;,&quot;TONGOD&quot;,&quot;CATILLUC&quot;,&quot;BOLIVAR&quot;],&quot;SAN IGNACIO&quot;:[&quot;SAN IGNACIO&quot;,&quot;CHIRINOS&quot;,&quot;HUARANGO&quot;,&quot;NAMBALLE&quot;,&quot;LA COIPA&quot;,&quot;SAN JOSE DE LOURDES&quot;,&quot;TABACONAS&quot;],&quot;SAN MARCOS&quot;:[&quot;PEDRO GALVEZ&quot;,&quot;ICHOCAN&quot;,&quot;GREGORIO PITA&quot;,&quot;JOSE MANUEL QUIROZ&quot;,&quot;EDUARDO VILLANUEVA&quot;,&quot;JOSE SABOGAL&quot;,&quot;CHANCAY&quot;],&quot;SAN PABLO&quot;:[&quot;SAN PABLO&quot;,&quot;SAN BERNARDINO&quot;,&quot;SAN LUIS&quot;,&quot;TUMBADEN&quot;]},&quot;CALLAO&quot;:{&quot;CALLAO&quot;:[&quot;CALLAO&quot;,&quot;BELLAVISTA&quot;,&quot;LA PUNTA&quot;,&quot;CARMEN DE LA LEGUA-REYNOSO&quot;,&quot;LA PERLA&quot;,&quot;VENTANILLA&quot;]},&quot;CUSCO&quot;:{&quot;CUSCO&quot;:[&quot;CUSCO&quot;,&quot;CCORCA&quot;,&quot;POROY&quot;,&quot;SAN JERONIMO&quot;,&quot;SAN SEBASTIAN&quot;,&quot;SANTIAGO&quot;,&quot;SAYLLA&quot;,&quot;WANCHAQ&quot;],&quot;ACOMAYO&quot;:[&quot;ACOMAYO&quot;,&quot;ACOPIA&quot;,&quot;ACOS&quot;,&quot;POMACANCHI&quot;,&quot;RONDOCAN&quot;,&quot;SANGARARA&quot;,&quot;MOSOC LLACTA&quot;],&quot;ANTA&quot;:[&quot;ANTA&quot;,&quot;CHINCHAYPUJIO&quot;,&quot;HUAROCONDO&quot;,&quot;LIMATAMBO&quot;,&quot;MOLLEPATA&quot;,&quot;PUCYURA&quot;,&quot;ZURITE&quot;,&quot;CACHIMAYO&quot;,&quot;ANCAHUASI&quot;],&quot;CALCA&quot;:[&quot;CALCA&quot;,&quot;COYA&quot;,&quot;LAMAY&quot;,&quot;LARES&quot;,&quot;PISAC&quot;,&quot;SAN SALVADOR&quot;,&quot;TARAY&quot;,&quot;YANATILE&quot;],&quot;CANAS&quot;:[&quot;YANAOCA&quot;,&quot;CHECCA&quot;,&quot;KUNTURKANKI&quot;,&quot;LANGUI&quot;,&quot;LAYO&quot;,&quot;PAMPAMARCA&quot;,&quot;QUEHUE&quot;,&quot;TUPAC AMARU&quot;],&quot;CANCHIS&quot;:[&quot;SICUANI&quot;,&quot;COMBAPATA&quot;,&quot;CHECACUPE&quot;,&quot;MARANGANI&quot;,&quot;PITUMARCA&quot;,&quot;SAN PABLO&quot;,&quot;SAN PEDRO&quot;,&quot;TINTA&quot;],&quot;CHUMBIVILCAS&quot;:[&quot;SANTO TOMAS&quot;,&quot;CAPACMARCA&quot;,&quot;COLQUEMARCA&quot;,&quot;CHAMACA&quot;,&quot;LIVITACA&quot;,&quot;LLUSCO&quot;,&quot;QUI\u00c3\u2018OTA&quot;,&quot;VELILLE&quot;],&quot;ESPINAR&quot;:[&quot;ESPINAR&quot;,&quot;CONDOROMA&quot;,&quot;COPORAQUE&quot;,&quot;OCORURO&quot;,&quot;PALLPATA&quot;,&quot;PICHIGUA&quot;,&quot;SUYKUTAMBO&quot;,&quot;ALTO PICHIGUA&quot;],&quot;LA CONVENCION&quot;:[&quot;SANTA ANA&quot;,&quot;ECHARATE&quot;,&quot;HUAYOPATA&quot;,&quot;MARANURA&quot;,&quot;OCOBAMBA&quot;,&quot;SANTA TERESA&quot;,&quot;VILCABAMBA&quot;,&quot;QUELLOUNO&quot;,&quot;KIMBIRI&quot;,&quot;PICHARI&quot;],&quot;PARURO&quot;:[&quot;PARURO&quot;,&quot;ACCHA&quot;,&quot;CCAPI&quot;,&quot;COLCHA&quot;,&quot;HUANOQUITE&quot;,&quot;OMACHA&quot;,&quot;YAURISQUE&quot;,&quot;PACCARITAMBO&quot;,&quot;PILLPINTO&quot;],&quot;PAUCARTAMBO&quot;:[&quot;PAUCARTAMBO&quot;,&quot;CAICAY&quot;,&quot;COLQUEPATA&quot;,&quot;CHALLABAMBA&quot;,&quot;COS\u00c3\u2018IPATA&quot;,&quot;HUANCARANI&quot;],&quot;QUISPICANCHI&quot;:[&quot;URCOS&quot;,&quot;ANDAHUAYLILLAS&quot;,&quot;CAMANTI&quot;,&quot;CCARHUAYO&quot;,&quot;CCATCA&quot;,&quot;CUSIPATA&quot;,&quot;HUARO&quot;,&quot;LUCRE&quot;,&quot;MARCAPATA&quot;,&quot;OCONGATE&quot;,&quot;OROPESA&quot;,&quot;QUIQUIJANA&quot;],&quot;URUBAMBA&quot;:[&quot;URUBAMBA&quot;,&quot;CHINCHERO&quot;,&quot;HUAYLLABAMBA&quot;,&quot;MACHUPICCHU&quot;,&quot;MARAS&quot;,&quot;OLLANTAYTAMBO&quot;,&quot;YUCAY&quot;]},&quot;HUANCAVELICA&quot;:{&quot;HUANCAVELICA&quot;:[&quot;HUANCAVELICA&quot;,&quot;ACOBAMBILLA&quot;,&quot;ACORIA&quot;,&quot;CONAYCA&quot;,&quot;CUENCA&quot;,&quot;HUACHOCOLPA&quot;,&quot;HUAYLLAHUARA&quot;,&quot;IZCUCHACA&quot;,&quot;LARIA&quot;,&quot;MANTA&quot;,&quot;MARISCAL CACERES&quot;,&quot;MOYA&quot;,&quot;NUEVO OCCORO&quot;,&quot;PALCA&quot;,&quot;PILCHACA&quot;,&quot;VILCA&quot;,&quot;YAULI&quot;,&quot;ASCENSION&quot;,&quot;HUANDO&quot;],&quot;ACOBAMBA&quot;:[&quot;ACOBAMBA&quot;,&quot;ANTA&quot;,&quot;ANDABAMBA&quot;,&quot;CAJA&quot;,&quot;MARCAS&quot;,&quot;PAUCARA&quot;,&quot;POMACOCHA&quot;,&quot;ROSARIO&quot;],&quot;ANGARAES&quot;:[&quot;LIRCAY&quot;,&quot;ANCHONGA&quot;,&quot;CALLANMARCA&quot;,&quot;CONGALLA&quot;,&quot;CHINCHO&quot;,&quot;HUAYLLAY GRANDE&quot;,&quot;HUANCA HUANCA&quot;,&quot;JULCAMARCA&quot;,&quot;SAN ANTONIO DE ANTAPARCO&quot;,&quot;STO TOMAS DE PATA&quot;,&quot;SECCLLA&quot;,&quot;CCOCHACCASA&quot;],&quot;CASTROVIRREYNA&quot;:[&quot;CASTROVIRREYNA&quot;,&quot;ARMA&quot;,&quot;AURAHUA&quot;,&quot;CAPILLAS&quot;,&quot;COCAS&quot;,&quot;CHUPAMARCA&quot;,&quot;HUACHOS&quot;,&quot;HUAMATAMBO&quot;,&quot;MOLLEPAMPA&quot;,&quot;SAN JUAN&quot;,&quot;TANTARA&quot;,&quot;TICRAPO&quot;,&quot;SANTA ANA&quot;],&quot;TAYACAJA&quot;:[&quot;PAMPAS&quot;,&quot;ACOSTAMBO&quot;,&quot;ACRAQUIA&quot;,&quot;AHUAYCHA&quot;,&quot;COLCABAMBA&quot;,&quot;DANIEL HERNANDEZ&quot;,&quot;HUACHOCOLPA&quot;,&quot;HUARIBAMBA&quot;,&quot;\u00c3\u2018AHUIMPUQUIO&quot;,&quot;PAZOS&quot;,&quot;QUISHUAR&quot;,&quot;SALCABAMBA&quot;,&quot;SAN MARCOS DE ROCCHAC&quot;,&quot;SURCUBAMBA&quot;,&quot;TINTAY PUNCU&quot;,&quot;SALCAHUASI&quot;],&quot;HUAYTARA&quot;:[&quot;AYAVI&quot;,&quot;CORDOVA&quot;,&quot;HUAYACUNDO ARMA&quot;,&quot;HUAYTARA&quot;,&quot;LARAMARCA&quot;,&quot;OCOYO&quot;,&quot;PILPICHACA&quot;,&quot;QUERCO&quot;,&quot;QUITO ARMA&quot;,&quot;SAN ANTONIO DE CUSICANCHA&quot;,&quot;SAN FRANCISCO DE SANGAYAICO&quot;,&quot;SAN ISIDRO&quot;,&quot;SANTIAGO DE CHOCORVOS&quot;,&quot;SANTIAGO DE QUIRAHUARA&quot;,&quot;SANTO DOMINGO DE CAPILLAS&quot;,&quot;TAMBO&quot;],&quot;CHURCAMPA&quot;:[&quot;CHURCAMPA&quot;,&quot;ANCO&quot;,&quot;CHINCHIHUASI&quot;,&quot;EL CARMEN&quot;,&quot;LA MERCED&quot;,&quot;LOCROJA&quot;,&quot;PAUCARBAMBA&quot;,&quot;SAN MIGUEL DE MAYOC&quot;,&quot;SAN PEDRO DE CORIS&quot;,&quot;PACHAMARCA&quot;]},&quot;HUANUCO&quot;:{&quot;HUANUCO&quot;:[&quot;HUANUCO&quot;,&quot;CHINCHAO&quot;,&quot;CHURUBAMBA&quot;,&quot;MARGOS&quot;,&quot;QUISQUI&quot;,&quot;SAN FCO DE CAYRAN&quot;,&quot;SAN PEDRO DE CHAULAN&quot;,&quot;STA MARIA DEL VALLE&quot;,&quot;YARUMAYO&quot;,&quot;AMARILIS&quot;,&quot;PILLCO MARCA&quot;],&quot;AMBO&quot;:[&quot;AMBO&quot;,&quot;CAYNA&quot;,&quot;COLPAS&quot;,&quot;CONCHAMARCA&quot;,&quot;HUACAR&quot;,&quot;SAN FRANCISCO&quot;,&quot;SAN RAFAEL&quot;,&quot;TOMAY KICHWA&quot;],&quot;DOS DE MAYO&quot;:[&quot;LA UNION&quot;,&quot;CHUQUIS&quot;,&quot;MARIAS&quot;,&quot;PACHAS&quot;,&quot;QUIVILLA&quot;,&quot;RIPAN&quot;,&quot;SHUNQUI&quot;,&quot;SILLAPATA&quot;,&quot;YANAS&quot;],&quot;HUAMALIES&quot;:[&quot;LLATA&quot;,&quot;ARANCAY&quot;,&quot;CHAVIN DE PARIARCA&quot;,&quot;JACAS GRANDE&quot;,&quot;JIRCAN&quot;,&quot;MIRAFLORES&quot;,&quot;MONZON&quot;,&quot;PUNCHAO&quot;,&quot;PU\u00c3\u2018OS&quot;,&quot;SINGA&quot;,&quot;TANTAMAYO&quot;],&quot;MARA\u00c3\u2018ON&quot;:[&quot;HUACRACHUCO&quot;,&quot;CHOLON&quot;,&quot;SAN BUENAVENTURA&quot;],&quot;LEONCIO PRADO&quot;:[&quot;RUPA RUPA&quot;,&quot;DANIEL ALOMIA ROBLES&quot;,&quot;HERMILIO VALDIZAN&quot;,&quot;LUYANDO&quot;,&quot;MARIANO DAMASO BERAUN&quot;,&quot;JOSE CRESPO Y CASTILLO&quot;],&quot;PACHITEA&quot;:[&quot;PANAO&quot;,&quot;CHAGLLA&quot;,&quot;MOLINO&quot;,&quot;UMARI&quot;],&quot;PUERTO INCA&quot;:[&quot;HONORIA&quot;,&quot;PUERTO INCA&quot;,&quot;CODO DEL POZUZO&quot;,&quot;TOURNAVISTA&quot;,&quot;YUYAPICHIS&quot;],&quot;HUACAYBAMBA&quot;:[&quot;HUACAYBAMBA&quot;,&quot;PINRA&quot;,&quot;CANCHABAMBA&quot;,&quot;COCHABAMBA&quot;],&quot;LAURICOCHA&quot;:[&quot;JESUS&quot;,&quot;BA\u00c3\u2018OS&quot;,&quot;SAN FRANCISCO DE ASIS&quot;,&quot;QUEROPALCA&quot;,&quot;SAN MIGUEL DE CAURI&quot;,&quot;RONDOS&quot;,&quot;JIVIA&quot;],&quot;YAROWILCA&quot;:[&quot;CHAVINILLO&quot;,&quot;APARICIO POMARES array(CHUPAN), &quot;,&quot;CAHUAC&quot;,&quot;CHACABAMBA&quot;,&quot;JACAS CHICO&quot;,&quot;OBAS&quot;,&quot;PAMPAMARCA&quot;,&quot;CHORAS&quot;]},&quot;ICA&quot;:{&quot;ICA&quot;:[&quot;ICA&quot;,&quot;LA TINGUI\u00c3\u2018A&quot;,&quot;LOS AQUIJES&quot;,&quot;PARCONA&quot;,&quot;PUEBLO NUEVO&quot;,&quot;SALAS&quot;,&quot;SAN JOSE DE LOS MOLINOS&quot;,&quot;SAN JUAN BAUTISTA&quot;,&quot;SANTIAGO&quot;,&quot;SUBTANJALLA&quot;,&quot;YAUCA DEL ROSARIO&quot;,&quot;TATE&quot;,&quot;PACHACUTEC&quot;,&quot;OCUCAJE&quot;],&quot;CHINCHA&quot;:[&quot;CHINCHA ALTA&quot;,&quot;CHAVIN&quot;,&quot;CHINCHA BAJA&quot;,&quot;EL CARMEN&quot;,&quot;GROCIO PRADO&quot;,&quot;SAN PEDRO DE HUACARPANA&quot;,&quot;SUNAMPE&quot;,&quot;TAMBO DE MORA&quot;,&quot;ALTO LARAN&quot;,&quot;PUEBLO NUEVO&quot;,&quot;SAN JUAN DE YANAC&quot;],&quot;NAZCA&quot;:[&quot;NAZCA&quot;,&quot;CHANGUILLO&quot;,&quot;EL INGENIO&quot;,&quot;MARCONA&quot;,&quot;VISTA ALEGRE&quot;],&quot;PISCO&quot;:[&quot;PISCO&quot;,&quot;HUANCANO&quot;,&quot;HUMAY&quot;,&quot;INDEPENDENCIA&quot;,&quot;PARACAS&quot;,&quot;SAN ANDRES&quot;,&quot;SAN CLEMENTE&quot;,&quot;TUPAC AMARU INCA&quot;],&quot;PALPA&quot;:[&quot;PALPA&quot;,&quot;LLIPATA&quot;,&quot;RIO GRANDE&quot;,&quot;SANTA CRUZ&quot;,&quot;TIBILLO&quot;]},&quot;JUNIN&quot;:{&quot;HUANCAYO&quot;:[&quot;HUANCAYO&quot;,&quot;CARHUACALLANGA&quot;,&quot;COLCA&quot;,&quot;CULLHUAS&quot;,&quot;CHACAPAMPA&quot;,&quot;CHICCHE&quot;,&quot;CHILCA&quot;,&quot;CHONGOS ALTO&quot;,&quot;CHUPURO&quot;,&quot;EL TAMBO&quot;,&quot;HUACRAPUQUIO&quot;,&quot;HUALHUAS&quot;,&quot;HUANCAN&quot;,&quot;HUASICANCHA&quot;,&quot;HUAYUCACHI&quot;,&quot;INGENIO&quot;,&quot;PARIAHUANCA&quot;,&quot;PILCOMAYO&quot;,&quot;PUCARA&quot;,&quot;QUICHUAY&quot;,&quot;QUILCAS&quot;,&quot;SAN AGUSTIN&quot;,&quot;SAN JERONIMO DE TUNAN&quot;,&quot;STO DOMINGO DE ACOBAMBA&quot;,&quot;SA\u00c3\u2018O&quot;,&quot;SAPALLANGA&quot;,&quot;SICAYA&quot;,&quot;VIQUES&quot;],&quot;CONCEPCION&quot;:[&quot;CONCEPCION&quot;,&quot;ACO&quot;,&quot;ANDAMARCA&quot;,&quot;COMAS&quot;,&quot;COCHAS&quot;,&quot;CHAMBARA&quot;,&quot;HEROINAS TOLEDO&quot;,&quot;MANZANARES&quot;,&quot;MCAL CASTILLA&quot;,&quot;MATAHUASI&quot;,&quot;MITO&quot;,&quot;NUEVE DE JULIO&quot;,&quot;ORCOTUNA&quot;,&quot;STA ROSA DE OCOPA&quot;,&quot;SAN JOSE DE QUERO&quot;],&quot;JAUJA&quot;:[&quot;JAUJA&quot;,&quot;ACOLLA&quot;,&quot;APATA&quot;,&quot;ATAURA&quot;,&quot;CANCHAILLO&quot;,&quot;EL MANTARO&quot;,&quot;HUAMALI&quot;,&quot;HUARIPAMPA&quot;,&quot;HUERTAS&quot;,&quot;JANJAILLO&quot;,&quot;JULCAN&quot;,&quot;LEONOR ORDO\u00c3\u2018EZ&quot;,&quot;LLOCLLAPAMPA&quot;,&quot;MARCO&quot;,&quot;MASMA&quot;,&quot;MOLINOS&quot;,&quot;MONOBAMBA&quot;,&quot;MUQUI&quot;,&quot;MUQUIYAUYO&quot;,&quot;PACA&quot;,&quot;PACCHA&quot;,&quot;PANCAN&quot;,&quot;PARCO&quot;,&quot;POMACANCHA&quot;,&quot;RICRAN&quot;,&quot;SAN LORENZO&quot;,&quot;SAN PEDRO DE CHUNAN&quot;,&quot;SINCOS&quot;,&quot;TUNAN MARCA&quot;,&quot;YAULI&quot;,&quot;CURICACA&quot;,&quot;MASMA CHICCHE&quot;,&quot;SAUSA&quot;,&quot;YAUYOS&quot;],&quot;JUNIN&quot;:[&quot;JUNIN&quot;,&quot;CARHUAMAYO&quot;,&quot;ONDORES&quot;,&quot;ULCUMAYO&quot;],&quot;TARMA&quot;:[&quot;TARMA&quot;,&quot;ACOBAMBA&quot;,&quot;HUARICOLCA&quot;,&quot;HUASAHUASI&quot;,&quot;LA UNION&quot;,&quot;PALCA&quot;,&quot;PALCAMAYO&quot;,&quot;SAN PEDRO DE CAJAS&quot;,&quot;TAPO&quot;],&quot;YAULI&quot;:[&quot;LA OROYA&quot;,&quot;CHACAPALPA&quot;,&quot;HUAY HUAY&quot;,&quot;MARCAPOMACOCHA&quot;,&quot;MOROCOCHA&quot;,&quot;PACCHA&quot;,&quot;STA BARBARA DE CARHUACAYAN&quot;,&quot;SUITUCANCHA&quot;,&quot;YAULI&quot;,&quot;STA ROSA DE SACCO&quot;],&quot;SATIPO&quot;:[&quot;SATIPO&quot;,&quot;COVIRIALI&quot;,&quot;LLAYLLA&quot;,&quot;MAZAMARI&quot;,&quot;PAMPA HERMOSA&quot;,&quot;PANGOA&quot;,&quot;RIO NEGRO&quot;,&quot;RIO TAMBO&quot;],&quot;CHANCHAMAYO&quot;:[&quot;CHANCHAMAYO&quot;,&quot;SAN RAMON&quot;,&quot;VITOC&quot;,&quot;SAN LUIS DE SHUARO&quot;,&quot;PICHANAQUI&quot;,&quot;PERENE&quot;],&quot;CHUPACA&quot;:[&quot;CHUPACA&quot;,&quot;AHUAC&quot;,&quot;CHONGOS BAJO&quot;,&quot;HUACHAC&quot;,&quot;HUAMANCACA CHICO&quot;,&quot;SAN JUAN DE ISCOS&quot;,&quot;SAN JUAN DE JARPA&quot;,&quot;TRES DE DICIEMBRE&quot;,&quot;YANACANCHA&quot;]},&quot;LA LIBERTAD&quot;:{&quot;TRUJILLO&quot;:[&quot;TRUJILLO&quot;,&quot;HUANCHACO&quot;,&quot;LAREDO&quot;,&quot;MOCHE&quot;,&quot;SALAVERRY&quot;,&quot;SIMBAL&quot;,&quot;VICTOR LARCO HERRERA&quot;,&quot;POROTO&quot;,&quot;EL PORVENIR&quot;,&quot;LA ESPERANZA&quot;,&quot;FLORENCIA DE MORA&quot;],&quot;BOLIVAR&quot;:[&quot;BOLIVAR&quot;,&quot;BAMBAMARCA&quot;,&quot;CONDORMARCA&quot;,&quot;LONGOTEA&quot;,&quot;UCUNCHA&quot;,&quot;UCHUMARCA&quot;],&quot;SANCHEZ CARRION&quot;:[&quot;HUAMACHUCO&quot;,&quot;COCHORCO&quot;,&quot;CURGOS&quot;,&quot;CHUGAY&quot;,&quot;MARCABAL&quot;,&quot;SANAGORAN&quot;,&quot;SARIN&quot;,&quot;SARTIMBAMBA&quot;],&quot;OTUZCO&quot;:[&quot;OTUZCO&quot;,&quot;AGALLPAMPA&quot;,&quot;CHARAT&quot;,&quot;HUARANCHAL&quot;,&quot;LA CUESTA&quot;,&quot;PARANDAY&quot;,&quot;SALPO&quot;,&quot;SINSICAP&quot;,&quot;USQUIL&quot;,&quot;MACHE&quot;],&quot;PACASMAYO&quot;:[&quot;SAN PEDRO DE LLOC&quot;,&quot;GUADALUPE&quot;,&quot;JEQUETEPEQUE&quot;,&quot;PACASMAYO&quot;,&quot;SAN JOSE&quot;],&quot;PATAZ&quot;:[&quot;TAYABAMBA&quot;,&quot;BULDIBUYO&quot;,&quot;CHILLIA&quot;,&quot;HUAYLILLAS&quot;,&quot;HUANCASPATA&quot;,&quot;HUAYO&quot;,&quot;ONGON&quot;,&quot;PARCOY&quot;,&quot;PATAZ&quot;,&quot;PIAS&quot;,&quot;TAURIJA&quot;,&quot;URPAY&quot;,&quot;SANTIAGO DE CHALLAS&quot;],&quot;SANTIAGO DE CHUCO&quot;:[&quot;SANTIAGO DE CHUCO&quot;,&quot;CACHICADAN&quot;,&quot;MOLLEBAMBA&quot;,&quot;MOLLEPATA&quot;,&quot;QUIRUVILCA&quot;,&quot;SANTA CRUZ DE CHUCA&quot;,&quot;SITABAMBA&quot;,&quot;ANGASMARCA&quot;],&quot;ASCOPE&quot;:[&quot;ASCOPE&quot;,&quot;CHICAMA&quot;,&quot;CHOCOPE&quot;,&quot;SANTIAGO DE CAO&quot;,&quot;MAGDALENA DE CAO&quot;,&quot;PAIJAN&quot;,&quot;RAZURI&quot;,&quot;CASA GRANDE&quot;],&quot;CHEPEN&quot;:[&quot;CHEPEN&quot;,&quot;PACANGA&quot;,&quot;PUEBLO NUEVO&quot;],&quot;JULCAN&quot;:[&quot;JULCAN&quot;,&quot;CARABAMBA&quot;,&quot;CALAMARCA&quot;,&quot;HUASO&quot;],&quot;GRAN CHIMU&quot;:[&quot;CASCAS&quot;,&quot;LUCMA&quot;,&quot;MARMOT&quot;,&quot;SAYAPULLO&quot;],&quot;VIRU&quot;:[&quot;VIRU&quot;,&quot;CHAO&quot;,&quot;GUADALUPITO&quot;]},&quot;LAMBAYEQUE&quot;:{&quot;CHICLAYO&quot;:[&quot;CHICLAYO&quot;,&quot;CHONGOYAPE&quot;,&quot;ETEN&quot;,&quot;ETEN PUERTO&quot;,&quot;LAGUNAS&quot;,&quot;MONSEFU&quot;,&quot;NUEVA ARICA&quot;,&quot;OYOTUN&quot;,&quot;PICSI&quot;,&quot;PIMENTEL&quot;,&quot;REQUE&quot;,&quot;JOSE LEONARDO ORTIZ&quot;,&quot;SANTA ROSA&quot;,&quot;SA\u00c3\u2018A&quot;,&quot;LA VICTORIA&quot;,&quot;CAYALTI&quot;,&quot;PATAPO&quot;,&quot;POMALCA&quot;,&quot;PUCALA&quot;,&quot;TUMAN&quot;],&quot;FERRE\u00c3\u2018AFE&quot;:[&quot;FERRE\u00c3\u2018AFE&quot;,&quot;INCAHUASI&quot;,&quot;CA\u00c3\u2018ARIS&quot;,&quot;PITIPO&quot;,&quot;PUEBLO NUEVO&quot;,&quot;MANUEL ANTONIO MESONES MURO&quot;],&quot;LAMBAYEQUE&quot;:[&quot;LAMBAYEQUE&quot;,&quot;CHOCHOPE&quot;,&quot;ILLIMO&quot;,&quot;JAYANCA&quot;,&quot;MOCHUMI&quot;,&quot;MORROPE&quot;,&quot;MOTUPE&quot;,&quot;OLMOS&quot;,&quot;PACORA&quot;,&quot;SALAS&quot;,&quot;SAN JOSE&quot;,&quot;TUCUME&quot;]},&quot;LIMA&quot;:{&quot;LIMA&quot;:[&quot;LIMA&quot;,&quot;ANCON&quot;,&quot;ATE&quot;,&quot;BRE\u00c3\u2018A&quot;,&quot;CARABAYLLO&quot;,&quot;COMAS&quot;,&quot;CHACLACAYO&quot;,&quot;CHORRILLOS&quot;,&quot;LA VICTORIA&quot;,&quot;LA MOLINA&quot;,&quot;LINCE&quot;,&quot;LURIGANCHO&quot;,&quot;LURIN&quot;,&quot;MAGDALENA DEL MAR&quot;,&quot;MIRAFLORES&quot;,&quot;PACHACAMAC&quot;,&quot;PUEBLO LIBRE&quot;,&quot;PUCUSANA&quot;,&quot;PUENTE PIEDRA&quot;,&quot;PUNTA HERMOSA&quot;,&quot;PUNTA NEGRA&quot;,&quot;RIMAC&quot;,&quot;SAN BARTOLO&quot;,&quot;SAN ISIDRO&quot;,&quot;BARRANCO&quot;,&quot;SAN MARTIN DE PORRES&quot;,&quot;SAN MIGUEL&quot;,&quot;STA MARIA DEL MAR&quot;,&quot;SANTA ROSA&quot;,&quot;SANTIAGO DE SURCO&quot;,&quot;SURQUILLO&quot;,&quot;VILLA MARIA DEL TRIUNFO&quot;,&quot;JESUS MARIA&quot;,&quot;INDEPENDENCIA&quot;,&quot;EL AGUSTINO&quot;,&quot;SAN JUAN DE MIRAFLORES&quot;,&quot;SAN JUAN DE LURIGANCHO&quot;,&quot;SAN LUIS&quot;,&quot;CIENEGUILLA&quot;,&quot;SAN BORJA&quot;,&quot;VILLA EL SALVADOR&quot;,&quot;LOS OLIVOS&quot;,&quot;SANTA ANITA&quot;],&quot;CAJATAMBO&quot;:[&quot;CAJATAMBO&quot;,&quot;COPA&quot;,&quot;GORGOR&quot;,&quot;HUANCAPON&quot;,&quot;MANAS&quot;],&quot;CANTA&quot;:[&quot;CANTA&quot;,&quot;ARAHUAY&quot;,&quot;HUAMANTANGA&quot;,&quot;HUAROS&quot;,&quot;LACHAQUI&quot;,&quot;SAN BUENAVENTURA&quot;,&quot;SANTA ROSA DE QUIVES&quot;],&quot;CA\u00c3\u2018ETE&quot;:[&quot;SAN VICENTE DE CA\u00c3\u2018ETE&quot;,&quot;CALANGO&quot;,&quot;CERRO AZUL&quot;,&quot;COAYLLO&quot;,&quot;CHILCA&quot;,&quot;IMPERIAL&quot;,&quot;LUNAHUANA&quot;,&quot;MALA&quot;,&quot;NUEVO IMPERIAL&quot;,&quot;PACARAN&quot;,&quot;QUILMANA&quot;,&quot;SAN ANTONIO&quot;,&quot;SAN LUIS&quot;,&quot;SANTA CRUZ DE FLORES&quot;,&quot;ZU\u00c3\u2018IGA&quot;,&quot;ASIA&quot;],&quot;HUAURA&quot;:[&quot;HUACHO&quot;,&quot;AMBAR&quot;,&quot;CALETA DE CARQUIN&quot;,&quot;CHECRAS&quot;,&quot;HUALMAY&quot;,&quot;HUAURA&quot;,&quot;LEONCIO PRADO&quot;,&quot;PACCHO&quot;,&quot;SANTA LEONOR&quot;,&quot;SANTA MARIA&quot;,&quot;SAYAN&quot;,&quot;VEGUETA&quot;],&quot;HUAROCHIRI&quot;:[&quot;MATUCANA&quot;,&quot;ANTIOQUIA&quot;,&quot;CALLAHUANCA&quot;,&quot;CARAMPOMA&quot;,&quot;CASTA&quot;,&quot;SAN JOSE DE LOS CHORRILLOS&quot;,&quot;CHICLA&quot;,&quot;HUANZA&quot;,&quot;HUAROCHIRI&quot;,&quot;LAHUAYTAMBO&quot;,&quot;LANGA&quot;,&quot;MARIATANA&quot;,&quot;RICARDO PALMA&quot;,&quot;SAN ANDRES DE TUPICOCHA&quot;,&quot;SAN ANTONIO&quot;,&quot;SAN BARTOLOME&quot;,&quot;SAN DAMIAN&quot;,&quot;SANGALLAYA&quot;,&quot;SAN JUAN DE TANTARANCHE&quot;,&quot;SAN LORENZO DE QUINTI&quot;,&quot;SAN MATEO&quot;,&quot;SAN MATEO DE OTAO&quot;,&quot;SAN PEDRO DE HUANCAYRE&quot;,&quot;SANTA CRUZ DE COCACHACRA&quot;,&quot;SANTA EULALIA&quot;,&quot;SANTIAGO DE ANCHUCAYA&quot;,&quot;SANTIAGO DE TUNA&quot;,&quot;SANTO DOMINGO DE LOS OLLEROS&quot;,&quot;SURCO&quot;,&quot;HUACHUPAMPA&quot;,&quot;LARAOS&quot;,&quot;SAN JUAN DE IRIS&quot;],&quot;YAUYOS&quot;:[&quot;YAUYOS&quot;,&quot;ALIS&quot;,&quot;AYAUCA&quot;,&quot;AYAVIRI&quot;,&quot;AZANGARO&quot;,&quot;CACRA&quot;,&quot;CARANIA&quot;,&quot;COCHAS&quot;,&quot;COLONIA&quot;,&quot;CHOCOS&quot;,&quot;HUAMPARA&quot;,&quot;HUANCAYA&quot;,&quot;HUANGASCAR&quot;,&quot;HUANTAN&quot;,&quot;HUA\u00c3\u2018EC&quot;,&quot;LARAOS&quot;,&quot;LINCHA&quot;,&quot;MIRAFLORES&quot;,&quot;OMAS&quot;,&quot;QUINCHES&quot;,&quot;QUINOCAY&quot;,&quot;SAN JOAQUIN&quot;,&quot;SAN PEDRO DE PILAS&quot;,&quot;TANTA&quot;,&quot;TAURIPAMPA&quot;,&quot;TUPE&quot;,&quot;TOMAS&quot;,&quot;VI\u00c3\u2018AC&quot;,&quot;VITIS&quot;,&quot;HONGOS&quot;,&quot;MADEAN&quot;,&quot;PUTINZA&quot;,&quot;CATAHUASI&quot;],&quot;HUARAL&quot;:[&quot;HUARAL&quot;,&quot;ATAVILLOS ALTO&quot;,&quot;ATAVILLOS BAJO&quot;,&quot;AUCALLAMA&quot;,&quot;CHANCAY&quot;,&quot;IHUARI&quot;,&quot;LAMPIAN&quot;,&quot;PACARAOS&quot;,&quot;SAN MIGUEL DE ACOS&quot;,&quot;VEINTISIETE DE NOVIEMBRE&quot;,&quot;STA CRUZ DE ANDAMARCA&quot;,&quot;SUMBILCA&quot;],&quot;BARRANCA&quot;:[&quot;BARRANCA&quot;,&quot;PARAMONGA&quot;,&quot;PATIVILCA&quot;,&quot;SUPE&quot;,&quot;SUPE PUERTO&quot;],&quot;OYON&quot;:[&quot;OYON&quot;,&quot;NAVAN&quot;,&quot;CAUJUL&quot;,&quot;ANDAJES&quot;,&quot;PACHANGARA&quot;,&quot;COCHAMARCA&quot;]},&quot;LORETO&quot;:{&quot;MAYNAS&quot;:[&quot;IQUITOS&quot;,&quot;ALTO NANAY&quot;,&quot;FERNANDO LORES&quot;,&quot;LAS AMAZONAS&quot;,&quot;MAZAN&quot;,&quot;NAPO&quot;,&quot;PUTUMAYO&quot;,&quot;TORRES CAUSANA&quot;,&quot;INDIANA&quot;,&quot;PUNCHANA&quot;,&quot;BELEN&quot;,&quot;SAN JUAN BAUTISTA&quot;,&quot;TNTE MANUEL CLAVERO&quot;],&quot;ALTO AMAZONAS&quot;:[&quot;YURIMAGUAS&quot;,&quot;BALSAPUERTO&quot;,&quot;JEBEROS&quot;,&quot;LAGUNAS&quot;,&quot;SANTA CRUZ&quot;,&quot;TNTE CESAR LOPEZ ROJAS&quot;],&quot;LORETO&quot;:[&quot;NAUTA&quot;,&quot;PARINARI&quot;,&quot;TIGRE&quot;,&quot;URARINAS&quot;,&quot;TROMPETEROS&quot;],&quot;REQUENA&quot;:[&quot;REQUENA&quot;,&quot;ALTO TAPICHE&quot;,&quot;CAPELO&quot;,&quot;EMILIO SAN MARTIN&quot;,&quot;MAQUIA&quot;,&quot;PUINAHUA&quot;,&quot;SAPUENA&quot;,&quot;SOPLIN&quot;,&quot;TAPICHE&quot;,&quot;JENARO HERRERA&quot;,&quot;YAQUERANA&quot;],&quot;UCAYALI&quot;:[&quot;CONTAMANA&quot;,&quot;VARGAS GUERRA&quot;,&quot;PADRE MARQUEZ&quot;,&quot;PAMPA HERMOZA&quot;,&quot;SARAYACU&quot;,&quot;INAHUAYA&quot;],&quot;MARISCAL RAMON CASTILLA&quot;:[&quot;MARISCAL RAMON CASTILLA&quot;,&quot;PEBAS&quot;,&quot;YAVARI&quot;,&quot;SAN PABLO&quot;],&quot;DATEM DEL MARA\u00c3\u2018ON&quot;:[&quot;BARRANCA&quot;,&quot;ANDOAS&quot;,&quot;CAHUAPANAS&quot;,&quot;MANSERICHE&quot;,&quot;MORONA&quot;,&quot;PASTAZA&quot;]},&quot;MADRE DE DIOS&quot;:{&quot;TAMBOPATA&quot;:[&quot;TAMBOPATA&quot;,&quot;INAMBARI&quot;,&quot;LAS PIEDRAS&quot;,&quot;LABERINTO&quot;],&quot;MANU&quot;:[&quot;MANU&quot;,&quot;FITZCARRALD&quot;,&quot;MADRE DE DIOS&quot;,&quot;HUEPETUHE&quot;],&quot;TAHUAMANU&quot;:[&quot;I\u00c3\u2018APARI&quot;,&quot;IBERIA&quot;,&quot;TAHUAMANU&quot;]},&quot;MOQUEGUA&quot;:{&quot;MARISCAL NIETO&quot;:[&quot;MOQUEGUA&quot;,&quot;CARUMAS&quot;,&quot;CUCHUMBAYA&quot;,&quot;SAN CRISTOBAL&quot;,&quot;TORATA&quot;,&quot;SAMEGUA&quot;],&quot;GENERAL SANCHEZ CERRO&quot;:[&quot;OMATE&quot;,&quot;COALAQUE&quot;,&quot;CHOJATA&quot;,&quot;ICHU\u00c3\u2018A&quot;,&quot;LA CAPILLA&quot;,&quot;LLOQUE&quot;,&quot;MATALAQUE&quot;,&quot;PUQUINA&quot;,&quot;QUINISTAQUILLAS&quot;,&quot;UBINAS&quot;,&quot;YUNGA&quot;],&quot;ILO&quot;:[&quot;ILO&quot;,&quot;EL ALGARROBAL&quot;,&quot;PACOCHA&quot;]},&quot;PASCO&quot;:{&quot;PASCO&quot;:[&quot;CHAUPIMARCA&quot;,&quot;HUACHON&quot;,&quot;HUARIACA&quot;,&quot;HUAYLLAY&quot;,&quot;NINACACA&quot;,&quot;PALLANCHACRA&quot;,&quot;PAUCARTAMBO&quot;,&quot;SAN FCO DE ASIS DE YARUSYACAN&quot;,&quot;SIMON BOLIVAR&quot;,&quot;TICLACAYAN&quot;,&quot;TINYAHUARCO&quot;,&quot;VICCO&quot;,&quot;YANACANCHA&quot;],&quot;DANIEL ALCIDES CARRION&quot;:[&quot;YANAHUANCA&quot;,&quot;CHACAYAN&quot;,&quot;GOYLLARISQUIZGA&quot;,&quot;PAUCAR&quot;,&quot;SAN PEDRO DE PILLAO&quot;,&quot;SANTA ANA DE TUSI&quot;,&quot;TAPUC&quot;,&quot;VILCABAMBA&quot;],&quot;OXAPAMPA&quot;:[&quot;OXAPAMPA&quot;,&quot;CHONTABAMBA&quot;,&quot;HUANCABAMBA&quot;,&quot;PUERTO BERMUDEZ&quot;,&quot;VILLA RICA&quot;,&quot;POZUZO&quot;,&quot;PALCAZU&quot;]},&quot;PIURA&quot;:{&quot;PIURA&quot;:[&quot;PIURA&quot;,&quot;CASTILLA&quot;,&quot;CATACAOS&quot;,&quot;LA ARENA&quot;,&quot;LA UNION&quot;,&quot;LAS LOMAS&quot;,&quot;TAMBO GRANDE&quot;,&quot;CURA MORI&quot;,&quot;EL TALLAN&quot;],&quot;AYABACA&quot;:[&quot;AYABACA&quot;,&quot;FRIAS&quot;,&quot;LAGUNAS&quot;,&quot;MONTERO&quot;,&quot;PACAIPAMPA&quot;,&quot;SAPILLICA&quot;,&quot;SICCHEZ&quot;,&quot;SUYO&quot;,&quot;JILILI&quot;,&quot;PAIMAS&quot;],&quot;HUANCABAMBA&quot;:[&quot;HUANCABAMBA&quot;,&quot;CANCHAQUE&quot;,&quot;HUARMACA&quot;,&quot;SONDOR&quot;,&quot;SONDORILLO&quot;,&quot;EL CARMEN DE LA FRONTERA&quot;,&quot;SAN MIGUEL DE EL FAIQUE&quot;,&quot;LALAQUIZ&quot;],&quot;MORROPON&quot;:[&quot;CHULUCANAS&quot;,&quot;BUENOS AIRES&quot;,&quot;CHALACO&quot;,&quot;MORROPON&quot;,&quot;SALITRAL&quot;,&quot;SANTA CATALINA DE MOSSA&quot;,&quot;SANTO DOMINGO&quot;,&quot;LA MATANZA&quot;,&quot;YAMANGO&quot;,&quot;SAN JUAN DE BIGOTE&quot;],&quot;PAITA&quot;:[&quot;PAITA&quot;,&quot;AMOTAPE&quot;,&quot;ARENAL&quot;,&quot;LA HUACA&quot;,&quot;PUEBLO NUEVO DE COLAN&quot;,&quot;TAMARINDO&quot;,&quot;VICHAYAL&quot;],&quot;SULLANA&quot;:[&quot;SULLANA&quot;,&quot;BELLAVISTA&quot;,&quot;LANCONES&quot;,&quot;MARCAVELICA&quot;,&quot;MIGUEL CHECA&quot;,&quot;QUERECOTILLO&quot;,&quot;SALITRAL&quot;,&quot;IGNACIO ESCUDERO&quot;],&quot;TALARA&quot;:[&quot;PARI\u00c3\u2018AS&quot;,&quot;EL ALTO&quot;,&quot;LA BREA&quot;,&quot;LOBITOS&quot;,&quot;MANCORA&quot;,&quot;LOS ORGANOS&quot;],&quot;SECHURA&quot;:[&quot;SECHURA&quot;,&quot;VICE&quot;,&quot;BERNAL&quot;,&quot;BELLAVISTA DE LA UNION&quot;,&quot;CRISTO NOS VALGA&quot;,&quot;RINCONADA LLICUAR&quot;]},&quot;PUNO&quot;:{&quot;PUNO&quot;:[&quot;PUNO&quot;,&quot;ACORA&quot;,&quot;ATUNCOLLA&quot;,&quot;CAPACHICA&quot;,&quot;COATA&quot;,&quot;CHUCUITO&quot;,&quot;HUATA&quot;,&quot;MA\u00c3\u2018AZO&quot;,&quot;PAUCARCOLLA&quot;,&quot;PICHACANI&quot;,&quot;SAN ANTONIO&quot;,&quot;TIQUILLACA&quot;,&quot;VILQUE&quot;,&quot;PLATERIA&quot;,&quot;AMANTANI&quot;],&quot;AZANGARO&quot;:[&quot;AZANGARO&quot;,&quot;ACHAYA&quot;,&quot;ARAPA&quot;,&quot;ASILLO&quot;,&quot;CAMINACA&quot;,&quot;CHUPA&quot;,&quot;JOSE DOMINGO CHOQUEHUANCA&quot;,&quot;MU\u00c3\u2018ANI&quot;,&quot;POTONI&quot;,&quot;SAMAN&quot;,&quot;SAN ANTON&quot;,&quot;SAN JOSE&quot;,&quot;SAN JUAN DE SALINAS&quot;,&quot;STGO DE PUPUJA&quot;,&quot;TIRAPATA&quot;],&quot;CARABAYA&quot;:[&quot;MACUSANI&quot;,&quot;AJOYANI&quot;,&quot;AYAPATA&quot;,&quot;COASA&quot;,&quot;CORANI&quot;,&quot;CRUCERO&quot;,&quot;ITUATA&quot;,&quot;OLLACHEA&quot;,&quot;SAN GABAN&quot;,&quot;USICAYOS&quot;],&quot;CHUCUITO&quot;:[&quot;JULI&quot;,&quot;DESAGUADERO&quot;,&quot;HUACULLANI&quot;,&quot;PISACOMA&quot;,&quot;POMATA&quot;,&quot;ZEPITA&quot;,&quot;KELLUYO&quot;],&quot;HUANCANE&quot;:[&quot;HUANCANE&quot;,&quot;COJATA&quot;,&quot;INCHUPALLA&quot;,&quot;PUSI&quot;,&quot;ROSASPATA&quot;,&quot;TARACO&quot;,&quot;VILQUE CHICO&quot;,&quot;HUATASANI&quot;],&quot;LAMPA&quot;:[&quot;LAMPA&quot;,&quot;CABANILLA&quot;,&quot;CALAPUJA&quot;,&quot;NICASIO&quot;,&quot;OCUVIRI&quot;,&quot;PALCA&quot;,&quot;PARATIA&quot;,&quot;PUCARA&quot;,&quot;SANTA LUCIA&quot;,&quot;VILAVILA&quot;],&quot;MELGAR&quot;:[&quot;AYAVIRI&quot;,&quot;ANTAUTA&quot;,&quot;CUPI&quot;,&quot;LLALLI&quot;,&quot;MACARI&quot;,&quot;NU\u00c3\u2018OA&quot;,&quot;ORURILLO&quot;,&quot;SANTA ROSA&quot;,&quot;UMACHIRI&quot;],&quot;SANDIA&quot;:[&quot;SANDIA&quot;,&quot;CUYOCUYO&quot;,&quot;LIMBANI&quot;,&quot;PHARA&quot;,&quot;PATAMBUCO&quot;,&quot;QUIACA&quot;,&quot;SAN JUAN DEL ORO&quot;,&quot;YANAHUAYA&quot;,&quot;ALTO INAMBARI&quot;,&quot;SAN PEDRO DE PUTINA PUNCO&quot;],&quot;SAN ROMAN&quot;:[&quot;JULIACA&quot;,&quot;CABANA&quot;,&quot;CABANILLAS&quot;,&quot;CARACOTO&quot;],&quot;YUNGUYO&quot;:[&quot;YUNGUYO&quot;,&quot;UNICACHI&quot;,&quot;ANAPIA&quot;,&quot;COPANI&quot;,&quot;CUTURAPI&quot;,&quot;OLLARAYA&quot;,&quot;TINICACHI&quot;],&quot;SAN ANTONIO DE PUTINA&quot;:[&quot;PUTINA&quot;,&quot;PEDRO VILCA APAZA&quot;,&quot;QUILCA PUNCU&quot;,&quot;ANANEA&quot;,&quot;SINA&quot;],&quot;EL COLLAO&quot;:[&quot;ILAVE&quot;,&quot;PILCUYO&quot;,&quot;SANTA ROSA&quot;,&quot;CAPASO&quot;,&quot;CONDURIRI&quot;],&quot;MOHO&quot;:[&quot;MOHO&quot;,&quot;CONIMA&quot;,&quot;TILALI&quot;,&quot;HUAYRAPATA&quot;]},&quot;SAN MARTIN&quot;:{&quot;MOYOBAMBA&quot;:[&quot;MOYOBAMBA&quot;,&quot;CALZADA&quot;,&quot;HABANA&quot;,&quot;JEPELACIO&quot;,&quot;SORITOR&quot;,&quot;YANTALO&quot;],&quot;HUALLAGA&quot;:[&quot;SAPOSOA&quot;,&quot;PISCOYACU&quot;,&quot;SACANCHE&quot;,&quot;TINGO DE SAPOSOA&quot;,&quot;ALTO SAPOSOA&quot;,&quot;EL ESLABON&quot;],&quot;LAMAS&quot;:[&quot;LAMAS&quot;,&quot;BARRANQUITA&quot;,&quot;CAYNARACHI&quot;,&quot;CU\u00c3\u2018UMBUQUI&quot;,&quot;PINTO RECODO&quot;,&quot;RUMISAPA&quot;,&quot;SHANAO&quot;,&quot;TABALOSOS&quot;,&quot;ZAPATERO&quot;,&quot;ALONSO DE ALVARADO&quot;,&quot;SAN ROQUE DE CUMBAZA&quot;],&quot;MARISCAL CACERES&quot;:[&quot;JUANJUI&quot;,&quot;CAMPANILLA&quot;,&quot;HUICUNGO&quot;,&quot;PACHIZA&quot;,&quot;PAJARILLO&quot;],&quot;RIOJA&quot;:[&quot;RIOJA&quot;,&quot;POSIC&quot;,&quot;YORONGOS&quot;,&quot;YURACYACU&quot;,&quot;NUEVA CAJAMARCA&quot;,&quot;ELIAS SOPLIN&quot;,&quot;SAN FERNANDO&quot;,&quot;PARDO MIGUEL&quot;,&quot;AWAJUN&quot;],&quot;SAN MARTIN&quot;:[&quot;TARAPOTO&quot;,&quot;ALBERTO LEVEAU&quot;,&quot;CACATACHI&quot;,&quot;CHAZUTA&quot;,&quot;CHIPURANA&quot;,&quot;EL PORVENIR&quot;,&quot;HUIMBAYOC&quot;,&quot;JUAN GUERRA&quot;,&quot;MORALES&quot;,&quot;PAPAPLAYA&quot;,&quot;SAN ANTONIO&quot;,&quot;SAUCE&quot;,&quot;SHAPAJA&quot;,&quot;LA BANDA DE SHILCAYO&quot;],&quot;BELLAVISTA&quot;:[&quot;BELLAVISTA&quot;,&quot;SAN RAFAEL&quot;,&quot;SAN PABLO&quot;,&quot;ALTO BIAVO&quot;,&quot;HUALLAGA&quot;,&quot;BAJO BIAVO&quot;],&quot;TOCACHE&quot;:[&quot;TOCACHE&quot;,&quot;NUEVO PROGRESO&quot;,&quot;POLVORA&quot;,&quot;SHUNTE&quot;,&quot;UCHIZA&quot;],&quot;PICOTA&quot;:[&quot;PICOTA&quot;,&quot;BUENOS AIRES&quot;,&quot;CASPIZAPA&quot;,&quot;PILLUANA&quot;,&quot;PUCACACA&quot;,&quot;SAN CRISTOBAL&quot;,&quot;SAN HILARION&quot;,&quot;TINGO DE PONASA&quot;,&quot;TRES UNIDOS&quot;,&quot;SHAMBOYACU&quot;],&quot;EL DORADO&quot;:[&quot;SAN JOSE DE SISA&quot;,&quot;AGUA BLANCA&quot;,&quot;SHATOJA&quot;,&quot;SAN MARTIN&quot;,&quot;SANTA ROSA&quot;]},&quot;TACNA&quot;:{&quot;TACNA&quot;:[&quot;TACNA&quot;,&quot;CALANA&quot;,&quot;INCLAN&quot;,&quot;PACHIA&quot;,&quot;PALCA&quot;,&quot;POCOLLAY&quot;,&quot;SAMA&quot;,&quot;ALTO DE LA ALIANZA&quot;,&quot;CIUDAD NUEVA&quot;,&quot;CORONEL GREGORIO ALBARRACIN L.&quot;],&quot;TARATA&quot;:[&quot;TARATA&quot;,&quot;HEROES ALBARRACIN&quot;,&quot;ESTIQUE&quot;,&quot;ESTIQUE PAMPA&quot;,&quot;SITAJARA&quot;,&quot;SUSAPAYA&quot;,&quot;TARUCACHI&quot;,&quot;TICACO&quot;],&quot;JORGE BASADRE&quot;:[&quot;LOCUMBA&quot;,&quot;ITE&quot;,&quot;ILABAYA&quot;],&quot;CANDARAVE&quot;:[&quot;CANDARAVE&quot;,&quot;CAIRANI&quot;,&quot;CURIBAYA&quot;,&quot;HUANUARA&quot;,&quot;QUILAHUANI&quot;,&quot;CAMILACA&quot;]},&quot;TUMBES&quot;:{&quot;TUMBES&quot;:[&quot;TUMBES&quot;,&quot;CORRALES&quot;,&quot;LA CRUZ&quot;,&quot;PAMPAS DE HOSPITAL&quot;,&quot;SAN JACINTO&quot;,&quot;SAN JUAN DE LA VIRGEN&quot;],&quot;CONTRALMIRANTE VILLAR&quot;:[&quot;ZORRITOS&quot;,&quot;CASITAS&quot;,&quot;CANOAS DE PUNTA SAL&quot;],&quot;ZARUMILLA&quot;:[&quot;ZARUMILLA&quot;,&quot;MATAPALO&quot;,&quot;PAPAYAL&quot;,&quot;AGUAS VERDES&quot;]},&quot;UCAYALI&quot;:{&quot;CORONEL PORTILLO&quot;:[&quot;CALLERIA&quot;,&quot;YARINACOCHA&quot;,&quot;MASISEA&quot;,&quot;CAMPOVERDE&quot;,&quot;IPARIA&quot;,&quot;NUEVA REQUENA&quot;,&quot;MANANTAY&quot;],&quot;PADRE ABAD&quot;:[&quot;PADRE ABAD&quot;,&quot;YRAZOLA&quot;,&quot;CURIMANA&quot;],&quot;ATALAYA&quot;:[&quot;RAIMONDI&quot;,&quot;TAHUANIA&quot;,&quot;YURUA&quot;,&quot;SEPAHUA&quot;],&quot;PURUS&quot;:[&quot;PURUS&quot;]}}"></span>
+                    </form>
+        <div id="terms-conditions-modal">
+            <header>
+                <h2>Requisitos Necesarios</h2>
+                <a href="#" class="MOButton">Cerrar</a>
+            </header>
+            <section>
+                <p class="title1">RED DE MUNICIPALIDADES URBANAS Y RURALES DEL PERU - REMURPE</p>
+                <p class="title1">RED NACIONAL DE EXPERTOS EN GESTION PUBLICA DESCENTRALIZADA RNE-GPD</p>
+                <p class="title2">REGLAMENTO INTERNO</p>
+                <p><strong>PRINCIPIOS, OBJETIVOS Y FINES</strong></p>
+                <p><strong>Artículo 1.- </strong>La Red Nacional de 
+Expertos en Gestión Pública Descentralizada RNE-GPD, es una plataforma 
+en red creado para el soporte técnico, político-institucional 
+especializado de la REMURPE con competencia exclusiva. La RNE-GPD, está 
+integrado por profesionales expertos en temas de alta especialización en
+ administración, asesoramiento, desarrollo de capacidades, ejecución, de
+ acciones, proyectos y políticas públicas Municipales y de Gobiernos 
+Regionales. Su función es el soporte técnico a la REMURPE para el 
+cumplimiento de su Plan Institucional y a Gobiernos Locales asociados de
+ REMURPE .</p>
+                <p><strong>Articulo 2.-</strong> La Red Nacional de 
+Expertos en Gestión Pública Descentralizada RNE-GPD estará integrado por
+ profesionales de todas las disciplinas que tengan la más amplia 
+trayectoria profesional, humana, política, institucional y académica 
+ligada a la Gestión Pública Municipal y de Gobiernos Regionales, que han
+ acreditado formación, dominio y experiencia laboral mínima de cinco 
+años.</p>
+                <p><strong>Artículo 3°.- </strong>Los integrantes de la 
+Red Nacional de Expertos en Gestión Pública Descentralizada RNE-GPD, 
+serán seleccionados previa evaluación de su respectiva experiencia y 
+especialización basado en su Curriculum Viate detallado y recomendado 
+por cualquiera de 02 representantes acreditados por REMURPE consignados 
+en un cuadro adjunto; y se revisará los antecedentes en condiciones 
+objetivas, transparentes y no discriminatorias, cuya convocatoria será 
+publicada, en la pagina web de la REMURPE. La aceptación y la 
+acreditación para formar parte e integrante de la Red Nacional de 
+Expertos en Gestión Pública Descentralizada RNE-GPD será comunicado 
+mediante un documento rubricado por el Secretario Ejecutivo Nacional de 
+la REMURPE</p>
+                <p><strong>Artículo 4°.- </strong>Los Expertos ejercerán
+ su función dentro de la REMURPE por el periodo que éstos lo decidan así
+ como también los informes de evaluación de cumplimiento de los fines y 
+objetivos de REMURPE, pudiendo la REMURPE o el Experto rescindir o 
+cerrar las relaciones dentro de la Red.</p>
+                <p><strong>Artículo 5°.- </strong>La función de los 
+integrantes de la Red Nacional de Expertos en Gestión Pública 
+Descentralizada RNE-GPD no es incompatible con la condición de 
+funcionario de REMURPE, así como Director, gerente, trabajador 
+dependiente, asesor, consultor independiente de cualquier institución 
+descentralizada, gobierno regional o local.</p>
+                <p><strong>Artículo 6°.- </strong>La Red Nacional de 
+Expertos en Gestión Pública Descentralizada RNE-GPD es una organización 
+perteneciente a REMURPE, todos sus acciones que emprendan será 
+gestionada, administrada por el Secretaria Ejecutiva Nacional de&nbsp; 
+REMURPE, y estará sujeto al Plan Institucional y Estatutos de REMURPE.</p>
+                <p><strong>Artículo 7°.- </strong>La Red Nacional de 
+Expertos en Gestión Pública Descentralizada RNE-GPD como organización en
+ Red de Expertos estará estructurada en 03 niveles:</p>
+                <ol style="list-style-type:decimal">
+                    <li><strong>Especialista Temáticos Nacionales:</strong>
+ Profesionales con formación académica y experiencia probada en temas 
+específicos concretos de Gestión Pública Local o Regional (SNIP, OSCE, 
+SIAF, entre otros).</li>
+                    <li><strong>Expertos Nacionales en Gestión Público Descentralizada</strong>:
+ Profesionales con formación profesional y post grado en Gestión Pública
+ Local o Regional, experiencia en Gerencia Pública y en implementación 
+de políticas públicas.</li>
+                    <li><strong>Expertos Internacionales en Gestión Pública</strong>:
+ Profesionales con formación académica y especialización en Gestión 
+Pública, con amplia experiencia en Gerencia Política, en elaboración, 
+implementación y monitoreo de políticas públicas y descentralización.</li>
+                </ol>
+                <p>Las especialidades consideradas para la Red RNE-GPD son:</p>
+                <table class="especialidades">
+                    <tbody>
+                        <tr>
+                            <td class="none">&nbsp;</td>
+                            <th>
+                                <p><strong>Gestión del territorio y Recursos Naturales</strong></p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="none">&nbsp;</td>
+                            <td>
+                                <p>Ordenamiento Territorial</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p><strong>Políticas Públicas Descentralizadas</strong></p>
+                            </th>
+                            <td>
+                                <p>Desarrollo Económico Territorial</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Diseños de Políticas Públicas</p>
+                            </td>
+                            <td>
+                                <p>Gestión de Obras</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Planeamiento territorial e Institucional</p>
+                            </td>
+                            <td>
+                                <p>Gestión Ambiental y Residuos Sólidos</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Gestión Financiera y presupuestal</p>
+                            </td>
+                            <td>
+                                <p>Gestión Integrada de Recursos Hídricos</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Contrataciones y adquisiciones</p>
+                            </td>
+                            <td>
+                                <p>Catastro y Desarrollo Urbano</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Servicios Públicos</p>
+                            </td>
+                            <td>
+                                <p>Mancomunidad / Asociativismo</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Administración Tributaria</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Proyectos de preinversión e inversión</p>
+                            </td>
+                            <th>
+                                <p><strong>Políticas Sociales Descentralizadas</strong></p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Recursos Humanos</p>
+                            </td>
+                            <td>
+                                <p>Educación Rural</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Participación Ciudadana</p>
+                            </td>
+                            <td>
+                                <p>Programas Alimentarios y Sociales</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Soporte Jurídico Municipal</p>
+                            </td>
+                            <td>
+                                <p>Saneamiento Básico</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="none">&nbsp;</td>
+                            <td>
+                                <p>Discapacidad e Inclusión</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="none">&nbsp;</td>
+                            <td>
+                                <p>Generación de Empleo</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="none">&nbsp;</td>
+                            <td>
+                                <p>Jóvenes y Género</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>DE LA ORGANIZACIÓN Y FUNCIONAMIENTO</strong></p>
+                <p><strong>Artículo 8°.- </strong>La Coordinación de la 
+Red Nacional de Expertos en Gestión Pública Descentralizada RNE-GPD 
+estará integrada por el Secretario Ejecutivo Nacional&nbsp; de REMURPE, 
+Un miembro del Equipo Técnico; Un Coordinador Regional en las regiones 
+donde REMURPE acredite una Organización de Municipalidades y Un 
+coordinador Temático de Gestión del Territorio y de Recursos Naturales, 
+Un Coordinador Temático de Gestión Pública Descentralizada y Un 
+coordinador de Gestión de Políticas Sociales Descentralizada.</p>
+                <p><strong>Artículo 9.-</strong> El Coordinador será 
+ejercido por el Secretario Ejecutivo de la REMURPE. El Coordinador será 
+un Experto Nacional que representará y coordinará la Red Nacional de 
+Expertos en Gestión Pública Descentralizada RNE-GPD y ejercerá las 
+funciones previstas en este Reglamento y en su normativa interna, la que
+ también definirá su régimen.</p>
+                <p><strong>Artículo 10.- </strong>La Red Nacional de 
+Expertos en Gestión Pública Descentralizada RNE-GPD, tendrá sesiones de 
+trabajo previa convocatoria formal a nivel de REMURPE Nacional o en la 
+REDES Regionales de REMURPE, generalmente un día antes de las 
+Conferencias Anuales de Municipalidades – CAMUR Nacional y Regionales, 
+donde se discutirán una agenda previamente consensuada durante la 
+convocatoria y adoptará sus acuerdos compromisos, metodologías, 
+documentación y otros que considere importante para beneficio de los 
+integrantes de la Red, la institucionalidad de REMURPE y el País.</p>
+                <p><strong>Artículo 11.- </strong>La Coordinación de la 
+Red Nacional de Expertos en Gestión Pública Descentralizada RNE-GPD, 
+sesionará al menos una cada semestre para efectos analizar, evaluar y 
+programar avances del plan y cumplimiento de metas.</p>
+                <p><strong>Artículo 12.- </strong>La sede de la 
+Coordinación de la Red Nacional de Expertos en Gestión Pública 
+Descentralizada RNE-GPD está ubicada en las oficinas de REMURPE&nbsp; 
+Nacional y en las Redes Regionales u organizaciones de municipalidades 
+acreditadas por REMURPE.</p>
+                <p><strong>Artículo 13.- </strong>El Coordinador de la Red Nacional de Expertos en Gestión Pública Descentralizada RNE-GPD tendrá las siguientes funciones:</p>
+                <ol style="list-style-type:lower-alpha">
+                    <li>Llevar el registro de Actas y demás 
+presentaciones que se formulen a la Red Nacional de Expertos en Gestión 
+Pública Descentralizada RNE-GPD.</li>
+                    <li>Efectuar el examen de admisibilidad formal de 
+los nuevos integrantes que se presenten a conocimiento de la 
+Coordinación de la Red Nacional de Expertos en Gestión Pública 
+Descentralizada RNE-GPD</li>
+                    <li>Poner en conocimiento del consejo directivo la 
+nomina de los expertos nacionales registrados en el sistema informático 
+de REMURPE.</li>
+                    <li>Informar de los acuerdos tomados en las sesiones de trabajo.</li>
+                    <li>Certificar las actuaciones de la Coordinación y ejercer la custodia de sus archivos.</li>
+                    <li>Levantar acta fiel e íntegra de las sesiones de 
+la Coordinación de la Red Nacional de Expertos en Gestión Pública 
+Descentralizada RNE-GPD.</li>
+                    <li>Asistir a la Coordinación de la Red Nacional de Expertos en Gestión Pública Descentralizada RNE-GPD en sus actividades.</li>
+                </ol>
+                <p><strong>DE LAS RESPONSABILIDADES, BENEFICIOS Y SANCIONES</strong></p>
+                <p><strong>Artículo 14.- </strong>Los integrantes de la 
+Red Nacional de Expertos en Gestión Pública Descentralizada RNE-GPD son 
+responsables de los documentos adjuntos en Curriculum Vitae, de los 
+datos consignado en el registro electrónico de la Pagina Web de REMURPE,
+ lo cual tiene el valor de Declaración Jurada.</p>
+                <p><strong>Artículo 15.- </strong>Corresponderá a la 
+Secretaria Ejecutiva Nacional de REMURPE en calidad de Coordinador de la
+ RNE-GPD y de los integrantes de la Coordinación evaluar 
+permanentemente&nbsp; el desempeño y cumplimiento de las actividades de 
+cada Asociado a la Red.</p>
+                <p><strong>Artículo 16.- </strong>Los beneficios para el Asociado a la Red Nacional de Expertos en Gestión Pública Descentralizada RNE-GPD, son los siguientes.</p>
+                <ol style="list-style-type:lower-alpha">
+                    <li>Especialización profesional en temas que el 
+Experto crea de su interés a nivel de talleres, diplomados, post grados,
+ implementados directamente por REMURPE, con instituciones nacionales y 
+extranjeras; públicas o privadas con las que REMURPE tiene convenios de 
+formación de capacidades, O con Universidades de prestigio nacional e 
+internacional aliadas de REMURPE.</li>
+                    <li>Elección preferente en los servicios de consultoría especializados que los Asociados de REMURPE requieran.</li>
+                    <li>Elección preferente en los servicios de consultoría especializados que la REMURPE y sus instituciones aliadas requieran.</li>
+                    <li>Acceso a oportunidades laborales afines la especialidad del Experto.</li>
+                    <li>Acceso a información exclusiva de REMURPE, sobre temas de especialización y de interés.</li>
+                </ol>
+                <p><strong>DEL INGRESO AL RNE-GPD</strong></p>
+                <p><strong>Artículo 17.- </strong>La actualización de la
+ RNE-GPD es libre y voluntaria y está dirigido a todas las personas que 
+deseen pertenecer al Equipo Nacional de expertos de REMURPE, quienes 
+deberán cumplir con los siguientes requisitos:</p>
+                <ol style="list-style-type:lower-alpha">
+                    <li>Llenar la ficha de datos que se encuentra en la página WEB de la REMURPE.</li>
+                    <li>Consignar el nombre y la autorización de 02 miembros responsables de REMURPE que garantizan conocer su experiencia laboral.</li>
+                    <li>Presentar su Curriculum Vitae en físico con 
+documentación detallada, que será entregado a una persona responsable 
+que se consigna en el cuadro adjunto.</li>
+                </ol>
+                <p>Cuadro: Miembros de REMURPE Nacional acreditados para autorización.</p>
+                <table>
+                    <thead>
+                        <tr><th>Nombres</th>
+                        <th>Correo Electrónico</th>
+                        <th>Región</th>
+                    </tr></thead>
+                    <tbody>
+                    <tr>
+                            <td>Carlos López</td>
+                            <td>clopez@remurpe.org.pe</td>
+                            <td>Lima</td>
+                        </tr><tr>
+                            <td>Wilbert Rozas</td>
+                            <td>wilbertrozas@yahoo.es</td>
+                            <td>Cusco</td>
+                        </tr><tr>
+                            <td>Rómulo Antúnez</td>
+                            <td>rantunez@remurpe.org.pe</td>
+                            <td>Lima</td>
+                        </tr><tr>
+                            <td>Carlos Arana</td>
+                            <td>carana@remurpe.org.pe</td>
+                            <td>Lima</td>
+                        </tr><tr>
+                            <td>Mayra Asmat</td>
+                            <td>kasmat@remurpe.org.pe</td>
+                            <td>Lima</td>
+                        </tr><tr>
+                            <td>Federico Fernández</td>
+                            <td>ffernandez@remurpe.org.pe</td>
+                            <td>Lima</td>
+                        </tr><tr>
+                            <td>Marivel Ccala</td>
+                            <td>mccala@remurpe.org.pe</td>
+                            <td>Lima</td>
+                        </tr><tr>
+                            <td>Leonardo Montes</td>
+                            <td>lemontca@hotmail.com</td>
+                            <td>Huancavelica</td>
+                        </tr><tr>
+                            <td>Alex Rojas</td>
+                            <td>alexrojas40@gmail.com</td>
+                            <td>Piura</td>
+                        </tr><tr>
+                            <td>Cristina Chambizea</td>
+                            <td>xtinachr@hotmail.com</td>
+                            <td>Cajamarca</td>
+                        </tr><tr>
+                            <td>César Vigo</td>
+                            <td>vigoreli@hotmail.com</td>
+                            <td>Cajamarca</td>
+                        </tr><tr>
+                            <td>Genaro Sánchez</td>
+                            <td>gesara2004@yahoo.es</td>
+                            <td>San Martín</td>
+                        </tr><tr>
+                            <td>Fidel Rodríguez</td>
+                            <td>fidelrori@hotmail.com</td>
+                            <td>Ancash</td>
+                        </tr><tr>
+                            <td>Gianina Vargas</td>
+                            <td>janina22_6@hotmail.com</td>
+                            <td>Huanuco</td>
+                        </tr><tr>
+                            <td>Alicia Carrasco</td>
+                            <td>alicg2501@hotmail.com</td>
+                            <td>Ayacucho</td>
+                        </tr><tr>
+                            <td>Ernesto Vizacardo</td>
+                            <td>ernesto.vizcardo@gmail.com</td>
+                            <td>Cusco</td>
+                        </tr><tr>
+                            <td>Lourdes Betancur</td>
+                            <td>lubeth9@yahoo.es</td>
+                            <td>Puno</td>
+                        </tr><tr>
+                            <td>Flor Herrera</td>
+                            <td>fherrera@remurpe.org.pe</td>
+                            <td>Apurimac</td>
+                        </tr><tr>
+                            <td>Jorge Aparcana</td>
+                            <td>jaaparcana1@gmail.com</td>
+                            <td>Ica</td>
+                        </tr>                    </tbody>
+                </table>
+                <p><strong>Artículo 18.- </strong>El responsable del 
+manejo de la Pagina WEB de REMURPE recibirá la ficha la misma que tiene 
+carácter de declaración jurada, y la derivará al correo correspondiente 
+para su evaluación y posterior otorgamiento del CERTIFICADO que lo 
+habilita como experto de REMURPE, previo cumplimiento de los 3 
+requisitos mencionados.</p>
+                <p><strong>Artículo 19</strong>.- Cumplido los 03 
+requisitos fundamentales y aceptados las condiciones del presente 
+reglamento los Expertos se sujetan a estas condiciones.</p>
+                <p><strong>Artículo 20</strong>.- El Experto puede 
+renunciar a ser parte del equipo de REMURPE, mediante Carta Simple 
+dirigido a la Secretaría Ejecutiva Nacional, la misma que deberá de ser 
+presentada en un plazo máximo de 30 días debiendo de entregar el informe
+ final de sus permanencia como socio de la RNE-GPD.</p>
+                <p><strong>Artículo 21.-</strong> EL Consejo Directivo 
+previa información documentada y sustentada por el Director Ejecutivo, 
+otorgará el reconocimiento de los miembros de REMURPE Nacional 
+acreditados para autorización.</p>
+                <p>EL Consejo directivo deberá de aprobar en su primera 
+sesión próxima que el Director Ejecutivo Nacional de REMURPE es el 
+coordinador de la Red Nacional de Expertos en Gestión Pública 
+Descentralizada RNE-GPD, y es este quien deberá de informar 
+semestralmente al consejo directivo de los avances, e ingresos generados
+ por la red a favor de REMURPE.</p>
+            </section>
+        </div>
+        <script src="a_data/respond.js"></script>
+        <script src="a_data/prefixfree.js"></script>
+        <script src="a_data/jquery.js"></script>
+        <script src="a_data/scripts.js"></script>
+    
+</body></html>

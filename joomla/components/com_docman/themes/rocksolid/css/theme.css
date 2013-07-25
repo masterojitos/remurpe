@@ -1,0 +1,382 @@
+/**
+ * The RockSolid Theme for DOCman is free software. This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or is derivative of works
+ * licensed under the GNU General Public License or other free or open source software licenses.
+ * The RockSolid Theme for DOCman is based on the Default DOCman Theme (copyright JoomlaTools)
+ * and RokDownloads (copyright RocketWerx) and is offered without any warranty, expressed or implied.
+ **/
+
+img {
+border:0 none;
+}
+/* Remove the following line if you have problems with the alignment of your theme */
+.clr {
+clear:both;
+}
+
+#catid{
+
+	width:200px;
+}
+#dm-header {
+border-bottom:1px dotted #ddd;
+height:75px;
+text-align:center;
+}
+#dm-header div {
+float:left;
+padding:3px;
+width:30%;
+}
+#dm-header a,#dm-header span {
+display:block;
+padding-bottom:5px;
+text-decoration:none;
+text-align:center;
+}
+h2 {
+padding-left:10px;
+text-align:left;
+}
+/* RokDownloads style general stuff */
+#dm-docs h3,#dm-cats h3,#dm-details h3 {
+margin:5px 0;
+}
+#dm-docs h4,#dm-details h4 {
+margin:0 0 15px;
+padding:0;
+text-decoration:none;
+}
+#dm-docs h3 a,#dm-docs h4 a,#dm-details h3 a,#dm-details h4 a,#dm-cats h3 a {
+font-weight:700;
+}
+#dm-docs .rs-thumb,#dm-cats .rs-thumb {
+float:left;
+width:100px;
+}
+#dm-docs .rs-thumb img,#dm-docs .rs-thumb div {
+margin:0 20px;
+}
+#dm-docs .rs-thumb div {
+border:1px solid red;
+display:block;
+height:48px;
+width:48px;
+}
+#dm-docs .rs-details,#dm-cats .rs-details {
+margin-left:100px;
+}
+#dm-docs .nothumb .rs-details {
+margin-left:15px;
+}
+#dm-docs ul,#dm-details ul,#dm-cats ul {
+margin:0;
+padding:0;
+}
+#dm-docs li.main,#dm-details .main,#dm-cats li.main {
+background:url(../images/gradient.png) 0 0 repeat-x;
+list-style:none;
+margin:0;
+padding:15px 0 25px;
+position:relative;
+}
+#dm-docs dl,#dm-details dl {
+background:#eee;
+padding:5px;
+}
+#dm-docs dt,#dm-details dt {
+float:left;
+font-weight:700;
+width:110px;
+}
+#dm-docs dd,#dm-details dd {
+color:#666;
+margin-left:110px;
+}
+#dm-docs .rs-button,#dm-details .rs-button {
+background:url(../images/button.png) 0 0 no-repeat;
+display:block;
+float:left;
+font-weight:700;
+height:27px;
+line-height:27px;
+margin-right:4px;
+text-align:center;
+width:126px;
+}
+/* file list stuff */
+#dm-docs .rs-file,#dm-docs #rs-file {
+position:relative;
+}
+#dm-docs .rs-status span {
+display:block;
+height:83px;
+position:absolute;
+right:0;
+top:0;
+width:83px;
+}
+#dm-docs .rs-status span span {
+display:none;
+}
+#dm-docs .rs-status span.rs-hot {
+}
+#dm-docs .rs-status span.rs-new {
+background:url(../images/new.png) 100% 0 no-repeat;
+}
+#dm-docs .rs-status span.rs-updated {
+background:url(../images/updated.png) 100% 0 no-repeat;
+}
+#dm-docs .rs-buttons {
+display:inline;
+overflow:hidden;
+}
+#dm-docs .rs-pagination {
+margin:20px 0;
+overflow:hidden;
+text-align:center;
+}
+#dm-docs .rs-pages {
+float:right;
+width:auto;
+}
+/* breadcrumb stuff */
+#dm-docs #rs-breadcrumbs {
+padding:10px 0;
+}
+#dm-docs #rs-breadcrumbs span {
+color:#999;
+font-weight:700;
+}
+/* folder specific stuff */
+#rs-folder {
+border-bottom:5px solid #eee;
+margin-bottom:15px;
+overflow:hidden;
+padding-bottom:15px;
+}
+#rs-folder .rs-folder_default {
+background:url(../images/folder.png) 0 0 no-repeat;
+}
+/* subfolder & files stuff */
+#rs-subfolders {
+border-bottom:5px solid #eee;
+}
+/* file specific stuff */
+#rs-file {
+background:url(../images/gradient.png) 0 0 repeat-x;
+padding:15px 15px 35px 0;
+}
+/* End Imported from RokDownloads */
+.dm-separator {
+border-top:1px solid gray;
+}
+a.dm-icon,a.dm-thumb {
+float:left;
+padding-right:10px;
+width:auto;
+}
+a.dm-name {
+display:inline;
+}
+span.dm-unpublished,span.dm-unapproved,span.dm-checked_out {
+font-size:14px;
+font-style:italic;
+font-weight:400;
+}
+span.dm-unpublished {
+color:#E66;
+}
+span.dm-unapproved {
+color:#6E6;
+}
+span.dm-checked_out {
+color:#66E;
+}
+span.editlinktip {
+padding:0 3px;
+}
+span.editlinktip a:hover {
+text-decoration:none;
+}
+.dm-date,.dm-files,.dm-counter {
+float:right;
+margin:7px 5px 0 0;
+width:auto;
+}
+.dm-description {
+margin:10px 0;
+}
+.dm-homepage {
+background-color:#F8F8F8;
+font-size:10px;
+padding:1px 1px 1px 5px;
+}
+.dm-cat .dm-name {
+color:#666;
+font-size:110%;
+margin:15px 10px 0 0;
+}
+.dm-cat .dm-description {
+padding:3px;
+}
+.dm-cat .dm-thumb {
+float:left;
+margin-right:5px;
+width:auto;
+}
+/* ---------- Orderby styles ------------ */
+.dm-orderby {
+background-color:#EEE;
+border-top:1px solid #ccc;
+font-size:12px;
+margin:0 0 10px;
+padding:2px 2px 4px 12px;
+}
+/* ---------- Details styles ------------ shared styles */
+.dm-doc caption,#dm-tooltip caption {
+font-weight:700;
+margin:auto;
+padding:5px 0;
+}
+.dm-doc table,#dm-tooltip table {
+border-collapse:collapse;
+border-left:1px solid gray;
+border-top:1px solid gray;
+}
+.dm-doc td,#dm-tooltip td {
+border-bottom:1px solid gray;
+border-right:1px solid gray;
+}
+.dm-doc thead,#dm-tooltip thead {
+background-color:#CCC;
+color:#111;
+}
+.dm-doc col#prop {
+background-color:#EEE;
+}
+/* -- specific style when show as seperate page 
+
+#dm-details {
+clear:left;
+width: 100%;
+text-align: left;
+float: left;
+}
+#dm-details table {
+width:100%
+}
+#dm-details td, #dm-details thead { padding: 3px; }
+ -- specific style when show as tooltip */
+#dm-tooltip td,#dm-tooltip thead {
+padding:2px;
+}
+/* ---------- Taskbar styles ---------- */
+.dm-taskbar {
+font-family:arial;
+list-style-type:none;
+margin:8px 0;
+overflow:hidden;
+padding-bottom:6px;
+}
+/* ---------- Toolbar styles ---------- */
+.dm-toolbar {
+height:32px;
+list-style:none;
+margin-right:25px;
+}
+.dm-toolbar li {
+background-image:none;
+float:right;
+}
+.dm-toolbar .dm-btn {
+display:block;
+height:32px;
+text-indent:-5000px;
+width:32px;
+}
+.dm-toolbar #dm-btn_save {
+background-image:url(../images/save.png);
+}
+.dm-toolbar #dm-btn_cancel {
+background-image:url(../images/cancel.png);
+}
+.dm-toolbar #dm-btn_save:hover {
+background-image:url(../images/save-over.png);
+}
+.dm-toolbar #dm-btn_cancel:hover {
+background-image:url(../images/cancel-over.png);
+}
+/* ---------- Form styles ----------- */
+.dm-form {
+width:35em;
+}
+.dm-form fieldset {
+border:none;
+margin:0;
+padding:0;
+}
+.dm-form label {
+font-weight:700;
+width:100px;
+}
+.dm-form p {
+margin:5px 0;
+text-align:left;
+}
+.dm-form fieldset.dm-button {
+border-top:1px solid Gray;
+margin:10px 0;
+}
+.dm-form select option.label {
+background-color:#EEE;
+border:1px solid #DDD;
+color:#333;
+}
+#dm-frmupload label {
+padding-right:10px;
+width:100px;
+}
+#dm-frmupload #dm-btn_back {
+float:left;
+margin-top:5px;
+}
+#dm-frmupload #dm-btn_submit {
+float:right;
+margin-top:5px;
+}
+#dm-frmedit {
+border:0 none;
+width:90%;
+}
+#dm-frmedit #dmthumbnail_preview {
+border:1px solid silver;
+float:right;
+height:80px;
+margin-right:30px;
+padding:3px;
+width:80px;
+}
+#dm-frmedit #license-page label {
+width:250px;
+}
+/* ---------- Nav styles ----------- */
+#dm-nav {
+border-top:2px dotted #ddd;
+clear:both;
+margin-top:15px;
+padding-top:15px;
+}
+#dm-nav div {
+margin-top:10px;
+}
+#dm-cats,#dm-docs,#dm-details,.dm-doc thead td,#dm-tooltip thead td {
+text-align:left;
+}
+#dm-docs .rs-counter,.dm-cat .dm-name_desc {
+float:left;
+width:auto;
+}
+.dm-form label.nofloat,.dm-form .editor {
+float:none;
+}

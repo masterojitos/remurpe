@@ -1,0 +1,16 @@
+/**
+ * The RockSolid Theme for DOCman is free software. This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or is derivative of works
+ * licensed under the GNU General Public License or other free or open source software licenses.
+ * The RockSolid Theme for DOCman is based on the Default DOCman Theme (copyright JoomlaTools)
+ * and RokDownloads (copyright RocketWerx) and is offered without any warranty, expressed or implied.
+ **/
+ 
+.message {
+padding: 10px 10px 10px 50px; 
+margin-bottom: 10px;
+border: 1px solid gray; 
+background: #FFFFCC url(../images/message.gif) no-repeat 10px 50%;
+color: red; 
+font-weight: bold;
+}

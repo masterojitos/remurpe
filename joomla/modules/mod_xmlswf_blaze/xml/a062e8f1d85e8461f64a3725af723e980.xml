@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	
+	<settings>
+		<background>
+		<border>
+			<color code="#94AC5A" alpha="1" />
+			</border>
+			<fill type="plain">
+			<color code="#FFFFFF" alpha="1"/>
+			<color code="#FFFFFF" alpha="1"
+			/>
+			</fill>
+			<cornerRadius>8</cornerRadius>
+				</background>
+		<mainPanel>
+			<background>
+			<border>
+			<color code="#94AC5A" alpha="1" />
+				</border>
+			<fill type="plain">
+			<color code="#EAEAEA" alpha="1"/>
+			<color code="#EAEAEA" alpha="1"/>
+			</fill>
+			<cornerRadius>8</cornerRadius>
+			</background>
+				
+				<descriptionBar>
+				<backgroundColor type="plain">
+					<color code="#000000" alpha="0.5" />
+					</backgroundColor>
+				<defaultTextColor>#FFFFFF</defaultTextColor>
+				<displayMethod>allTime</displayMethod>
+				<position>bottom</position>
+			</descriptionBar>
+			<preloaderColor color="#3F5705" alpha="1" />
+			
+		</mainPanel>
+		<controlsPanel>
+		<background>
+				<border>
+		<color code="#FFFFFF" alpha="1" />
+			</border>
+				<fill type="gradient">
+						<color code="#9BAB72" alpha="1" />
+						<color code="#9BAB72" alpha="1" />
+						</fill>
+			<cornerRadius>5</cornerRadius>
+			</background>
+			
+			<globalButtons>
+				<backgroundColor>
+					<up color="#FFFFFF" alpha="0.7"/>
+							<over color="#FFFFFF" alpha="0.7"/>
+							<down color="#FFFFFF" alpha="0.3"/>
+					</backgroundColor>
+				<labelColor>
+					<up color="#323232" alpha="0.7"/>
+							<over color="#5898F3" alpha="0.7"/>
+							<down color="#323232" alpha="0.3"/>
+					
+				</labelColor>
+			</globalButtons>
+			
+			<imageButtons>
+				<backgroundColor>
+					<up color="#F2F2F2" alpha="0"/>
+							<over color="#E7E7E7" alpha="0.7"/>
+							<down color="#F2F2F2" alpha="0.3"/>
+							<selected color="#FFFFFF" alpha="0.7"/>
+				</backgroundColor>
+				<labelColor>
+					<up color="#FFFFFF"
+						alpha="1"/>
+							<over color="#3F5705"
+						alpha="1"/>
+							<down color="#3F5705"
+						alpha="1"/>
+					<selected color="#3F5705"
+						alpha="1"/>
+					</labelColor>
+				</imageButtons>
+							
+				<tooltip>
+				<backgroundColor>
+						<border color="#FFFFFF"
+						alpha="1"/>
+							<fill color="#000000"
+						alpha="1"/>
+						<labelColor color="#FFFFFF" alpha="1"/>
+				</backgroundColor>
+					
+				</tooltip>
+			
+			<position>bottom</position>
+			<displayType>show</displayType>
+				</controlsPanel>
+		
+		<priceTag enabled="no">
+			<position>TL</position>
+			<textSize>18</textSize>
+			<currency>
+				<base>
+					<color code="#FFFFFF" alpha="0.8" />
+					<color code="#CECECE" alpha="0.8" />
+				</base>
+				<label color="#FF00CC" alpha="0.8" />
+				<symbol>$</symbol>
+			</currency>
+			<price>
+				<base color="#FF00CC" alpha="0.5" />
+				<label color="#101010" alpha="0.8" />
+			</price>
+		</priceTag>
+				<imageEffect>
+				
+		<type>2</type>
+		<time>1000</time>
+		<closingEffect>default</closingEffect>
+		</imageEffect>
+		<descriptionEffect>
+			<type>2</type>
+		</descriptionEffect>
+		<autoplay>	
+			<displayTime>3</displayTime>
+			<default>yes</default>
+		</autoplay>
+		</settings>
+	<images>		
+<image><main scale="yes">http://localhost/v3/images/galeria/f1.jpg</main><label><![CDATA[Image one]]></label>
+<description defaultColor="yes"><![CDATA[Description one]]></description>
+<link window="current" >#</link>
+<price>0.00</price>
+</image>
+		<image><main scale="yes">http://localhost/v3/images/galeria/f2.jpg</main><label><![CDATA[Image two]]></label>
+<description defaultColor="yes"><![CDATA[Description two]]></description>
+<link window="current" >#</link>
+<price>0.00</price>
+</image>
+		<image><main scale="yes">http://localhost/v3/images/galeria/f3.jpg</main><label><![CDATA[Image three]]></label>
+<description defaultColor="yes"><![CDATA[Description three]]></description>
+<link window="current" >#</link>
+<price>0.00</price>
+</image>
+		<image><main scale="yes">http://localhost/v3/images/galeria/f4.jpg</main><label><![CDATA[Image four]]></label>
+<description defaultColor="yes"><![CDATA[Description four]]></description>
+<link window="current" >#</link>
+<price>0.00</price>
+</image>
+		<image><main scale="yes">http://localhost/v3/images/galeria/f5.jpg</main><label><![CDATA[Image five]]></label>
+<description defaultColor="yes"><![CDATA[Description five]]></description>
+<link window="current" >#</link>
+<price>0.00</price>
+</image>
+		
+</images>
+</data>
