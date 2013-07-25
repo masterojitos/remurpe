@@ -42,7 +42,6 @@
     <p class="block-intervencion">
         <label for="intervencion">Zonas de intervención</label>
         <select name="intervencion" id="intervencion" multiple="multiple">
-            <option value=""></option>
             <?php
             foreach ($departamentos as $departamento) {
                 $departamento = ucwords(strtolower($departamento));
